@@ -1,3 +1,1 @@
-To Start:
-
-docker build . -t duara-home; docker run --name docker-home
+See ./scripts/[start|stop|restart] for usage details. Generally self-explanatory.
