@@ -1,4 +1,8 @@
 #!/bin/bash
 
 docker build . -t duara-home
-docker run --name duara-home-1 -d -p 80:80 duara-home
+docker run --name duara-home-1 -d \
+  -p 80:80 \
+  -p 443:443 \
+  -v /etc/letsencrypt:/etc/letsencrypt \
+  duara-home
