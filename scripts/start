@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build . -t duara-home
+docker run --name duara-home-1 -p 80:80 duara-home
