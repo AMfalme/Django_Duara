@@ -1,3 +1,9 @@
+/*color scheme
+	#92278F
+	#D12D68
+	#778A91
+*/
+
 body{
 	display: block;
 	margin: 0;
@@ -5,6 +11,9 @@ body{
 	color: #85969c;
 	background-color:#F2F3F2;
 
+}
+a:hover{
+	text-decoration: none !important;
 }
 .logo a img{
 	width: 200px;
@@ -26,7 +35,7 @@ nav.navigation{
 nav.navigation ul li a{
 	color: #85969c;
 	}
-nav.navigation ul li a:hover{
+nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	text-decoration: none;
 	color: #000;
 	}
@@ -39,7 +48,8 @@ nav.navigation ul li a:hover{
 .landing-section{
 	min-height: 560px;
 	height: 100%;
-    background: #5a356e;
+	/* conflicting colors cornelius to advice cornelius #5a356e*/
+    background: #92278F;
     color: #fff;
     text-align: center;
 }
@@ -53,8 +63,14 @@ nav.navigation ul li a:hover{
 	margin: 60px auto;display: block;
 }
 .landing-section .left-side{
-	border-right: 1px solid #fff;
+	
 	margin: 30px 0;
+}
+.code-sample{
+	background-color: #030021;
+	min-height: 350px;
+	width: 100%;
+	border-radius: 4px;
 }
 .services li{
 	text-align: left;
@@ -75,13 +91,14 @@ nav.navigation ul li a:hover{
 	
 }
 .login input, .signup input{
-	padding: 20px;
+	
 	border-color: #85969c;
 	margin: 20px auto;
+	height: 45px;
 }
 .login input.submit, .signup input.submit{
-	background-color: #333;
-	border-color: #333;
+	background-color: #5a356e;
+	border-color: #5a356e;
 	width: 200px;
 	margin: 20px auto 0 auto;
 	display: block;
