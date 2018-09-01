@@ -3,11 +3,12 @@ body{
 	margin: 0;
 	padding: 0;
 	color: #85969c;
+	background-color:#F2F3F2;
 
 }
 .logo a img{
 	width: 200px;
-	float: right;
+	;
 	height: 115px;
 }
 nav.navigation ul li{
@@ -15,9 +16,12 @@ nav.navigation ul li{
 	display: inline-block;
 	margin: 30px auto;
 	padding: 10px;
-
+	float: right;
     font-size: 16px;
     font-weight: 500;
+}
+nav.navigation{
+	float: right;
 }
 nav.navigation ul li a{
 	color: #85969c;
