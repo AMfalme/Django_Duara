@@ -1,0 +1,118 @@
+body{
+	display: block;
+	margin: 0;
+	padding: 0;
+	color: #85969c;
+	background-color:#F2F3F2;
+
+}
+.logo a img{
+	width: 200px;
+	;
+	height: 115px;
+}
+nav.navigation ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 30px auto;
+	padding: 10px;
+	float: right;
+    font-size: 16px;
+    font-weight: 500;
+}
+nav.navigation{
+	float: right;
+}
+nav.navigation ul li a{
+	color: #85969c;
+	}
+nav.navigation ul li a:hover{
+	text-decoration: none;
+	color: #000;
+	}
+.trial a{
+	background-color: #59356e;
+    color: #fff !important;
+    padding: 20px;
+    border-radius: 4px;
+}
+.landing-section{
+	min-height: 560px;
+	height: 100%;
+    background: #5a356e;
+    color: #fff;
+    text-align: center;
+}
+.landing-section .left-side button{
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	padding: 15px;
+	border-radius: 3px;
+	min-width: 200px;
+	margin: 60px auto;display: block;
+}
+.landing-section .left-side{
+	border-right: 1px solid #fff;
+	margin: 30px 0;
+}
+.services li{
+	text-align: left;
+	list-style: none;
+}
+.services li img{
+	width: 50px;
+}
+.login{
+	margin-top: 50px !important;
+}
+.login, .signup{
+	width: 400px;
+	margin: 0 auto;
+	border: 1px solid #85969c;
+	padding: 30px;
+	border-radius: 2px;
+	
+}
+.login input, .signup input{
+	padding: 20px;
+	border-color: #85969c;
+	margin: 20px auto;
+}
+.login input.submit, .signup input.submit{
+	background-color: #333;
+	border-color: #333;
+	width: 200px;
+	margin: 20px auto 0 auto;
+	display: block;
+
+
+}
+.page-tab{
+	min-height: 500px !important;
+}
+.alternative{
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+}
+.alternative ul li{
+	display: inline-block;
+	border-right: 1px solid #333;
+	margin-right: 5px;
+	padding-right: 5px; 
+
+}
+.login form h2, .signup form h2{
+	text-align: center;
+}
+.copyright img
+{
+	width: 20px;
+}
+footer{
+	background-color: #000;
+	color: #fff;
+	bottom: 0;
+	text-align: center;
+}
