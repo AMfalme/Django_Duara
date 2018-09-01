@@ -12,6 +12,13 @@ body{
 	background-color:#F2F3F2;
 
 }
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 a:hover{
 	text-decoration: none !important;
 }
@@ -66,6 +73,27 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	
 	margin: 30px 0;
 }
+.form-triggers ul{
+	width: 400px;
+    margin: 0 auto;
+    list-style: none;
+    background: #a2afb4;
+}
+.form-triggers li{
+	text-align: center;
+	display: inline-block;
+    padding: 20px;
+    width: 50%;
+    color: darkblue;
+    float: left;
+    cursor: pointer;
+}
+.form-triggers li.active{
+ background: #8b9ba0;
+}
+.form-triggers li a{
+		color: darkblue;
+}
 .code-sample{
 	background-color: #030021;
 	min-height: 350px;
@@ -80,7 +108,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	width: 50px;
 }
 .login{
-	margin-top: 50px !important;
+	margin-top: 0 !important;
 }
 .login, .signup{
 	width: 400px;
@@ -122,6 +150,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .login form h2, .signup form h2{
 	text-align: center;
+	margin: 55px auto;
 }
 .copyright img
 {
