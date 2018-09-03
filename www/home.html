@@ -31,7 +31,7 @@
 			<ul>
 				
 				<li>
-					<a class="" href="login.html">Account Management</a>
+					<!-- <a class="" href="login.html">Account Management</a> -->
 				</li>
 			</ul>
 		</nav>
@@ -40,31 +40,63 @@
 	</div>
 	<div class="container-fluid landing-section">
 		<div class="row">
-			<div class="col-md-4 left-side">
-				<a href="signup.html">
-					<button>
-						Sign Up For free
-					</button>
-				</a>
-				<p>
-					Already have an Account?
-				</p>
-				<a href="login.html">
-					<button>
-						Sign In
-					</button>
-				</a>
+			<div class="col-md-8 left-side">
+					<div class="form-triggers">
+				<ul>
+					<li id="login" class="active"><a href="#login">Login</a></li>
+					<li id="signup"><a href="#signup">Signup</a></li>
+				</ul>
 			</div>
-			<div class="col-md-8 right-side">
-				<h4>Duara:<em><b> Rethinking cloud.</b></em></h4>
+				<div class="login">
+					<form>
+						<h2>Login</h2>
+						<div class="form-group">
+		                  <input class="form-control" name="username" placeholder="User Name" type="text" minlength="4" required>
+		                </div>
+		                <div class="form-group">
+		                  <input class="form-control" name="Password" placeholder="Password" type="password" minlength="4" required>
+		                </div>
+		                <input class="btn btn-success submit" type="submit" value="Login">
+
+					</form>
+				</div>
+				<div class="signup">
+					<form>
+						<h2>Signup</h2>
+						<div class="form-group">
+		                  <input class="form-control" name="username" placeholder="User Name" type="text" minlength="4" required>
+		                </div>
+		                <div class="form-group">
+		                  <input class="form-control" name="email" placeholder="Email Address" type="password" minlength="4" required>
+		                </div>
+		                <div class="form-group">
+		                  <input class="form-control" name="Password" placeholder="Password" type="password" minlength="4" required>
+		                </div>
+		                <div class="form-group">
+		                  <input class="form-control" name="Password" placeholder="Retype Password" type="password" minlength="4" required>
+		                </div>
+		                <input class="btn btn-success submit" type="submit" value="Create Account">
+
+					</form>
+				</div>
+				<div class="alternative">
+					<ul>
+						<a href="signup.html"><li>Create Account?</li></a>
+						<a href="#"><li>Forgot Password?</li></a>
+						<a href="#"><li>Forgot Username?</li></a>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4 right-side">
+				<h4>Duara Systems:<em><b> Rethinking cloud.</b></em></h4>
 				<ul class="services">
 					<li><img src="images/tick.jpg"> Infrastructure as a service</li>
 					<li><img src="images/tick.jpg">We take care of low level, so you can concentrate on productivity.</li>
 					<li></li>
 				</ul>
-				<div class="code-sample">
+				<!-- <div class="code-sample">
 					
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -77,5 +109,25 @@
 			</div>
 		</div>
 	</footer>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.signup').hide();
+			$('#signup').click( function(){
+				 console.log( $( this ).text() );
+				$('#login').removeClass('active');
+				$(this).addClass('active');
+				$('.signup').css("display","block");
+				$('.login').hide();
+			});
+			$('#login').click( function(){
+				 console.log( $( this ).text() );
+				$('#signup').removeClass('active');
+				$(this).addClass('active');
+				$('.login').css("display","block");
+				$('.signup').hide();
+			});
+		});
+	</script>
 </body>
 </html>

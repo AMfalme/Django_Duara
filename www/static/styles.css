@@ -89,10 +89,11 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     cursor: pointer;
 }
 .form-triggers li.active{
- background: #8b9ba0;
+ background: #030021;
+ color: #fff;
 }
-.form-triggers li a{
-		color: darkblue;
+.form-triggers li.active a{
+		color: #fff;
 }
 .code-sample{
 	background-color: #030021;
@@ -116,11 +117,12 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	border: 1px solid #85969c;
 	padding: 30px;
 	border-radius: 2px;
+	background: #fff;
 	
 }
 .login input, .signup input{
 	
-	border-color: #85969c;
+	border-color: #030021;
 	margin: 20px auto;
 	height: 45px;
 }
