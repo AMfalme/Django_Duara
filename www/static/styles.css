@@ -102,12 +102,36 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	border-radius: 4px;
 }
 .services li{
-	text-align: left;
+	text-align: center;
 	list-style: none;
+	float: left;
+	width: 50%;
+	border-bottom: 1px solid #eee;
+
+
 }
-.services li img{
+.services li div{
 	width: 50px;
+	width: 120px;
+	height: 120px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
 }
+.circle{
+
+}
+.circle{
+	background-image: url(../images/nodes_transparent.png); 
+	
+}
+.cloud{
+	background-image: url(../img/logo/icon.svg);
+}
+
 .login{
 	margin-top: 0 !important;
 }
@@ -138,6 +162,9 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .page-tab{
 	min-height: 500px !important;
 }
+.right-side{
+	padding-top: 50px;
+}
 .alternative{
 	margin: 0 auto;
 	text-align: center;
@@ -145,9 +172,10 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .alternative ul li{
 	display: inline-block;
-	border-right: 1px solid #333;
+	border-right: 1px solid #8b8bf1;
 	margin-right: 5px;
 	padding-right: 5px; 
+	color: #fff;
 
 }
 .login form h2, .signup form h2{
