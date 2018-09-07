@@ -19,13 +19,13 @@ body{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-a:hover{
+a:hover, a:focus{
 	text-decoration: none !important;
 }
 .logo a img{
 	width: 200px;
-	;
-	height: 115px;
+	
+	height: 80px;
 }
 nav.navigation ul li{
 	list-style: none;
@@ -53,10 +53,10 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     border-radius: 4px;
 }
 .landing-section{
-	min-height: 560px;
+	min-height: 360px;
 	height: 100%;
 	/* conflicting colors cornelius to advice cornelius #5a356e*/
-    background: #92278F;
+    background: #330e2f;
     color: #fff;
     text-align: center;
 }
@@ -71,26 +71,33 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .landing-section .left-side{
 	
-	margin: 30px 0;
 }
 .form-triggers ul{
 	width: 400px;
     margin: 0 auto;
     list-style: none;
-    background: #a2afb4;
+    overflow: hidden;
+    margin: 20px auto;
 }
 .form-triggers li{
 	text-align: center;
 	display: inline-block;
     padding: 20px;
     width: 50%;
-    color: darkblue;
+    color: #fff;
     float: left;
     cursor: pointer;
+    
+}
+.form-triggers li a{
+	color: #fff;
 }
 .form-triggers li.active{
- background: #030021;
  color: #fff;
+}
+.form-triggers li.active a{
+	border-bottom: 1px solid #fff;
+	padding: 10px;
 }
 .form-triggers li.active a{
 		color: #fff;
@@ -100,6 +107,14 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	min-height: 350px;
 	width: 100%;
 	border-radius: 4px;
+	margin: 60px auto 20px;
+    padding: 45px;
+    color: #fff;
+}
+.services{
+	display: block;
+	position: relative;
+	overflow: hidden;
 }
 .services li{
 	text-align: center;
@@ -112,8 +127,8 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .services li div{
 	width: 50px;
-	width: 120px;
-	height: 120px;
+	width: 90px;
+	height: 90px;
 	border: 1px solid #fff;
 	border-radius: 50%;
 	background-color: #fff;
@@ -121,12 +136,71 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	background-position: center;
 	margin: 0 auto;
 }
-.circle{
+.info{
+    padding: 0px;
 
+}
+.product{
+	margin: 40px auto;
+	height: 200px;
+}
+.product h4{
+	text-align: center;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 0.1px;
+    margin: 30px auto; 
+}
+.product i{
+	float: left;
+	color: #32204b;
+    font-size: 100px;
+}
+.wording{
+	    float: right;
+    border: 1px solid #4e32416b;
+    padding: 20px;
+    width: 250px;
+    margin-left: 10px;
+    min-height: 140px;
+    text-align: center;
+}
+.wow{
+	visibility: none;
+}
+.info div{
+	margin: 20px auto;
+	width: 50%;
+    display: inline-block;
+    float: left;
+}
+.info i{
+	 animation: fadeInLeft 1.25s cubic-bezier(0.4, 0, 1, 1) 0.5s 1 forwards;
+	 font-size: 90px;
+}
+.purple-shade{
+	background-color: #d7ded7;
+	margin: 31px auto;
 }
 .circle{
 	background-image: url(../images/nodes_transparent.png); 
 	
+}
+.subscribe-form{
+	padding: 30px;
+	margin: 30px auto; 
+}
+.subscribe-form input{
+	color: #000;
+	padding: 20px; 
+}
+button.subscribe{
+	border: 1px solid #b13a63;
+    background-color: transparent;
+    padding: 13px;
+    border-radius: 5px;
+    width: 100%;
 }
 .cloud{
 	background-image: url(../img/logo/icon.svg);
@@ -139,10 +213,35 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	width: 400px;
 	margin: 0 auto;
 	border: 1px solid #85969c;
-	padding: 30px;
+	padding: 0 30px;
 	border-radius: 2px;
 	background: #fff;
 	
+}
+.btn:hover{
+	color: #fff;
+}
+.login:before, .signup:before{
+	display: inline-block;
+    position: absolute;
+    border-radius: .1875rem 0 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 3rem;
+    height: 3rem;
+    content: '';
+   
+    top: calc(8.75rem - 0px);
+    background-color: #fff;
+    z-index: 100;
+}
+.login:before{
+	 left: calc(17rem + 30px);
+}
+.signup:before{
+	
+    right: calc(17rem + 30px);
+    
 }
 .login input, .signup input{
 	
@@ -151,10 +250,10 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	height: 45px;
 }
 .login input.submit, .signup input.submit{
-	background-color: #5a356e;
-	border-color: #5a356e;
+	background-color: #33132f;
+	border-color:#33132f;
 	width: 200px;
-	margin: 20px auto 0 auto;
+	margin: 20px auto;
 	display: block;
 
 
@@ -163,7 +262,12 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	min-height: 500px !important;
 }
 .right-side{
-	padding-top: 50px;
+	padding-top: 30px;
+}
+.right-side h1{
+	text-transform: uppercase;
+    font-size: 63px;
+    font-weight: 900;
 }
 .alternative{
 	margin: 0 auto;
@@ -180,7 +284,40 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .login form h2, .signup form h2{
 	text-align: center;
-	margin: 55px auto;
+	margin: 5px auto;
+}
+.copyright{
+	    background-color: #000;
+    text-align: center;
+    margin-bottom: -64px;
+    padding: 4px;
+    color: #eef;
+}
+.clompute h2{
+	color: #663ab6;
+font-size: 20px;
+text-align: center;
+margin: 160px auto 40px;
+text-transform: uppercase;
+font-weight: 600;
+}
+.clompute ul li{
+	list-style: none;
+	text-align: center;
+	font-size: 18px;
+	color: #040a21;
+}
+ .clompute img{
+ 	width: 100px;
+    margin: 0 auto;
+    display: block;
+ }
+.cloudcompute img{
+	width: 300px;
+margin: 41px auto -100px auto;
+}
+.cloudcompute{
+	margin: -30px auto -80px auto;
 }
 .copyright img
 {
