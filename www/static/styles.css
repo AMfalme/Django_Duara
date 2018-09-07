@@ -223,18 +223,14 @@ button.subscribe{
 	color: #fff;
 }
 .login:before, .signup:before{
-display: inline-block;
+content: " ";
+    width: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent #84969c transparent;
     position: absolute;
-    border-radius: .1875rem 0 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 3rem;
-    height: 3rem;
-    content: '';
-    top: calc(8.75rem - 3px);
-    background-color: #84969c;
-    z-index: 100;
-    border: 1px solid #84969c;
+    top: 80px;
+    right: 0;
 }
 .login:before{
 	 left: calc(17rem + 30px);
@@ -251,8 +247,8 @@ display: inline-block;
 	height: 45px;
 }
 .login input.submit, .signup input.submit{
-	background-color: #33132f;
-	border-color:#33132f;
+	background-color: #84969c;
+	border-color:#84969c;
 	width: 200px;
 	margin: 20px auto;
 	display: block;
@@ -315,7 +311,7 @@ font-weight: 600;
  }
 .cloudcompute img{
 	width: 300px;
-margin: -10px auto -180px auto;
+margin: 5px auto -180px auto;
 }
 /*.cloudcompute{
 	margin: -30px auto -80px auto;
