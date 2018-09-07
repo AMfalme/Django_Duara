@@ -53,10 +53,18 @@
 			<div class="col-md-6 left-side">
 					<div class="form-triggers">
 				<ul>
-					<li id="login" class="active"><a href="#login">Login</a></li>
+					<li id="login" class="active">
+						<a href="#login">Login</a>
+					</li>
+					<div class="border-active">
+						
+				</div>
 					<li id="signup"><a href="#signup">Signup</a></li>
+					
 				</ul>
+				
 			</div>
+			<div class="transform">
 				<div class="login wow fadeInLeft">
 					<form>
 						<h2>Login</h2>
@@ -69,6 +77,13 @@
 		                <input class="btn btn submit" type="submit" value="Login">
 
 					</form>
+					<div class="alternative">
+					<ul>
+						<a href="signup.html"><li>Create Account?</li></a>
+						<a href="#"><li>Forgot Password?</li></a>
+						<a href="#"><li>Forgot Username?</li></a>
+					</ul>
+				</div>
 				</div>
 				<div class="signup">
 					<form>
@@ -88,18 +103,20 @@
 		                <input class="btn btn submit" type="submit" value="Create Account">
 
 					</form>
-				</div>
-				<div class="alternative">
+					<div class="alternative">
 					<ul>
-						<a href="signup.html"><li>Create Account?</li></a>
+						<a href="signup.html"><li>Have an account?</li></a>
 						<a href="#"><li>Forgot Password?</li></a>
 						<a href="#"><li>Forgot Username?</li></a>
 					</ul>
 				</div>
+				</div>
+				
+			</div>
 				
 			</div>
 			<div class="col-md-6 right-side">
-				<h1 class="fadeInLeft wow">Duara Systems</h1>
+				<h1 class="fadeInLeft wow">Duara systems</h1>
 					<p><em><b> Rethinking cloud.</b></em></p>
 			
 				<div class="info">
@@ -124,7 +141,8 @@
 					</div>
 				
 				<div class="cloudcompute">
-					<img src="images/cloudcompute.png">
+					<img src="images/web icons/web icon-01.png">
+					<img class="wifi" src="images/web icons/wifi.jpg">
 				</div>
 			</div>
 		</div>
@@ -135,9 +153,25 @@
 			<div class="col-md-7">
 			<div class="code-sample">
 					<div class="services">
-				<ul class="cloud">
-					<li>
-						<div class="circle">
+				<ul class="">
+					<li class="top-li">
+						<div class="flexible">
+							
+						</div>
+						<h4>
+							Flexible Connectivity.
+						</h4>
+					</li>
+					<li class="top-li">
+						<div class="cloud">
+							
+						</div>
+						<h4>
+							Easily deployable.
+						</h4>
+					</li>
+						<li>
+						<div class="Scalable">
 							
 						</div>
 						<h4>
@@ -145,13 +179,16 @@
 						</h4>
 					</li>
 					<li>
-						<div class="cloud">
+						<div class="extensible">
 							
 						</div>
+
 						<h4>
-							Easily deployable
+							Easily deployable.
 						</h4>
 					</li>
+					
+					<hr>
 				</ul>
 				
 			</div>
@@ -177,10 +214,10 @@
 		
 	
 	
-	<div class="container-fluid products">
+	<div class="container products purple-shade">
 		<div class="row">
-			<div class="col-md-4 product">
-				<div>
+			<div class="col-md-4 ">
+				<div class="product">
 					<h4>Affordable prices</h4>
 					<i class="fas fa-hand-holding-usd"></i>
 					<div class="wording">
@@ -191,8 +228,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 product">
-				<div>
+			<div class="col-md-4 ">
+				<div class="product">
 					<h4>An Intuitive Experience</h4>
 					<i class="far fa-smile-wink"></i>
 					<div class="wording">
@@ -202,8 +239,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 product">
-				<div>
+			<div class="col-md-4 ">
+				<div class="product">
 					<h4>Scalable Cloud Resource</h4>
 					<i class="fas fa-tint"></i>
 					<div class="wording">
@@ -213,12 +250,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 product">
-				<div>
+			<div class="col-md-4" style="float: none;margin: 0 auto;">
+				<div class="product">
 					<h4>Seemless Integration</h4>
 					<i class="fas fa-grip-horizontal"></i>
 					<div class="wording">
-						<h4>Reliability at your finger-tips.</h4>
+						<h5>Reliability at your finger-tips.</h5>
 						<p>
 							 Increase your compute resources as your business demands. Give your end user a seemless experience as you scale up your applications.
 						</p>
@@ -227,7 +264,7 @@
 			</div>
 		</div>
 	</div>
-		<div class="container purple-shade">
+		<div class="container shade ">
 				<div class="row">
 					<div class="col-md-12">
 						<form class="subscribe-form">
@@ -280,22 +317,24 @@
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script type="text/javascript">
 		$(function(){
-			$('.signup').hide();
+			
 			$('#signup').click( function(e){
 				e.preventDefault();
 				 console.log( $( this ).text() );
 				$('#login').removeClass('active');
 				$(this).addClass('active');
-				$('.signup').css("display","block");
-				$('.login').hide();
+				$('.transform').addClass("signup-active");
+				$('.border-active').addClass('border-signup');
+				
 			});
 			$('#login').click( function(e){
 				e.preventDefault();
 				 console.log( $( this ).text() );
 				$('#signup').removeClass('active');
 				$(this).addClass('active');
-				$('.login').css("display","block");
-				$('.signup').hide();
+				$('.border-active').removeClass('border-signup');
+				$('.transform').removeClass('signup-active');
+				
 			});
 		});
 	</script>

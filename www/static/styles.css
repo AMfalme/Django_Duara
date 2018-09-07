@@ -21,6 +21,7 @@ body{
 }
 a:hover, a:focus{
 	text-decoration: none !important;
+	outline: none !important;
 }
 .logo a img{
 	width: 200px;
@@ -77,7 +78,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     margin: 0 auto;
     list-style: none;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 .form-triggers li{
 	text-align: center;
@@ -95,10 +96,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .form-triggers li.active{
  color: #fff;
 }
-.form-triggers li.active a{
-	border-bottom: 1px solid #fff;
-	padding: 10px;
-}
+
 .form-triggers li.active a{
 		color: #fff;
 }
@@ -107,7 +105,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	min-height: 350px;
 	width: 100%;
 	border-radius: 4px;
-	margin: 60px auto 20px;
+	margin: 110px auto 20px;
     padding: 45px;
     color: #fff;
 }
@@ -121,9 +119,13 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	list-style: none;
 	float: left;
 	width: 50%;
+	
+	margin-top: 20px;
+
+
+}
+.top-li{
 	border-bottom: 1px solid #eee;
-
-
 }
 .services li div{
 	width: 50px;
@@ -142,11 +144,13 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .product{
 	margin: 40px auto;
-	height: 200px;
+	min-height: 275px;
+	border: 1px solid #000;
+	padding: 20px;
 }
 .product h4{
 	text-align: center;
-    color: blue;
+    color: #000;
     text-transform: uppercase;
     font-size: 21px;
     letter-spacing: 0.1px;
@@ -154,17 +158,25 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .product i{
 	float: left;
-	color: #32204b;
-    font-size: 100px;
+	color: #b4a9af;
+	
+    font-size: 35px;
+}
+.product div{
+
 }
 .wording{
 	    float: right;
-    border: 1px solid #4e32416b;
+    
     padding: 20px;
     width: 250px;
-    margin-left: 10px;
+    
     min-height: 140px;
     text-align: center;
+    
+}
+.wording p{
+	color: #330e2f;
 }
 .wow{
 	visibility: none;
@@ -176,16 +188,25 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     float: left;
 }
 .info i{
-	 animation: fadeInLeft 1.25s cubic-bezier(0.4, 0, 1, 1) 0.5s 2 forwards;
-	 font-size: 90px;
+	 animation: fadeInLeft 1.25s cubic-bezier(0.4, 0, 1, 1) 0.5s 1 forwards;
+	 font-size: 50px;
 	 color: #84969c;
 }
 .purple-shade{
+	
+	padding: 20px;
+}
+.border-signup{
+	transition: 1s;
+left: 270px !important;
+}
+.shade{
 	background-color: #d7ded7;
 	margin: 183px auto 20px;
 }
-.circle{
-	background-image: url(../images/nodes_transparent.png); 
+.flexible{
+	background-image: url("../images/web icons/webicon-09.png"); 
+	background-size: contain;
 	
 }
 .subscribe-form{
@@ -204,19 +225,29 @@ button.subscribe{
     width: 100%;
 }
 .cloud{
-	background-image: url(../img/logo/icon.svg);
+	background-image: url("../images/web icons/webicon-08.png");
+	background-size: contain;
 }
 
-.login{
-	margin-top: 0 !important;
+.Scalable{
+	background-image: url("../images/web icons/web icon-03.png");
+	background-size: contain;
+}
+.extensible{
+	background-image: url("../images/web icons/web icon-05.png");
+	background-size: contain;
 }
 .login, .signup{
 	width: 400px;
-	margin: 0 auto;
-	border: 1px solid #85969c;
-	padding: 0 30px;
-	border-radius: 2px;
-	background: #330e2f;
+    margin: 0 auto;
+    border: 1px solid #85969c;
+    padding: 0 30px;
+    border-radius: 2px;
+    background: #330e2f;
+    
+    
+    backface-visibility: hidden;
+    
 	
 }
 .btn:hover{
@@ -228,18 +259,52 @@ content: " ";
     border-style: solid;
     border-width: 10px;
     border-color: transparent transparent #84969c transparent;
-    position: absolute;
-    top: 80px;
+    position: relative;
+    top: -30px;
     right: 0;
 }
 .login:before{
-	 left: calc(17rem + 30px);
+	 right: 90px;
 }
 .signup:before{
 	
-    right: calc(17rem + 30px);
+    left: 90px;
     
 }
+.border-active{
+	border-bottom: 1px solid #fff;
+    bottom: -48px;
+    position: relative;
+    width: 60px;
+    left: 70px;
+    transition: 1s;
+}
+.signup{
+	transform: rotateY(90deg);
+	transition-duration: .5s;
+	backface-visibility: hidden;
+	margin: -325px auto;
+}
+.signup-active .signup{
+	display: block !important;
+	transform: rotateY(0deg) !important;
+	
+	transition-duration: .5s;
+	transition-delay: 1s;
+}
+.login{
+	margin-top: 0 !important;
+	
+	transition-duration: 1s;
+	transition-delay: .5s;
+}
+.signup-active .login{
+	transition-duration: .5s;
+	
+	transform: rotateY(90deg) !important;
+
+}
+
 .login input, .signup input{
 	
 	border-color: #030021;
@@ -252,6 +317,7 @@ content: " ";
 	width: 200px;
 	margin: 20px auto;
 	display: block;
+	color: #33132f;
 
 
 }
@@ -262,9 +328,9 @@ content: " ";
 	padding-top: 30px;
 }
 .right-side h1{
-	text-transform: uppercase;
-    font-size: 63px;
+	font-size: 63px;
     font-weight: 900;
+    font-family: inherit;
 }
 .alternative{
 	margin: 0 auto;
@@ -312,6 +378,14 @@ font-weight: 600;
 .cloudcompute img{
 	width: 300px;
 margin: 5px auto -180px auto;
+    background-color: #fff;
+
+}
+.wifi{
+	position: absolute;
+left: 167px;
+margin: 10px !important;
+width: 85px !important;
 }
 /*.cloudcompute{
 	margin: -30px auto -80px auto;
