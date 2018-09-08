@@ -241,7 +241,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .pitch{
 	color: #000;
-	text-align: left;
+	text-align: center;
 	padding: 35px;
 }
 .purple-shade{
@@ -249,7 +249,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	padding: 20px;
 }
 .border-signup{
-	transition: 1s;
+	transition: .1s;
 left: 270px !important;
 }
 .shade{
