@@ -56,7 +56,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .landing-section{
 	min-height: 360px;
 	height: 100%;
-	/* conflicting colors cornelius to advice cornelius #5a356e*/
+	/* conflicting colors cornelius to advice cornelius #922785*/
     
     color: #000;
     text-align: center;
@@ -106,7 +106,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 		color: #000;
 }
 .code-sample{
-	background-color: #5a356e;
+	background-color: #922785;
 	min-height: 350px;
 	width: 100%;
 	border-radius: 4px;
@@ -148,8 +148,8 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 
 }
 .info h6{
-	color: #000000;
-    border-bottom: 1px solid #87989e;
+	color: #778a91;
+    border-bottom: 1px solid #778A91;
     line-height: 29px;
     margin-top: -25px;
 }
@@ -218,16 +218,16 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .info .flexible, .info .extensible{
 	 animation: fadeInLeft 1.25s cubic-bezier(0.4, 0, 1, 1) 0.5s 1 forwards;
 	 font-size: 50px;
-	 color: #5a356e;
+	 color: #922785;
 }
 .info .Scalable, .info .cloud{
 	animation: fadeInRight 1.25s cubic-bezier(0.4, 0, 0.1, 1) 0.5s 1 forwards;
 	 font-size: 50px;
-	 color: #5a356e;	
+	 color: #922785;	
 }
 
 .circle {
-    border: 2px dotted #5a356e;
+    border: 2px dotted #922785;
     border-radius: 50%;
     content: "";
     width: 150px;
@@ -242,7 +242,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .pitch{
 	color: #000;
 	text-align: left;
-	padding: 20px;
+	padding: 35px;
 }
 .purple-shade{
 	
@@ -304,10 +304,10 @@ button.subscribe{
 .login, .signup{
 	width: 400px;
     margin: 0 auto;
-    border: 1px solid #87989e;
+    border: 1px solid #778A91;
     padding: 0 30px;
     border-radius: 2px;
-    background: #87989E;
+    background: #778A91;
     backface-visibility: hidden;
     
 	
@@ -320,7 +320,7 @@ content: " ";
     width: 0;
     border-style: solid;
     border-width: 10px;
-    border-color: transparent transparent #84969c transparent;
+    border-color: transparent transparent #778A91 transparent;
     position: relative;
     top: -28px;
     right: 0;
@@ -342,28 +342,21 @@ content: " ";
     transition: 1s;
 }
 .signup{
-	transform: rotateY(90deg);
-	transition-duration: .5s;
-	backface-visibility: hidden;
-	margin: -325px auto;
+	display: none;
+	
+	margin: 0px auto;
 }
 .signup-active .signup{
 	display: block !important;
-	transform: rotateY(0deg) !important;
 	
-	transition-duration: .5s;
-	transition-delay: 1s;
 }
 .login{
 	margin-top: 0 !important;
 	
-	transition-duration: 1s;
-	transition-delay: .5s;
+	
 }
 .signup-active .login{
-	transition-duration: .5s;
-	
-	transform: rotateY(90deg) !important;
+	display: none;
 
 }
 
@@ -388,7 +381,7 @@ content: " ";
 }
 .right-side{
 	padding-top: 30px;
-	color: #84969c;
+	color: #778a91;
 }
 .right-side h1{
 	font-size: 63px;
