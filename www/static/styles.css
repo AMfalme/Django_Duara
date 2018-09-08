@@ -57,9 +57,14 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	min-height: 360px;
 	height: 100%;
 	/* conflicting colors cornelius to advice cornelius #5a356e*/
-    background: #330e2f;
-    color: #fff;
+    
+    color: #000;
     text-align: center;
+    border: 1px solid #84969c;
+    border-radius: 4px;
+}
+.Title{
+	color: #000;
 }
 .landing-section .left-side button{
 	border: 1px solid #fff;
@@ -91,17 +96,17 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     
 }
 .form-triggers li a{
-	color: #fff;
+	color: #000;
 }
 .form-triggers li.active{
- color: #fff;
+ color: #000;
 }
 
 .form-triggers li.active a{
-		color: #fff;
+		color: #000;
 }
 .code-sample{
-	background-color: #030021;
+	background-color: #5a356e;
 	min-height: 350px;
 	width: 100%;
 	border-radius: 4px;
@@ -138,9 +143,18 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	background-position: center;
 	margin: 0 auto;
 }
-.info{
+.info-top, .info-bottom{
     padding: 0px;
 
+}
+.info h6{
+	color: #000000;
+    border-bottom: 1px solid #87989e;
+    line-height: 29px;
+    margin-top: -25px;
+}
+.info p{
+	color: #000;
 }
 .product{
 	margin: 40px auto;
@@ -165,6 +179,18 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 .product div{
 
 }
+.left{
+	float: left;
+	position: relative;
+    left: 85px;
+    margin-top: -50px !important;
+}
+.right{
+	float: right;
+	position: relative;
+    right: 85px;
+    margin-top: -50px !important;
+}
 .wording{
 	    float: right;
     
@@ -182,15 +208,41 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	visibility: none;
 }
 .info div{
-	margin: 20px auto;
-	width: 50%;
+	    margin: 0 auto;
+    
     display: inline-block;
-    float: left;
+   
+    text-align: center;
+   
 }
-.info i{
+.info .flexible, .info .extensible{
 	 animation: fadeInLeft 1.25s cubic-bezier(0.4, 0, 1, 1) 0.5s 1 forwards;
 	 font-size: 50px;
-	 color: #84969c;
+	 color: #5a356e;
+}
+.info .Scalable, .info .cloud{
+	animation: fadeInRight 1.25s cubic-bezier(0.4, 0, 0.1, 1) 0.5s 1 forwards;
+	 font-size: 50px;
+	 color: #5a356e;	
+}
+
+.circle {
+    border: 2px dotted #5a356e;
+    border-radius: 50%;
+    content: "";
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+   
+}
+.limit-info{
+	margin-top: 70px;
+}
+.pitch{
+	color: #000;
+	text-align: left;
+	padding: 20px;
 }
 .purple-shade{
 	
@@ -207,6 +259,9 @@ left: 270px !important;
 .flexible{
 	background-image: url("../images/web icons/webicon-09.png"); 
 	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px;
+    height: 100px;
 	
 }
 .subscribe-form{
@@ -227,25 +282,32 @@ button.subscribe{
 .cloud{
 	background-image: url("../images/web icons/webicon-08.png");
 	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
 }
 
 .Scalable{
 	background-image: url("../images/web icons/web icon-03.png");
 	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
 }
 .extensible{
 	background-image: url("../images/web icons/web icon-05.png");
 	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
 }
 .login, .signup{
 	width: 400px;
     margin: 0 auto;
-    border: 1px solid #85969c;
+    border: 1px solid #87989e;
     padding: 0 30px;
     border-radius: 2px;
-    background: #330e2f;
-    
-    
+    background: #87989E;
     backface-visibility: hidden;
     
 	
@@ -260,7 +322,7 @@ content: " ";
     border-width: 10px;
     border-color: transparent transparent #84969c transparent;
     position: relative;
-    top: -30px;
+    top: -28px;
     right: 0;
 }
 .login:before{
@@ -272,7 +334,7 @@ content: " ";
     
 }
 .border-active{
-	border-bottom: 1px solid #fff;
+	border-bottom:1px solid #000;
     bottom: -48px;
     position: relative;
     width: 60px;
@@ -307,17 +369,17 @@ content: " ";
 
 .login input, .signup input{
 	
-	border-color: #030021;
+	
 	margin: 20px auto;
 	height: 45px;
 }
 .login input.submit, .signup input.submit{
-	background-color: #84969c;
-	border-color:#84969c;
-	width: 200px;
-	margin: 20px auto;
-	display: block;
-	color: #33132f;
+	background-color: #fff;
+    border-color: #84969c;
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+    color: #000;
 
 
 }
@@ -326,11 +388,13 @@ content: " ";
 }
 .right-side{
 	padding-top: 30px;
+	color: #84969c;
 }
 .right-side h1{
 	font-size: 63px;
     font-weight: 900;
     font-family: inherit;
+
 }
 .alternative{
 	margin: 0 auto;
@@ -339,15 +403,16 @@ content: " ";
 }
 .alternative ul li{
 	display: inline-block;
-	border-right: 1px solid #8b8bf1;
+	border-right: 1px solid #000;
 	margin-right: 5px;
 	padding-right: 5px; 
-	color: #fff;
+	color: #000;
 
 }
 .login form h2, .signup form h2{
 	text-align: center;
 	margin: 5px auto;
+	color: #fff;
 }
 .copyright{
 	    background-color: #000;
