@@ -49,9 +49,9 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	}
 	.dropdown{
 	display: none;
-		position: absolute !important;border: 1px solid #eee;
-   
-    border-radius: 8px;
+		position: absolute !important;border: 1px solid #778A91;
+   	z-index: 3;
+    border-radius: 2px;
 }
 
 .menu-hover:after{
