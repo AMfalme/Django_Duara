@@ -30,15 +30,15 @@ a:hover, a:focus{
 }
 nav.navigation ul li{
 	list-style: none;
-	display: inline-block;
-	margin: 30px auto;
-	padding: 10px;
-	float: right;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px;
+    float: left;
     font-size: 16px;
     font-weight: 500;
 }
 nav.navigation{
-	float: right;
+	
 }
 nav.navigation ul li a{
 	color: #85969c;
@@ -47,6 +47,32 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	text-decoration: none;
 	color: #000;
 	}
+	.dropdown{
+	display: none;
+		position: absolute !important;border: 1px solid #eee;
+   
+    border-radius: 8px;
+}
+
+.menu-hover:after{
+	content: " ";
+    width: 0;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #778A91 transparent transparent;
+    
+    float: right;
+    margin: 8px;
+    cursor: pointer;
+}
+.dropdown a{
+	display: block;
+    padding: 10px;
+    background: #fff;
+    z-index: 10000000;
+    border-bottom: 1px solid #eee;
+
+}
 .trial a{
 	background-color: #59356e;
     color: #fff !important;
@@ -54,14 +80,14 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     border-radius: 4px;
 }
 .landing-section{
-	min-height: 360px;
+	min-height: 500px;
 	height: 100%;
 	/* conflicting colors cornelius to advice cornelius #922785*/
     
     color: #000;
     text-align: center;
-    border: 1px solid #84969c;
     border-radius: 4px;
+    overflow: hidden;
 }
 .Title{
 	color: #000;
@@ -76,7 +102,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	margin: 60px auto;display: block;
 }
 .landing-section .left-side{
-	
+	margin-bottom: 15px;
 }
 .form-triggers ul{
 	width: 400px;
@@ -158,10 +184,13 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .product{
 	margin: 40px auto;
-	min-height: 275px;
-	border: 1px solid #000;
+	min-height: 375px;
 	padding: 20px;
+	border: 1px solid rgba(118, 136, 145, 0.4);
+	border-radius: 8px;
+	
 }
+
 .product h4{
 	text-align: center;
     color: #000;
@@ -171,8 +200,8 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     margin: 30px auto; 
 }
 .product i{
-	float: left;
-	color: #b4a9af;
+	display: block;text-align: center;
+	color: #000;
 	
     font-size: 35px;
 }
@@ -192,7 +221,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     margin-top: -50px !important;
 }
 .wording{
-	    float: right;
+	margin: 0 auto;
     
     padding: 20px;
     width: 250px;
@@ -202,7 +231,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     
 }
 .wording p{
-	color: #330e2f;
+	color: #000000;
 }
 .wow{
 	visibility: none;
@@ -254,7 +283,7 @@ left: 270px !important;
 }
 .shade{
 	background-color: #d7ded7;
-	margin: 183px auto 20px;
+	
 }
 .flexible{
 	background-image: url("../images/web icons/webicon-09.png"); 
@@ -376,6 +405,12 @@ content: " ";
 
 
 }
+.pricing h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
 .page-tab{
 	min-height: 500px !important;
 }
@@ -383,10 +418,11 @@ content: " ";
 	padding-top: 30px;
 	color: #778a91;
 }
-.right-side h1{
-	font-size: 63px;
+.right-side h2{
+
     font-weight: 900;
     font-family: inherit;
+    color:rgb(105, 40, 103);
 
 }
 .alternative{
