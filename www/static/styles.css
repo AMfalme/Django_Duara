@@ -132,9 +132,9 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 		color: #000;
 }
 .code-sample{
-	background-color: #922785;
+	background-color: #030021;
 	min-height: 350px;
-	width: 100%;
+	width: 80%;
 	border-radius: 4px;
 	margin: 110px auto 20px;
     padding: 45px;
@@ -201,7 +201,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .product i{
 	display: block;text-align: center;
-	color: #000;
+	color:  #31132e;
 	
     font-size: 35px;
 }
@@ -220,12 +220,15 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     right: 85px;
     margin-top: -50px !important;
 }
+.clients{
+	text-align: center;
+}
 .wording{
 	margin: 0 auto;
     
     padding: 20px;
     width: 250px;
-    
+   
     min-height: 140px;
     text-align: center;
     
