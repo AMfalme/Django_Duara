@@ -455,6 +455,13 @@ content: " ";
 
 
 }
+.pricing{
+	width: 80%;
+	margin: 30px auto;
+	border:1px solid #030021;
+	padding: 20px;
+	border-radius: 4px;
+}
 .pricing h3{
 	text-align: center;
 	text-transform: uppercase;
@@ -536,6 +543,29 @@ width: 85px !important;
 /*.cloudcompute{
 	margin: -30px auto -80px auto;
 }*/
+.channels{
+	padding: 50px 0;
+}
+.channels img{
+	width: 60%;
+	width: 200px;
+	margin: 20px auto;
+}
+.channels li{
+	list-style: none;
+}
+.linkedin img{
+	width: 65px !important;
+}
+.descr{
+	padding-top: 50px;
+}
+.descr h4{
+	text-transform: uppercase;
+}
+.descr p{
+	text-align: left;
+}
 .copyright img
 {
 	width: 20px;
