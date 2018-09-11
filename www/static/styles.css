@@ -570,9 +570,19 @@ width: 85px !important;
 {
 	width: 20px;
 }
+.quick li{
+	color: #fff;
+	list-style: none;
+	text-align: left;
+	padding-left: 80px;
+	text-decoration: underline;
+}
 footer{
 	background-color: #000;
 	color: #fff;
 	bottom: 0;
 	text-align: center;
+}
+footer .logo img{
+	height: 200px;
 }
