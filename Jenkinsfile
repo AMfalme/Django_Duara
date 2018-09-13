@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('Build') {
         steps {
-          sh 'echo helloworld: 3'
+          sh "docker build . -t gcr.io/robotic-fuze-194312/ddash:$BUILD_NUMBER"
         }
       }
     }
