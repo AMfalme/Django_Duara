@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    registryCredential = "duara-cloud"
+    registryCredential = "duara-cloud Google Container Registry Account"
     dockerImage = ''
   }
 
