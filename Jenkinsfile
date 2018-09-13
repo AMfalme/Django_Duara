@@ -3,7 +3,9 @@ pipeline {
     stages {
       stage('Build') {
         steps {
-          docker.build "gcr.io/robotic-fuze-194312/ddash:$BUILD_NUMBER"
+          script {
+            docker.build "${env.DOCKER_REGISTRY}/${env.JOB_NAME}:${env.BUILD_NUMBER}"
+          }
         }
       }
     }
