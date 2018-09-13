@@ -38,7 +38,11 @@ nav.navigation ul li{
     font-weight: 500;
 }
 nav.navigation{
-	
+	margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
 }
 nav.navigation ul li a{
 	color: #85969c;
@@ -49,9 +53,10 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	}
 	.dropdown{
 	display: none;
-		position: absolute !important;border: 1px solid #778A91;
+		position: absolute !important;
    	z-index: 3;
     border-radius: 2px;
+    box-shadow: 0px 2px 1px 0px rgb(106, 50, 103);
 }
 
 .menu-hover:after{
@@ -80,10 +85,8 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     border-radius: 4px;
 }
 .landing-section{
-	min-height: 500px;
-	height: 100vh;
-	/* conflicting colors cornelius to advice cornelius #922785*/
-    
+	min-height: 600px;
+	margin: 50px auto 0;
     color: #000;
     text-align: center;
     border-radius: 4px;
@@ -97,34 +100,37 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 }
 .landing-section .left-side button{
 	background-color: #6a3267;
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 3px;
-    min-width: 200px;
-    display: block;
+
+color: #ffffff;
+
+padding: 15px;
+
+border-radius: 3px;
+
+width: 400px;
+
+display: block;
+
+margin: 0 auto;
 }
 .landing-section .left-side{
-	margin-bottom: 15px;
+	margin: 15px auto;
 }
-.form-triggers ul{
-	width: 400px;
-    margin: 0 auto;
-    list-style: none;
-    overflow: hidden;
-    margin: 5px auto;
+.menu-border{
+	box-shadow: -9px -20px 18px 20px rgb(106, 50, 103);
 }
-.form-triggers li{
-	text-align: center;
-	display: inline-block;
-    padding: 20px;
+
+.form-triggers{
+	position: relative;
+    float: right;
     width: 50%;
-    color: #fff;
-    float: left;
-    cursor: pointer;
-    
+    min-width: 400px;
 }
 .form-triggers li a{
 	color: #000;
+}
+.form-triggers li{
+	margin: 22px 65px !important;
 }
 .form-triggers li.active{
  color: #000;
@@ -136,15 +142,15 @@ text-decoration: underline;
 color: #000;
 }
 .form-triggers li.active a{
-		color: #000;
+		color: #6a3267;
 }
 .code-sample{
-	background-color: #030021;
+	
 	width: 80%;
 	border-radius: 4px;
-	margin: 20px auto;
+	margin:  auto;
 	padding: 45px;
-color: #fff;
+	color: #030021;
 }
 .services{
 	display: block;
@@ -160,6 +166,9 @@ color: #fff;
 	margin-top: 20px;
 
 
+}
+.owl-carousel{
+	padding: 20px;
 }
 .top-li{
 	border-bottom: 1px solid #eee;
@@ -192,7 +201,7 @@ color: #fff;
 	color: #000;
 }
 .product{
-	margin: 40px auto;
+	margin: 0px auto 70px;
 	min-height: 330px;
 	padding: 20px;
 	border: 1px solid rgb(3, 0, 33);
@@ -210,7 +219,7 @@ color: #fff;
 }
 .product i{
 	display: block;text-align: center;
-	color:  #31132e;
+	color:  #030021;
 	
     font-size: 35px;
 }
@@ -222,6 +231,10 @@ color: #fff;
 	position: relative;
     left: 85px;
     margin-top: -50px !important;
+}
+.right-nav{
+	width: 400px;
+
 }
 .right{
 	float: right;
@@ -278,8 +291,11 @@ color: #fff;
    
 }
 .limit-info{
-	margin-top: 0px;
+	margin: 100px auto;
+	animation-delay: 12s;
+	-webkit-animation:  5s infinite linear;
 }
+
 .pitch{
 	color: #000;
 	text-align: center;
@@ -306,12 +322,23 @@ left: 270px !important;
     height: 100px;
 	
 }
-.map{
-	background-image: url("../images/africa3.png");
-height: 65vh;
-background-repeat: no-repeat;
-background-size: contain;
-background-position: 50% -12%;
+.map img{
+	
+    height: 500px;
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: block;
+
+}
+.map h4{
+	text-align: center;
+    color: #040a21;
+}
+@media only screen and (max-width: 1600px) {
+	.map{
+		background-size: contain;
+	}
 }
 .subscribe-form{
 	padding: 30px;
@@ -336,36 +363,36 @@ button.subscribe{
 	height: 100px;
 }
 .dot{
-	background-image: url(../images/pin-marker.png);
-    width: 50px;
-    height: 50px;
+	background-image: url(../images/marker.png);
+    width: 25px;
+    height: 25px;
     z-index: 33;
     position: absolute;
     border-radius: 14px;
     cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
-}
+}/*
 .Ethiopia{
-	right: 140px;
-    margin-top: 140px;
+	right: 770px;
+    top: 320px;
 }
 .Kenya{
-	right: 150px;
-    margin-top: 190px;
+	right: 785px;
+    top: 330px;
 }
 .Nigeria{
-	left: 230px;
-    margin-top: 155px;
+	right: 1150px;
+    top: 380px;
 }
 .SouthAfrica{
 	right: 230px;
-    margin-top: 380px;
+    margin: 0 auto;
 }
 .Tunisia{
 	left: 250px;
-    margin-top: 10px;
-}
+    margin: 0 auto;
+}*/
 .Scalable{
 	background-image: url("../images/web icons/web icon-03.png");
 	background-size: contain;
@@ -381,7 +408,7 @@ button.subscribe{
 	height: 100px;
 }
 .login, .signup{
-	width: 450px;
+	width: 400px;
     margin: 0 auto;
     border: 1px solid #778A91;
     padding: 0 30px;
@@ -413,8 +440,8 @@ content: " ";
     
 }
 .border-active{
-	border-bottom:1px solid #000;
-    bottom: -48px;
+	border-bottom:1px solid #6a3267;
+    bottom: -63px;
     position: relative;
     width: 60px;
     left: 70px;
@@ -480,7 +507,7 @@ content: " ";
     font-weight: 900;
     font-family: inherit;
     color:rgb(105, 40, 103);
-    font-size: 40px;
+    font-size: 34px;
     
 
 }
@@ -502,13 +529,7 @@ content: " ";
 	margin: 5px auto;
 	color: #fff;
 }
-.copyright{
-	    background-color: #000;
-    text-align: center;
-    margin-bottom: -64px;
-    padding: 4px;
-    color: #eef;
-}
+
 .clompute h2{
 	color: #663ab6;
 font-size: 20px;
@@ -544,44 +565,74 @@ width: 85px !important;
 	margin: -30px auto -80px auto;
 }*/
 .channels{
-	padding: 50px 0;
+	padding: 35px 0;
 }
 .channels img{
 	width: 60%;
-	width: 200px;
-	margin: 20px auto;
+	width: 25px;
+	margin: 10px auto;
 }
 .channels li{
 	list-style: none;
 }
 .linkedin img{
-	width: 65px !important;
+	width: 30px !important;
 }
 .descr{
 	padding-top: 50px;
 }
 .descr h4{
-	text-transform: uppercase;
+	
+	text-decoration: underline;
+	line-height: 10px;
 }
 .descr p{
 	text-align: left;
 }
+.copyright p{
+	text-align: left;
+	padding-left: 50px;
+}
 .copyright img
 {
 	width: 20px;
+	height: 20px !important;
 }
 .quick li{
 	color: #fff;
-	list-style: none;
-	text-align: left;
-	padding-left: 80px;
-	text-decoration: underline;
+    list-style: none;
+    padding-left: 20px;
+}
+@-webkit-keyframes rotation {
+		0% {
+
+				-webkit-transform: rotate(0deg);
+		}
+		25%{
+				transition-delay: 10s;
+				-webkit-transform: rotate(90deg);
+		}
+		50%{
+				-webkit-transform: rotate(180deg);
+		}
+		75%{
+			-webkit-transform: rotate(270deg);
+		}
+
+		100%{
+			-webkit-transform: rotate(360deg);
+		}
+}
+.globe{
+	/*-webkit-animation: rotation 5s infinite linear;*/
+	width: 70px;
+	height: 70px;
 }
 footer{
-	background-color: #000;
+	background-color: #030021;
 	color: #fff;
 	bottom: 0;
-	text-align: center;
+	
 }
 footer .logo img{
 	height: 200px;

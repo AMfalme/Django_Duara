@@ -26,14 +26,15 @@
 	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css">
 </head>
 <body>
-		<div class="container top-nav">
+		<div class=" menu-border">
+	<div class="container top-nav">
 	<div class="row">
 		<div class="logo col-md-2">
 			<a href="home.html"><img src="img/logo/horizontal.svg"></a>
 			
 		</div>
-		<nav class="col-md-8 navigation">
-			<ul>
+		<nav class="col-md-10 navbar  collapse navbar-collapse navigation">
+			<ul class=" ">
 				<li>
 					<div class="menu-hover" >
 					<a href="#"> 
@@ -47,18 +48,34 @@
 				</div>
 
 				</li>
-				<li >
-					<a href="pricing.html" class="active">
+				<li>
+					<a href="pricing.html">
 						Pricing
 					</a>
 				</li>
-			</ul>
+
+		
+			<div class="form-triggers">
+				<div class="right-nav">
+					<li id="signup"  class="active"><a href="#signup">Signup</a></li>
+					<div class="border-active">
+						
+				</div>
+
+					<li id="login">
+						<a href="#login">Login</a>
+					</li>
+				</div>
+				
+				
+			</div>
 			
-			
+				</ul>
 		</nav>
 		
 	</div>
 	</div>
+</div>
 		<div class="container ">
 		<div class="row">
 			<div class="col-md-12">
@@ -110,18 +127,24 @@
 	</div>
 		<footer class="container-fluid">
 		<div class="row">
-				<div class="col-md-4 logo">
+				<div class="col-md-3 logo">
 				<img src="img/logo/vertical.svg">
-				<h4>
-					Quick links
-				</h4>
-				<ul class="quick">
+
+				<div class="copyright">
+					<p>Copyright <img src="images/copyright.png"></p>
+				</div>
+				
+			
+			</div>
+			<div class="col-md-3 descr">
+				<h4>Company</h4>
+					<ul class="quick">
 					<a href="home.html"><li>
 						Homepage
 					</li></a>
 					<a href="pricing.html">
 						<li>
-							Our pricing model
+							pricing
 						</li>
 					</a>
 					<a href="#">
@@ -136,36 +159,33 @@
 					</a>
 				</ul>
 			</div>
-			<div class="col-md-5 descr">
-				<h4>Reliable</h4>
-				<p>
-					We offer public cloud service with more than 5 data centres around Africa.
-					We give you a robust platform for very affordable prices.
-							Get a virtual private cloud system for as low as 3$/month
-				</p>
-				<h4>Affordable</h4>
-				<p>
-					Easily scale up and quickly to accomodate more users and more tasks. We grow together, We progress with each other. 
-					Increase your compute resources as your business demands. Give your end user a seemless experience as you scale up your applications.
-				</p>
+			<div class="col-md-3 descr">
+				<hr>
+				<h5>Focusing on Africa</h5>
+						<img class="globe" src="images/globe.png">
 			</div>
 			
 			<div class="col-md-3">
 				<ul class="channels">
 					<li >
-						<h4>Follow us</h4>
-						<img src="images/slack.png">
+						<h4>CONTACT US</h4>
+						<P>
+							Galana Plaza, 7th Floor<br>
+							Galana Road, Nairobi<br>
+							Tel: 07XXXXXXXX<br>
+							Email: Support@duara.io<br>
+
+						</P>
+						<img src="images/slack.png" ><span>Slack</span>
 					</li>
 					<li class="linkedin">
-						<img src="images/Linkedin2.png">
+						<img src="images/linkedin.jpg"><span>Linkedin</span>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</footer>
-	<div class="copyright">
-					<p>Copyright <img src="images/copyright.png"></p>
-				</div>
+	
 	<script type="text/javascript" src="static/scripts.js"></script>
 </body>
 </html>
