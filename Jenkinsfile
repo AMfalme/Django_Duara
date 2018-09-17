@@ -28,7 +28,7 @@ pipeline {
         script {
           kubernetesDeploy(
             kubeconfigId: 'duara-kubeconfig',
-            configs: './deployment/*.yaml',
+            configs: 'deployment/*.yaml',
             enableConfigSubstitution: false,
           )
         }
