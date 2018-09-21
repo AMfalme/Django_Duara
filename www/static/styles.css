@@ -96,7 +96,10 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	display: block;
 }
 .Title{
-	color: #000;
+	color: #778a91;
+    position: absolute;
+    margin: -15px auto 0 45px;
+    display: block;
 }
 .landing-section .left-side button{
 	background-color: #6a3267;
@@ -117,8 +120,10 @@ margin: 0 auto;
 	margin: 15px auto;
 }
 .menu-border{
-	box-shadow: -9px -20px 18px 20px rgb(106, 50, 103);
+	box-shadow: -9px -20px 18px 20px rgb(4, 10, 33);
 }
+
+
 
 .form-triggers{
 	position: relative;
@@ -202,7 +207,7 @@ color: #000;
 }
 .product{
 	margin: 0px auto 70px;
-	min-height: 330px;
+	min-height: 360px;
 	padding: 20px;
 	border: 1px solid rgb(3, 0, 33);
 	border-radius: 8px;
@@ -249,7 +254,7 @@ color: #000;
 	margin: 0 auto;
     
     padding: 20px;
-    width: 250px;
+    
    
     min-height: 140px;
     text-align: center;
@@ -326,7 +331,7 @@ left: 270px !important;
 	
     height: 500px;
 	width: 90%;
-	max-width: 1000px;
+	max-width: 870px;
 	margin: 0 auto;
 	display: block;
 
@@ -565,7 +570,7 @@ width: 85px !important;
 	margin: -30px auto -80px auto;
 }*/
 .channels{
-	padding: 35px 0;
+	
 }
 .channels img{
 	width: 60%;
@@ -583,8 +588,7 @@ width: 85px !important;
 }
 .descr h4{
 	
-	text-decoration: underline;
-	line-height: 10px;
+	text-transform: uppercase;
 }
 .descr p{
 	text-align: left;
@@ -601,7 +605,7 @@ width: 85px !important;
 .quick li{
 	color: #fff;
     list-style: none;
-    padding-left: 20px;
+    
 }
 @-webkit-keyframes rotation {
 		0% {
@@ -629,7 +633,7 @@ width: 85px !important;
 	height: 70px;
 }
 footer{
-	background-color: #030021;
+	background-color: #000;
 	color: #fff;
 	bottom: 0;
 	
