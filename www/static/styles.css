@@ -56,7 +56,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 		position: absolute !important;
    	z-index: 3;
     border-radius: 2px;
-    box-shadow: 0px 2px 1px 0px rgb(106, 50, 103);
+    box-shadow: 0px 2px 1px 0px rgb(41, 107, 181);
 }
 
 .menu-hover:after{
@@ -102,7 +102,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     display: block;
 }
 .landing-section .left-side button{
-	background-color: #6a3267;
+	background-color: #296BB5;
 
 color: #ffffff;
 
@@ -120,7 +120,7 @@ margin: 0 auto;
 	margin: 15px auto;
 }
 .menu-border{
-	box-shadow: -9px -20px 18px 20px rgb(4, 10, 33);
+	box-shadow: -9px -20px 18px 20px #6FCBD6;
 }
 
 
@@ -147,7 +147,7 @@ text-decoration: underline;
 color: #000;
 }
 .form-triggers li.active a{
-		color: #6a3267;
+		color: #296BB5;
 }
 .code-sample{
 	
@@ -224,7 +224,7 @@ color: #000;
 }
 .product i{
 	display: block;text-align: center;
-	color:  #030021;
+	color:  #296BB5;
 	
     font-size: 35px;
 }
@@ -445,7 +445,7 @@ content: " ";
     
 }
 .border-active{
-	border-bottom:1px solid #6a3267;
+	border-bottom:1px solid #296BB5;
     bottom: -63px;
     position: relative;
     width: 60px;
