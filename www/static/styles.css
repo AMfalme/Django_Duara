@@ -102,7 +102,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     display: block;
 }
 .landing-section .left-side button{
-	background-color: #296BB5;
+	background-color: #92278F;
 
 color: #ffffff;
 
@@ -120,7 +120,7 @@ margin: 0 auto;
 	margin: 15px auto;
 }
 .menu-border{
-	box-shadow: -9px -20px 18px 20px #6FCBD6;
+	box-shadow: -7px -12px 12px 20px #552b5d;
 }
 
 
@@ -224,7 +224,7 @@ color: #000;
 }
 .product i{
 	display: block;text-align: center;
-	color:  #296BB5;
+	color:  #92278F;
 	
     font-size: 35px;
 }
@@ -320,7 +320,7 @@ left: 270px !important;
 	
 }
 .flexible{
-	background-image: url("../images/web icons/webicon-09.png"); 
+	background-image: url("../img/images/web icons/webicon-09.png"); 
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
@@ -361,14 +361,14 @@ button.subscribe{
     width: 100%;
 }
 .cloud{
-	background-image: url("../images/web icons/webicon-08.png");
+	background-image: url("../img/images/web icons/webicon-08.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
 	height: 100px;
 }
 .dot{
-	background-image: url(../images/marker.png);
+	background-image: url(../img/images/marker.png);
     width: 25px;
     height: 25px;
     z-index: 33;
@@ -399,14 +399,14 @@ button.subscribe{
     margin: 0 auto;
 }*/
 .Scalable{
-	background-image: url("../images/web icons/web icon-03.png");
+	background-image: url("../img/images/web icons/web icon-03.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
 	height: 100px;
 }
 .extensible{
-	background-image: url("../images/web icons/web icon-05.png");
+	background-image: url("../img/images/web icons/web icon-05.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
