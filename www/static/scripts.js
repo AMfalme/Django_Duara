@@ -1,8 +1,10 @@
 $(function(){
 			
 			$('#login').click( function(e){
+				e.stopPropagation();
 				e.preventDefault();
 				 console.log( $( this ).text() );
+				 $('.identity-forms').show();
 				$('#login').removeClass('active');
 				$(this).addClass('active');
 				$('.transform').addClass("login-active");
@@ -10,6 +12,8 @@ $(function(){
 				
 			});
 			$('#signup').click( function(e){
+				e.stopPropagation();
+ 				$('.identity-forms').show();
 				e.preventDefault();
 				 console.log( $( this ).text() );
 				$('#signup').removeClass('active');
@@ -23,8 +27,9 @@ $(function(){
 					$('#dropdown').toggle();
 				});
 			$("body").click(function(e) {
-               e.preventDefault();
+            
                $('#dropdown').hide();
+               $('.identity-forms').hide();
             });
 		});
 		$(document).ready(function(){
