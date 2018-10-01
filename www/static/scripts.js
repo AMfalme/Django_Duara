@@ -19,9 +19,13 @@ $(function(){
 				
 			});
 			$('.menu-hover').click(function(e){
-					e.preventDefault();
-					$('.dropdown').toggleClass('block');
+					e.stopPropagation();
+					$('#dropdown').toggle();
 				});
+			$("body").click(function(e) {
+               e.preventDefault();
+               $('#dropdown').hide();
+            });
 		});
 		$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({

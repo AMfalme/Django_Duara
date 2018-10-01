@@ -51,7 +51,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	text-decoration: none;
 	color: #000;
 	}
-	.dropdown{
+	#dropdown{
 	display: none;
 		position: absolute !important;
    	z-index: 3;
@@ -69,8 +69,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     float: right;
     margin: 8px;
     cursor: pointer;
-}
-.dropdown a{
+}#dropdown a{
 	display: block;
     padding: 10px;
     background: #fff;
