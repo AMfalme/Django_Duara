@@ -72,22 +72,26 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     border-radius: 2px;
     box-shadow: 0px 2px 1px 0px rgb(130, 89, 138);
 }
+.identity-active{
+	display: block !important;
+}
 .identity-forms{
 	
 	padding: 10px;
 	
-	margin: -15px 150px;
+	margin: -25px;
     position: absolute;
-    right: 0;
+  
     opacity: 15;
     z-index: 10;
     display: none;
+        margin-left: 60px;
 }
 .identity-forms .signup:before {
-    left: 60px;
+    left: 50px;
 }
 .identity-forms .login:before {
-    right: -260px;
+    right: -245px;
 }
 .menu-hover:after{
 	content: " ";
@@ -147,7 +151,7 @@ display: block;
 margin: 0 auto;
 }
 .landing-section .left-side{
-	margin: -45px auto;
+	margin: -60px auto;
 }
 .menu-border{
 	/*box-shadow: -7px -12px 12px 20px #778a91;*/
@@ -329,7 +333,8 @@ color: #000;
 .limit-info{
 	margin: 100px auto;
 	animation-delay: 12s;
-	-webkit-animation:  5s infinite linear;
+	-webkit-animation:  25s infinite linear;
+	animation-name: rotation;
 }
 
 .pitch{
@@ -344,7 +349,7 @@ color: #000;
 }
 .border-signup{
 	transition: .1s;
-left: 270px !important;
+left: 260px !important;
 }
 .shade{
 	background-color: #d7ded7;
@@ -356,6 +361,7 @@ left: 270px !important;
 	background-repeat: no-repeat;
 	width: 100px;
     height: 100px;
+
 	
 }
 .map img{
@@ -452,6 +458,7 @@ button.subscribe{
     background: #542e63;
     backface-visibility: hidden;
     height: 400px;
+
  
 	
 }
@@ -475,11 +482,11 @@ content: " ";
     right: 0;
 }
 .login:before{
-	 right: -100px;
+	 right: -80px;
 }
 .signup:before{
 	
-    left: -100px;
+    left: -115px;
     
 }
 .border-active{
@@ -527,7 +534,7 @@ content: " ";
 }
 .identity-forms {}
 .login form{
-	margin-top: 80px;
+
 }
 .pricing{
 	width: 80%;
@@ -654,21 +661,79 @@ width: 85px !important;
 
 				-webkit-transform: rotate(0deg);
 		}
-		25%{
-				transition-delay: 10s;
+		20%{
+			
 				-webkit-transform: rotate(90deg);
+		}
+		30%{
+			
+				-webkit-transform: rotate(90deg);
+		}
+		40%{
+				-webkit-transform: rotate(180deg);
 		}
 		50%{
 				-webkit-transform: rotate(180deg);
 		}
-		75%{
+		60%{
 			-webkit-transform: rotate(270deg);
+		}
+		70%{
+			-webkit-transform: rotate(270deg);
+		}
+
+		80%{
+			-webkit-transform: rotate(360deg);
+		}
+
+		90%{
+			-webkit-transform: rotate(360deg);
 		}
 
 		100%{
 			-webkit-transform: rotate(360deg);
 		}
 }
+@-webkit-keyframes rotateX {
+		0% {
+
+				-webkit-transform: rotateX(0deg);
+		}
+		20%{
+			
+				-webkit-transform: rotateX(90deg);
+		}
+		30%{
+			
+				-webkit-transform: rotateX(90deg);
+		}
+		40%{
+				-webkit-transform: rotateX(180deg);
+		}
+		50%{
+				-webkit-transform: rotateX(180deg);
+		}
+		60%{
+			-webkit-transform: rotateX(270deg);
+		}
+		70%{
+			-webkit-transform: rotateX(270deg);
+		}
+
+		80%{
+			-webkit-transform: rotateX(360deg);
+		}
+
+		90%{
+			-webkit-transform: rotateX(360deg);
+		}
+
+		100%{
+			-webkit-transform: rotateX(360deg);
+		}
+}
+
+
 .globe{
 	/*-webkit-animation: rotation 5s infinite linear;*/
 	width: 70px;

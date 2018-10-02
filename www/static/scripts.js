@@ -1,11 +1,16 @@
 $(function(){
 	
-			
+			$('.identity-forms').click(
+					function(e){
+						e.stopPropagation();
+					}
+					);
 			$('#login').click( function(e){
+
 				e.stopPropagation();
 				e.preventDefault();
 				 console.log( $( this ).text() );
-				 $('.identity-forms').show();
+				 $('.identity-forms').addClass('identity-active');
 				$('#login').removeClass('active');
 				$(this).addClass('active');
 				$('.transform').addClass("login-active");
@@ -14,7 +19,7 @@ $(function(){
 			});
 			$('#signup').click( function(e){
 				e.stopPropagation();
- 				$('.identity-forms').show();
+ 				$('.identity-forms').addClass('identity-active');
 				e.preventDefault();
 				 console.log( $( this ).text() );
 				$('#signup').removeClass('active');
@@ -30,13 +35,9 @@ $(function(){
 			$("body").click(function(e) {
             
                $('#dropdown').hide();
-               $('.identity-forms').hide();
+               $('.identity-forms').removeClass('identity-active');
             });
-            $('.identity-forms').click(
-            	function(e){
-            		$('.identity-forms').show();
-            	}
-            	);
+           
 
 		});
 		$(document).ready(function(){
