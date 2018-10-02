@@ -1,4 +1,5 @@
 $(function(){
+	
 			
 			$('#login').click( function(e){
 				e.stopPropagation();
@@ -31,6 +32,12 @@ $(function(){
                $('#dropdown').hide();
                $('.identity-forms').hide();
             });
+            $('.identity-forms').click(
+            	function(e){
+            		$('.identity-forms').show();
+            	}
+            	);
+
 		});
 		$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({

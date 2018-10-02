@@ -117,7 +117,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     display: block;
 }
 .landing-section .left-side button{
-	background-color: #92278F;
+	background-color: #778A91;
 
 color: #ffffff;
 
@@ -135,7 +135,7 @@ margin: 0 auto;
 	margin: 15px auto;
 }
 .menu-border{
-	box-shadow: -7px -12px 12px 20px #552b5d;
+	box-shadow: -7px -12px 12px 20px #778a91;
 }
 
 
@@ -161,8 +161,8 @@ text-decoration: underline;
 
 color: #000;
 }
-.form-triggers li.active a{
-		color: #296BB5;
+.form-triggers li.active a, .form-triggers li.active a:hover{
+		color: #94488f;
 }
 .code-sample{
 	
@@ -430,13 +430,20 @@ button.subscribe{
 .login, .signup{
 	width: 400px;
     margin: 0 auto;
-    border: 1px solid #778A91;
+    border: 1px solid #94488f;
     padding: 0 30px;
     border-radius: 2px;
-    background: #778A91;
+    background: #94488f;
     backface-visibility: hidden;
-    
+    height: 400px;
+    overflow: hidden;
 	
+}
+.login p, .signup p{
+	color: #fff;
+}
+.login a, .signup a{
+	color: grey;
 }
 .btn:hover{
 	color: #fff;
@@ -446,7 +453,7 @@ content: " ";
     width: 0;
     border-style: solid;
     border-width: 10px;
-    border-color: transparent transparent #778A91 transparent;
+    border-color: transparent transparent #94488f transparent;
     position: relative;
     top: -28px;
     right: 0;
@@ -460,7 +467,7 @@ content: " ";
     
 }
 .border-active{
-	border-bottom:1px solid #296BB5;
+	border-bottom:1px solid #94488f;
     bottom: -63px;
     position: relative;
     width: 60px;
@@ -493,14 +500,18 @@ content: " ";
 	height: 45px;
 }
 .login input.submit, .signup input.submit{
-	background-color: #fff;
+	background-color: #778A91;
     border-color: #84969c;
-    width: 200px;
+    width: 100%;
     margin: 20px auto;
     display: block;
-    color: #000;
+    color: #fff;
 
 
+}
+.identity-forms {}
+.login form{
+	margin-top: 80px;
 }
 .pricing{
 	width: 80%;
