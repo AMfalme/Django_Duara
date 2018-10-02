@@ -19,8 +19,8 @@ $(function(){
 			});
 			$('#signup').click( function(e){
 				e.stopPropagation();
- 				$('.identity-forms').addClass('identity-active');
 				e.preventDefault();
+ 				$('.identity-forms').addClass('identity-active');
 				 console.log( $( this ).text() );
 				$('#signup').removeClass('active');
 				$(this).addClass('active');

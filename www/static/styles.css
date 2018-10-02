@@ -299,7 +299,7 @@ color: #000;
 	color: #000000;
 }
 .wow{
-	visibility: none;
+	visibility: hidden;
 }
 .info div{
 	    margin: 0 auto;
@@ -317,7 +317,8 @@ color: #000;
 .info .Scalable, .info .cloud{
 	animation: fadeInRight 1.25s cubic-bezier(0.4, 0, 0.1, 1) 0.5s 1 forwards;
 	 font-size: 50px;
-	 color: #922785;	
+	 color: #922785;
+	 visibility: visible;	
 }
 
 .circle {
@@ -355,12 +356,14 @@ left: 260px !important;
 	background-color: #d7ded7;
 	
 }
+
 .flexible{
 	background-image: url("../img/images/web icons/webicon-09.png"); 
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100px;
     height: 100px;
+    visibility: visible;
 
 	
 }
@@ -441,6 +444,8 @@ button.subscribe{
 	background-repeat: no-repeat;
 	width: 100px;
 	height: 100px;
+	visibility: visible;
+	animation-name: rotateY;
 }
 .extensible{
 	background-image: url("../img/images/web icons/web icon-05.png");
@@ -448,6 +453,7 @@ button.subscribe{
 	background-repeat: no-repeat;
 	width: 100px;
 	height: 100px;
+	visibility: visible;
 }
 .login, .signup{
 	width: 400px;
@@ -458,6 +464,7 @@ button.subscribe{
     background: #542e63;
     backface-visibility: hidden;
     height: 400px;
+    visibility: visible;
 
  
 	
@@ -694,42 +701,42 @@ width: 85px !important;
 			-webkit-transform: rotate(360deg);
 		}
 }
-@-webkit-keyframes rotateX {
+@-webkit-keyframes rotateY {
 		0% {
 
-				-webkit-transform: rotateX(0deg);
+				-webkit-transform: rotateY(0deg);
 		}
 		20%{
 			
-				-webkit-transform: rotateX(90deg);
+				-webkit-transform: rotateY(90deg);
 		}
 		30%{
 			
-				-webkit-transform: rotateX(90deg);
+				-webkit-transform: rotateY(90deg);
 		}
 		40%{
-				-webkit-transform: rotateX(180deg);
+				-webkit-transform: rotateY(180deg);
 		}
 		50%{
-				-webkit-transform: rotateX(180deg);
+				-webkit-transform: rotateY(180deg);
 		}
 		60%{
-			-webkit-transform: rotateX(270deg);
+			-webkit-transform: rotateY(270deg);
 		}
 		70%{
-			-webkit-transform: rotateX(270deg);
+			-webkit-transform: rotateY(270deg);
 		}
 
 		80%{
-			-webkit-transform: rotateX(360deg);
+			-webkit-transform: rotateY(360deg);
 		}
 
 		90%{
-			-webkit-transform: rotateX(360deg);
+			-webkit-transform: rotateY(360deg);
 		}
 
 		100%{
-			-webkit-transform: rotateX(360deg);
+			-webkit-transform: rotateY(360deg);
 		}
 }
 
