@@ -5,13 +5,19 @@
 */
 @font-face {
     font-family: circular-pro-medium;
+     font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Medium.otf") format("opentype");
 }
 
 @font-face {
     font-family: circular-pro-Bold;
-    font-weight: bold;
+     font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: proxima-nova-black;
+     font-display: auto;
+    src: url("../Fonts/Proxima Nova/Mark Simonson - Proxima Nova Regular.otf") format("opentype");
 }
 html{
 	font-family: 'circular-pro-medium' !important;
@@ -70,7 +76,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 		position: absolute !important;
    	z-index: 3;
     border-radius: 2px;
-    box-shadow: 0px 2px 1px 0px rgb(130, 89, 138);
+    box-shadow: 0px 2px 1px 0px rgb(132, 149, 155);
 }
 .identity-active{
 	display: block !important;
@@ -79,7 +85,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
 	
 	padding: 10px;
 	
-	margin: -25px;
+	margin: 5px;
     position: absolute;
   
     opacity: 15;
@@ -98,7 +104,7 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     width: 0;
     border-style: solid;
     border-width: 5px;
-    border-color: #778A91 transparent transparent;
+    border-color: #3c5158 transparent transparent;
     
     float: right;
     margin: 8px;
@@ -123,7 +129,12 @@ nav.navigation ul li a:hover, nav.navigation ul li a.active{
     color: #000;
     text-align: center;
     border-radius: 4px;
+
   
+}
+.landing-section h2{
+	font-size: 38px;
+	color: #580b77;
 }
 .block{
 	display: block;
@@ -154,7 +165,7 @@ margin: 0 auto;
 	margin: -60px auto;
 }
 .menu-border{
-	/*box-shadow: -7px -12px 12px 20px #778a91;*/
+	box-shadow: -7px -12px 12px 20px #778a91;
 }
 
 
@@ -335,7 +346,7 @@ color: #000;
 	margin: 100px auto;
 	animation-delay: 12s;
 	-webkit-animation:  25s infinite linear;
-	animation-name: rotation;
+
 }
 
 .pitch{
@@ -445,7 +456,7 @@ button.subscribe{
 	width: 100px;
 	height: 100px;
 	visibility: visible;
-	animation-name: rotateY;
+	animation-name: rotateA;
 }
 .extensible{
 	background-image: url("../img/images/web icons/web icon-05.png");
@@ -503,6 +514,10 @@ content: " ";
     width: 60px;
     left: 70px;
     transition: 1s;
+    display: none;
+}
+.identity-active .border-active{
+	display: block;
 }
 .signup{
 	display: block;
@@ -541,7 +556,7 @@ content: " ";
 }
 .identity-forms {}
 .login form{
-
+	margin-top: 30px;
 }
 .pricing{
 	width: 80%;
@@ -701,42 +716,42 @@ width: 85px !important;
 			-webkit-transform: rotate(360deg);
 		}
 }
-@-webkit-keyframes rotateY {
+@-webkit-keyframes rotateA {
 		0% {
 
-				-webkit-transform: rotateY(0deg);
+				-webkit-transform: rotate(0deg);
 		}
 		20%{
 			
-				-webkit-transform: rotateY(90deg);
+				-webkit-transform: rotate(90deg);
 		}
 		30%{
 			
-				-webkit-transform: rotateY(90deg);
+				-webkit-transform: rotate(90deg);
 		}
 		40%{
-				-webkit-transform: rotateY(180deg);
+				-webkit-transform: rotate(180deg);
 		}
 		50%{
-				-webkit-transform: rotateY(180deg);
+				-webkit-transform: rotate(180deg);
 		}
 		60%{
-			-webkit-transform: rotateY(270deg);
+			-webkit-transform: rotate(270deg);
 		}
 		70%{
-			-webkit-transform: rotateY(270deg);
+			-webkit-transform: rotate(270deg);
 		}
 
 		80%{
-			-webkit-transform: rotateY(360deg);
+			-webkit-transform: rotate(360deg);
 		}
 
 		90%{
-			-webkit-transform: rotateY(360deg);
+			-webkit-transform: rotate(360deg);
 		}
 
 		100%{
-			-webkit-transform: rotateY(360deg);
+			-webkit-transform: rotate(360deg);
 		}
 }
 
