@@ -38,8 +38,8 @@ body{
 }
 
 p {
-    font-size: 20px;
-    font-family: ;
+    font-size: 15px;
+
 }
 ul li{
     list-style: none;
@@ -62,6 +62,7 @@ a:hover, a:active, a:visited, a:focus{
     
 }
 
+
 nav.navigation {
     margin: 0 auto;
 }
@@ -72,38 +73,41 @@ nav.navigation ul li {
     font-weight: 500;
 }
 nav.navigation ul li a {
-    color: #fff;
+    color: #ffb8f6;
     text-transform: capitalize;
     font-family: "circular-pro-Bold";
     font-size: 15px;
 }.logo a img {
-   width: 155px;
-    margin: 10px;
-    height: 65px;
+       width: 115px;
+    margin: 20px;
+   
 }
-
-.logo-img{
+.menu-scroll li{
+    padding: 15px 30px 15px 30px !important;
+}
+.menu-scroll .logo-img{
+    margin: 5px !important;
     width: 80px;
     margin: 0 auto;
     display: block; 
-    height: 80px;
+    height: 45px;
 }
 .right {
     float: right !important;
 }
 .menu-trigger{
 	height: 40px;
-    width: 50px;
+    width: 40px;
     float: right;
-  	cursor: pointer;
+    cursor: pointer;
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 60px;
+    top: 15px;
     display: none;
 }
 .menu-trigger ul li{
 	display: block !important;
-    width: 50px;
+    width: 35px;
     height: 5px;
     background-color: purple;
     padding: none;
@@ -112,6 +116,31 @@ nav.navigation ul li a {
 }
 
 
+.menu-scroll{
+    position: fixed;
+    transition-duration: 1s;   
+    backface-visibility: hidden;
+    padding-right: 15px;capitalize
+    padding-left: 15px;
+
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+    width: 100%;
+    z-index: 10;
+}
+.menu-scroll .Title{
+    color: #fff;
+    position: absolute;
+    margin: -8px auto 0 15px;
+    display: block;
+    width: 150px;
+}
+.menu-scroll a{
+    color: purple !important;
+}
+.menu-scroll .menu-hover:after{
+    
+}
 /* home section */
 
 #home{
@@ -123,7 +152,7 @@ nav.navigation ul li a {
     align-items: center;
     height: 91vh;
     margin-top: 94px;
-    max-height: 680px;
+    max-height: 780px;
     color: #000;
     text-align: center;
     border-radius: 4px;
@@ -140,14 +169,14 @@ nav.navigation ul li a {
     font-weight: 600;
 }
 .pitch {
-    color: #ffffff !important;
+    color: #ffb8f6 !important;
     text-align: left;
     margin: 0px;
     font-size: 20px;
     font-family: circular-std-Book;
     width: 380px;
 }
-.centered a {
+.buttons a {
     background-color: transparent;
     border: 1.6px solid #fff;
     padding: 10px;
@@ -173,7 +202,7 @@ nav.navigation ul li a {
 #features h1 {
     text-align: center;
     margin: 50px auto;
-    color: #821e44;
+    color: #778A91;
     font-weight: 600;
     letter-spacing: 4px;
 }
@@ -196,35 +225,34 @@ nav.navigation ul li a {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
+    color: #b80076;
 }
-
+0727538201100
 #features p {
     text-align: -webkit-auto;
-    color: #777;
+    color: #959094;
     margin: 20px auto;
     max-width: 650px;
-    font-size: 14px;
+    font-size: 15px;
     
 }
 
 .pitch-spin {
     text-align: center;
-    color: #994588;
+    color: #768891;
     margin: 56px auto ;
     font-size: 22px;
     word-spacing: 10px;
     font-weight: 600;
 }
 
-.support img{
-    width: 70px !important;
-}
+
 .simple {
     margin: 30px auto !important;
     width: 80%;
 }
 .simple p{
-    color: #6f2531 !important;
+    color: rgba(134, 67, 125, 0.72) !important;
     font-size: 16px !important;
     font-weight: 600;
     letter-spacing: 1px;
@@ -328,16 +356,7 @@ nav.navigation ul li a {
 #home .buttons{
     margin-top: 50px;
 }
-.purple-shade a {
-    background-color: transparent;
-    border: 1px solid #fff;
-    padding: 9px;
-    border-radius: 20px;
-    color: #fff;
-    font-size: 14px;
-    margin-right: 30px;
-    width: 95px;
-}
+
 /* Pricing section */
 
 #pricing {
@@ -356,13 +375,17 @@ nav.navigation ul li a {
     -webkit-animation: 25s infinite linear;
 }
 .info.active, .info:hover {
-    background-color: #6d4063;
+    font-weight: 700;
     cursor: pointer;
-    color: #fff;
+    color: #6d4063;
+    border-width: 2px;
+    border-color: #6d4063;
+}
+.info.active h6, .info:hover h6 {
+    font-weight: 700;
 }
 .info.active {
-    background-color: #6d4063;
-    border-bottom: none;
+  
     height: 50px;
     z-index: 30;
 }
@@ -373,20 +396,22 @@ nav.navigation ul li a {
     text-align: center;
 }
 .info.active h6 {
-    color: #fff;
+ color: #6d4063;
 }
 .info {
     width: 33%;
    
 
     border: 1px solid #cebcca;
-    border-radius: 20px;
     border-top: none;
     display: inline-block;
     padding: 2px;
 
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+}
+.borderless{
+    border-left: none; border-right: none;
 }
 .target-info{
     width: 85%;
@@ -401,7 +426,7 @@ nav.navigation ul li a {
 }
 
 .border-shadow{
-    border: 2px solid #cec1cb;
+ 
     border-radius: 20px;
 }
 .pricing-table table{

@@ -11,12 +11,8 @@ $(function(){
           }, 1000);
 
       });
-      	   /*-------------------------------------------------------------------------*
-     * 03. This function helps in front end form data validation when a user clicks the signup button  *
-     *-------------------------------------------------------------------------*/
-      $("#signupform").validate(
-      	
-      	);
+
+    
       	   /*-------------------------------------------------------------------------*
      *                   04. Pricing section tabbable area                          *
      *-------------------------------------------------------------------------*/
@@ -134,8 +130,28 @@ $('#signup').removeClass('active');
  }
 loopThrough('#flashing-text', 2000, 200, -10);
 
-loopThrough('.configure', 1000, 20,20)	
-		
+loopThrough('.configure', 1000, 20,20);	
+		$(window).scroll(
+              
+                
+                function(e){
+                      
+                    if ($(this).scrollTop() > 150) {
+                        $('.identity-forms').addClass('identity-scroll');
+                
+                        $('.menu-border').addClass('menu-scroll');
+                        $('.logo-img').attr('src','../../static/images/horizontal.svg');
+                    // } else if (N){
+                    //  $
+                    // }
+                }
+                     else  {
+                        $('.menu-border').removeClass('menu-scroll');
+                        $('.logo-img').attr('src','../../static/images/transparent.png');
+                        $('.identity-forms').removeClass('identity-scroll');
+                    }}
+                
+                );
 		});
 		$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
@@ -150,8 +166,8 @@ loopThrough('.configure', 1000, 20,20)
 });
 $('.play').on('click',function(){
     owl.trigger('play.owl.autoplay',[1000]);
-})
+});
 $('.stop').on('click',function(){
-    owl.trigger('stop.owl.autoplay')
+    owl.trigger('stop.owl.autoplay');
 });
 			});
