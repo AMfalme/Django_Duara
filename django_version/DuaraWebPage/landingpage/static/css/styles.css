@@ -3,7 +3,7 @@
 	#D12D68
 	#778A91
 */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @font-face {
     font-family:  circular-book;
      font-display: auto;
@@ -34,7 +34,7 @@
 body{
     margin: 0;
     color: #85969c;
-    font-family: circular-std-Book;
+    font-family: 'Roboto', sans-serif;;
 }
 
 p {
@@ -56,9 +56,10 @@ a:hover, a:active, a:visited, a:focus{
 	transition-duration: 1s;
 	position: fixed;
 	width: 100%;
-	background-color: #fff;
+	
 	z-index: 15;
-	box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+    
+    
 }
 
 nav.navigation {
@@ -71,11 +72,16 @@ nav.navigation ul li {
     font-weight: 500;
 }
 nav.navigation ul li a {
-    color: #3c5158;
+    color: #fff;
     text-transform: capitalize;
     font-family: "circular-pro-Bold";
     font-size: 15px;
+}.logo a img {
+   width: 155px;
+    margin: 10px;
+    height: 65px;
 }
+
 .logo-img{
     width: 80px;
     margin: 0 auto;
@@ -109,7 +115,7 @@ nav.navigation ul li a {
 /* home section */
 
 #home{
-	background-image: linear-gradient( 135deg, hsl(302, 58%, 36%) 0%, rgb(191, 60, 98) 100%);
+	background-image: linear-gradient( 135deg, #92278F 0%, #D12D68 100%);
 }
 .landing-section{
     overflow: hidden;
@@ -128,14 +134,18 @@ nav.navigation ul li a {
 }
 .landing-section h2 {
     color: #fff;
-    min-width: 200px;
+    width: 455px;
     text-align: left;
+    font-size: 40px;
+    font-weight: 600;
 }
 .pitch {
-    color: #d8d8d8 !important;
+    color: #ffffff !important;
     text-align: left;
-    margin: 0px auto 62px;
+    margin: 0px;
     font-size: 20px;
+    font-family: circular-std-Book;
+    width: 380px;
 }
 .centered a {
     background-color: transparent;
@@ -144,7 +154,7 @@ nav.navigation ul li a {
     border-radius: 30px;
     color: #fff;
     font-size: 22px;
-    width: 316px !important;
+    width: 250px !important;
     float: left;
 }
 .centered a:hover{
@@ -168,10 +178,10 @@ nav.navigation ul li a {
     letter-spacing: 4px;
 }
 #features img{
-    width: 100px;
+    width: 50px;
     margin: 0 auto;
     display: block;
-    height: 100px;
+    height: 55px;
 }
 .simple img{
     width:30%;
@@ -314,6 +324,9 @@ nav.navigation ul li a {
     display: block;
     width: 10%;
     min-width: 250px;
+}
+#home .buttons{
+    margin-top: 50px;
 }
 .purple-shade a {
     background-color: transparent;
