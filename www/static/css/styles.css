@@ -230,16 +230,18 @@ nav.navigation ul li a {
     color: #6d184e;
 }
 .clompute {
-    border-right: 1px solid grey;
+    
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
     padding: 22px;
         transition-duration: 1s;
         margin: 50px auto;
-        background-color: rgb(239, 232, 232);
+        
 }
 .clompute:hover{
     transform: scale(1.1);
     transition-duration: 1s;
+    border-right: 1px solid grey;
+background-color: rgb(239, 232, 232);
 }
 .reduce p {
     text-align: center;
