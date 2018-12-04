@@ -46,6 +46,7 @@ ul li{
 }
 a:hover, a:active, a:visited, a:focus{
     text-decoration: none !important;
+    outline: none;
 }
 /* .wow{
     visibility: hidden;
