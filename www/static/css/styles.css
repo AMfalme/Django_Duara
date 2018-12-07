@@ -87,11 +87,11 @@ nav.navigation ul li a {
     padding: 15px 30px 15px 30px !important;
 }
 .menu-scroll .logo-img{
-    margin: 5px !important;
-    width: 80px;
+    margin: 12px !important;
+    
     margin: 0 auto;
     display: block; 
-    height: 45px;
+    
 }
 .right {
     float: right !important;

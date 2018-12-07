@@ -140,7 +140,7 @@ loopThrough('.configure', 1000, 20,20);
                         $('.identity-forms').addClass('identity-scroll');
                 
                         $('.menu-border').addClass('menu-scroll');
-                        $('.logo-img').attr('src','static/images/horizontal.svg');
+                        $('.logo-img').attr('src','static/images/colored.png');
                     // } else if (N){
                     //  $
                     // }
