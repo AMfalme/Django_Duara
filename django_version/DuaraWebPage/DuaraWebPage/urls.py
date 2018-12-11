@@ -20,5 +20,7 @@ from django.urls import path, include
 app_name = 'landingpage'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('landingpage/', include('landingpage.urls')),
+    path('', include('subscribe.urls')),
+    path('landingpage/', include('landingpage.urls'))
+
 ]

@@ -1,0 +1,21 @@
+.subscribemail{
+	float: left;
+border-radius: 30px;
+padding: 10px;
+}
+.submit-btn-sub{
+	background-color: #cdd032;
+    color: #080808;
+    margin: 20px auto;
+    padding: 10px !important;
+    width: 175px;
+    display: block !important;
+    border-radius: 20px !important;
+}
+.pitch1{
+	text-align: left;
+    color: #fff;
+    font-size: 17px;
+    font-family: circular-std-Book;
+    margin: 30px auto;
+}
