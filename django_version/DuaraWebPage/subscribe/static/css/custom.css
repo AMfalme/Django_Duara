@@ -19,3 +19,12 @@ padding: 10px;
     font-family: circular-std-Book;
     margin: 30px auto;
 }
+.alert-success.message {
+    position: absolute;
+    top: 90px;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+    border-radius: 9px;
+    left: 35%;
+}

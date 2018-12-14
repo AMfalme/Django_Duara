@@ -78,9 +78,10 @@ WSGI_APPLICATION = 'DuaraWebPage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+        'HOST': 'localhost',
+        'NAME': 'Duara_Beta',
+        'USER': 'root',
+        'PASSWORD': '12341234',
     }
 }
 
