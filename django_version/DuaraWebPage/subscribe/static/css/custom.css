@@ -1,12 +1,14 @@
 .subscribemail{
 	float: left;
 border-radius: 30px;
-padding: 10px;
+padding: 11px;
+border: none;
+margin-right: 10px;
 }
 .submit-btn-sub{
-	background-color: #cdd032;
+	background-color: #c1ba53;
     color: #080808;
-    margin: 20px auto;
+    margin: 0;
     padding: 10px !important;
     width: 175px;
     display: block !important;
@@ -17,14 +19,21 @@ padding: 10px;
     color: #fff;
     font-size: 17px;
     font-family: circular-std-Book;
-    margin: 30px auto;
+    margin: 80px auto 0 0;
+    padding-left: 62px;
 }
-.alert-success.message {
+.alert-success.message, p.survey{
     position: absolute;
-    top: 90px;
+    top: 45px;
     margin: 0 auto;
     display: block;
     padding: 20px;
     border-radius: 9px;
     left: 35%;
+}
+p.survey{
+    margin-top: 35px;
+}
+.landing-section{
+    height: 86vh !important;
 }

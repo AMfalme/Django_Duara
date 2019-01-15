@@ -55,8 +55,13 @@
                 <div class="landing-section  purple-theme">
                     {% if new_subscriber %} 
                     <div class="alert-success message">
-                        Congratuations for subscribing to our platform:  {{ new_subscriber }}, {{ error_message  }}
+                        Thank you for subscribing onto the Duara platform. {{ error_message  }} <br>
+                        <p>
+                        Kindly take part in our short
+                        <a href="duara.io">survey.</a>  
+                    </p>
                     </div>
+
                     {% elif error_message%}
                      <div class="alert-success message">
                      {{   error_message}}
@@ -77,9 +82,10 @@
                        
                         <div class="">
                                     <p class="pitch"> 
-                                       Self-Provision and deploy your cloud instances in 3 simple steps.
+                                       We make it easy for developers and enterprises to deploy cloud applications at the click of a button.
                                     </p>
                                     <p class="pitch1">
+                                        Launching soon!
                                         Sign up to be part of our Beta process. 
                                     </p>
                                 </div>

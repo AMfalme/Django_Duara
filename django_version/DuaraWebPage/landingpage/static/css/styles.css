@@ -145,13 +145,15 @@ nav.navigation ul li a {
 /* home section */
 
 #home{
-	background-image: linear-gradient( 135deg, #92278F 0%, #D12D68 100%);
+	background-image: url(../images/Banner.png);
+    background-size: cover;
+    height: 100vh;
 }
 .landing-section{
     overflow: hidden;
     display: flex;
     align-items: center;
-    height: 91vh;
+  
     margin-top: 94px;
     max-height: 780px;
     color: #000;
@@ -168,14 +170,15 @@ nav.navigation ul li a {
     text-align: left;
     font-size: 40px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 .pitch {
-    color: #ffb8f6 !important;
+    color: #fff;
     text-align: left;
     margin: 0px;
     font-size: 20px;
     font-family: circular-std-Book;
-    width: 380px;
+    width: 100%;
 }
 .buttons a {
     background-color: transparent;
@@ -191,8 +194,8 @@ nav.navigation ul li a {
     color: #fff;
 }
 .duara-cloud {
-    background-image: url(../images/duaracloud.png);
-    height: 303px;
+    background-image: url(../images/map.png);
+    height: 540px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -381,7 +384,7 @@ p.simplicity{
     min-width: 250px;
 }
 #home .buttons{
-    margin-top: 50px;
+    margin: 10px auto auto 25px;
 }
 
 /* Pricing section */
