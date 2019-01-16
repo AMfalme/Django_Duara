@@ -148,13 +148,16 @@ nav.navigation ul li a {
 	background-image: url(../images/Banner.png);
     background-size: cover;
     height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 .landing-section{
     overflow: hidden;
     display: flex;
     align-items: center;
   
-    margin-top: 94px;
+    margin-top: 90px;
     max-height: 780px;
     color: #000;
     text-align: center;
@@ -195,7 +198,7 @@ nav.navigation ul li a {
 }
 .duara-cloud {
     background-image: url(../images/map.png);
-    height: 540px;
+    height: 90vh;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

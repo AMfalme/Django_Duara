@@ -43,30 +43,29 @@
         <div class="container">
             <div class="row">
                 <div class="logo col-md-2 col-sm-2">
-                    <a href="/landingpage"><img class="logo-img" src="../../static/images/transparent.png"></a>
+                    <a href="/"><img class="logo-img" src="../../static/images/transparent.png"></a>
                     
                 </div>
             </div>
         </div>
     </div>
+    {% if new_subscriber %} 
+                    <div class="alert alert-success message">
+                        Thank you for subscribing onto the Duara platform. {{ error_message  }}
+                        <button type="button" class="close" id="dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    </div>
+
+                    {% elif error_message%}
+                     <div class="alert alert-warning message">
+                     {{   error_message}}
+                     <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    </div>
+                    {% endif %}
         <section id="home">
         <div class="container ">
             <div class="row">
                 <div class="landing-section  purple-theme">
-                    {% if new_subscriber %} 
-                    <div class="alert-success message">
-                        Thank you for subscribing onto the Duara platform. {{ error_message  }} <br>
-                        <p>
-                        Kindly take part in our short
-                        <a href="duara.io">survey.</a>  
-                    </p>
-                    </div>
-
-                    {% elif error_message%}
-                     <div class="alert-success message">
-                     {{   error_message}}
-                    </div>
-                    {% endif %}
+                    
                     <div class="col-md-offset-1 col-md-5">
                         <div class="centered">
                         <h2>
@@ -120,14 +119,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><script>new WOW().init();</script>
 
 <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
-<script> 
-function afterReveal( el ) 
-{
-el.addEventListener('animationend', function( event ) 
-     {
-          $('.wow').each(function(){ $(this).css('opacity',1); }); 
-     }
-     ); 
-} new WOW({ callback: afterReveal }).init() 
+<script>
+    $(document).ready(function(){
+    window.setTimeout(function() {
+  $(".alert").fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove();
+  });
+}, 5000);
+$('#dismiss').on(
+    'click', function(){
+        $('.alert').hide();
+    }
+);
+ } );
 </script>
 {% endblock %}

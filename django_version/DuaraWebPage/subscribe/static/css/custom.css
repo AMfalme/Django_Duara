@@ -20,9 +20,9 @@ margin-right: 10px;
     font-size: 17px;
     font-family: circular-std-Book;
     margin: 80px auto 0 0;
-    padding-left: 62px;
+    padding-left: 20px;
 }
-.alert-success.message, p.survey{
+.alert-warning.message, .alert-success.message, p.survey{
     position: absolute;
     top: 45px;
     margin: 0 auto;
@@ -30,6 +30,8 @@ margin-right: 10px;
     padding: 20px;
     border-radius: 9px;
     left: 35%;
+    width: 400px;
+    z-index: 30;
 }
 p.survey{
     margin-top: 35px;
