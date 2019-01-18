@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 
 
 app_name = 'landingpage'
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', include('subscribe.urls')),
     path('landingpage/', include('landingpage.urls'))
 
 ]
+
+if settings.ADMIN_ENABLED:
+    urlpatterns.append(path('admin/', admin.site.urls))

@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     "duara.io.10.0.0.2.xip.io"
 ]
 
+ADMIN_ENABLED = False
+
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 LOGGING = {
@@ -112,10 +114,10 @@ WSGI_APPLICATION = 'DuaraWebPage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '10.10.0.10',
-        'NAME': 'LaunchingSoon',
-        'USER': 'LaunchingSoon',
-        'PASSWORD': 'secret',
+        'HOST': 'diam.staging',
+        'NAME': 'launching_soon',
+        'USER': 'launching_soon',
+        'PASSWORD': 'ATiCEntaLTuR',
     }
 }
 
