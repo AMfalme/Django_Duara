@@ -7,16 +7,17 @@ pipeline {
   environment {
     DOCKER_REGISTRY = "gcr.io"
     PROJECT_ID = "robotic-fuze-194312"
-    NAME = "ddash"
+    NAME = "home"
     GIT_SHA = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
     GCR_IMAGE = "$DOCKER_REGISTRY/$PROJECT_ID/$NAME"
     GCR_IMAGE_SHA = "$GCR_IMAGE:$GIT_SHA"
     GCR_IMAGE_LATEST = "$GCR_IMAGE:latest"
 
-    EXPOSED_PORT="80"
+    CONTAINER_PORT="80"
+    HOST_PORT="8080"
     DOCKER_NET="docker-net"
     // Machines
-    STAGING = "ddash.staging"
+    MACHINE = "ddash.staging"
     DNS_SERVER = "10.0.0.2"
   }
 
@@ -30,7 +31,7 @@ pipeline {
     }
     stage('Publish Image') {
       when {
-          branch 'queens'
+          branch 'release'
       }
       steps {
         script {
@@ -46,17 +47,16 @@ pipeline {
     }
     stage('Deploy Staging') {
         when {
-            branch 'queens'
+            branch 'release'
         }
         environment {
-            ENV_FILE = "~/.env/ddash.staging.env"
-            STAGE = "staging"
+            STAGE = "production"
         }
         steps {
             script {
                 def remote = [:]
-                remote.name = "$STAGING"
-                remote.host = "$STAGING"
+                remote.name = "$MACHINE"
+                remote.host = "$MACHINE"
                 remote.allowAnyHosts = true
                 withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-private-key', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
                     remote.user = userName
@@ -65,8 +65,7 @@ pipeline {
                         sshCommand remote: remote, command: "docker stop $NAME || true"
                         sshCommand remote: remote, command: "docker rm $NAME || true"
                         sshCommand remote: remote, command: "docker pull $GCR_IMAGE_LATEST"
-                        sshCommand remote: remote, command: "docker run --network $DOCKER_NET --name memcached -d memcached || true"
-                        sshCommand remote: remote, command: "docker run -d -p $EXPOSED_PORT:$EXPOSED_PORT -e STAGE=$STAGE --network $DOCKER_NET --dns=$DNS_SERVER --env-file $ENV_FILE --restart=always --name $NAME $GCR_IMAGE_LATEST"
+                        sshCommand remote: remote, command: "docker run -d -p $HOST_PORT:$CONTAINER_PORT -e STAGE=$STAGE --network $DOCKER_NET --dns=$DNS_SERVER --restart=always --name $NAME $GCR_IMAGE_LATEST"
                         sshCommand remote: remote, command: "docker system prune -f"
                     }
                 }
