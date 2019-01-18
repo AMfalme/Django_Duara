@@ -7,24 +7,29 @@ import json
 # Create your views here.
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+import logging
 
 
+logger = logging.getLogger("DuaraWebPage.subscribe")
 
 
 def index(request):
+    message = None
+    error_message = None
     if request.method == 'POST':
+        logger.debug("index() - POST")
         try:
             email = request.POST.get('email')
             validate_email(email)
             new_subscriber = Subscribers(email = email)
             new_subscriber.save()
-            return render(request, 'subscribe/index.html', {'new_subscriber': new_subscriber})
+            message = "Thank you for your interest, %s. We will keep you updated on our progress." % email
+            logger.info("New user: %s" % email)
         except ValidationError as e:
-            error_message = 'Invalid Email address kindy input a valid email address'
-            return render(request, 'subscribe/index.html', {'error_message': error_message })
+            error_message = "Invalid e-mail address. Kindly input a valid e-mail address and try again."
+            logger.info("Invalid e-mail address submitted.")
         except IntegrityError:
-            error_message = 'You are already subscribed to our platform'
-            return render(request, 'subscribe/index.html', {'error_message': error_message})
-    else:
-        return render(request, 'subscribe/index.html')
+            error_message = "You are already subscribed. We will keep you updated on our progress."
+            logger.info("Duplicate subscription")
 
+    return render(request, 'subscribe/index.html', { "message": message, "error_message": error_message })

@@ -6,8 +6,12 @@ RUN apt-get update && apt-get install -y \
 COPY . /opt/landing_page
 WORKDIR /opt/landing_page
 
+RUN ["mkdir", "/var/log/home"]
+
 RUN ["pip3", "install", "--upgrade", "pip"]
 RUN ["pip3", "install","-r", "requirements.txt"]
+RUN ["python3", "DuaraWebPage/manage.py", "collectstatic"]
+
 
 EXPOSE 80
-CMD ["python3", "DuaraWebPage/manage.py", "runserver", "0.0.0.0:80"]
+CMD ["uwsgi", "uwsgi.ini"]

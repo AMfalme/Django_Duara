@@ -49,18 +49,18 @@
             </div>
         </div>
     </div>
-    {% if new_subscriber %} 
-                    <div class="alert alert-success message">
-                        Thank you for subscribing onto the Duara platform. {{ error_message  }}
-                        <button type="button" class="close" id="dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    </div>
+    {% if message %} 
+    <div class="alert alert-success message">
+      {{ message }}
+      <button type="button" class="close" id="dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
 
-                    {% elif error_message%}
-                     <div class="alert alert-warning message">
-                     {{   error_message}}
-                     <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    </div>
-                    {% endif %}
+    {% elif error_message %}
+    <div class="alert alert-warning message">
+    {{ error_message }}
+      <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+    {% endif %}
         <section id="home">
         <div class="container ">
             <div class="row">

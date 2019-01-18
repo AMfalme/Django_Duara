@@ -77,6 +77,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'DuaraWebPage.middleware.DuaraMiddleware',
 ]
 
 ROOT_URLCONF = 'DuaraWebPage.urls'
@@ -84,7 +85,8 @@ ROOT_URLCONF = 'DuaraWebPage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'landingpage')],
+        'DIRS': [os.path.join(BASE_DIR, 'landingpage'),
+                 os.path.join(BASE_DIR, "DuaraWebPage")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,10 +108,10 @@ WSGI_APPLICATION = 'DuaraWebPage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'NAME': 'Duara_Beta',
-        'USER': 'root',
-        'PASSWORD': '12341234',
+        'HOST': '10.10.0.10',
+        'NAME': 'LaunchingSoon',
+        'USER': 'LaunchingSoon',
+        'PASSWORD': 'secret',
     }
 }
 
