@@ -10,7 +10,7 @@ RUN ["mkdir", "/var/log/home"]
 
 RUN ["pip3", "install", "--upgrade", "pip"]
 RUN ["pip3", "install","-r", "requirements.txt"]
-RUN ["python3", "DuaraWebPage/manage.py", "collectstatic"]
+RUN ["python3", "manage.py", "collectstatic"]
 
 
 EXPOSE 80
