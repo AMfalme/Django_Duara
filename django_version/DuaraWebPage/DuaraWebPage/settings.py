@@ -25,7 +25,11 @@ SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "duara.io",
+    "duara.io.10.0.0.2.xip.io"
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
