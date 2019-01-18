@@ -28,3 +28,5 @@ def index(request):
     else:
         return render(request, 'subscribe/index.html')
 
+def errorpage(request):
+    return render(request, 'subscribe/404.html')
