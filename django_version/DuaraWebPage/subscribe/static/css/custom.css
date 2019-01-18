@@ -39,3 +39,22 @@ p.survey{
 .landing-section{
     height: 86vh !important;
 }
+.error-box {
+    position: relative;
+margin: 200px auto;
+width: 34%;
+min-width: 300px;
+box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+padding: 55px;
+height: 290px;
+}
+.error-box h1, h4{
+    text-align: center;
+}
+.error-box h4{
+    font-weight: bold;
+font-size: 14px;
+}
+.error-box a{
+    text-align: center;
+}
