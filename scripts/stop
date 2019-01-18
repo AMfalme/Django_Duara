@@ -1,5 +1,0 @@
-#!/bin/bash
-
-docker stop duara-home-1
-docker rm duara-home-1
-docker rmi duara-home

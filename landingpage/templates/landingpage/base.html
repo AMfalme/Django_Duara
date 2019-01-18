@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Duara</title>
+	<!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-2.png' %}">
+    <!-- start of hypertext picked from index.html in previously landing page -->
+	<!-- <link rel="manifest" href="/manifest.json"> -->
+	<meta charset="UTF-8">
+	<!-- <meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#d7ded7">
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes"> -->
+
+    <!-- end of hypertext picked from index.html in previously landing page -->
+    <!-- css stylels -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    {% block extrahead %}{% endblock %}
+    <!-- end css external stylesheets -->
+</head>
+<body>
+    <div class="menu-border">
+        <div class="container">
+            <div class="row">
+                <div class="logo col-md-2 col-sm-2">
+                    <a href="/landingpage"><img class="logo-img" src="../../static/images/transparent.png"></a>
+                    
+                </div>
+                <div class="menu-trigger">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <nav class="col-md-10 col-sm-10 navbar navbar-expand-lg navigation">
+                    <ul class="right navbar-nav">
+                            
+                            <li class="nav-item">
+
+                                <a class="nav_scroll nav-link" href="#home">
+                                    home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                
+                                <a class="nav_scroll nav-link" href="#products"> 
+                                    Products
+                                </a>
+                                    
+                                
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav_scroll nav-link" href="#pricing">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav_scroll nav-link" href="#contact">
+                                    Contact us
+                                </a>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
