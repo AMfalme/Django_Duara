@@ -23,22 +23,50 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost"]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+LOGGING = {
+	'version': 1,
+	'disable_existing_loggers': False,
+	'handlers': {
+		'file': {
+			'level': 'DEBUG',
+			'class': 'logging.FileHandler',
+			'filename': '/var/log/home/home.log',
+		},
+	},
+	'loggers': {
+		'django': {
+			'handlers': ['file'],
+			'level': 'DEBUG',
+			'propagate': True,
+		},
+		'DuaraWebPage': {
+			'handlers': ['file'],
+			'level': 'DEBUG',
+			'propagate': True,
+		},
+	},
+}
+
+
+ADMINS = ["cmetto@duara.io"]
 
 # Application definition
-
 INSTALLED_APPS = [
-    'landingpage.apps.LandingpageConfig',
+    'landingpage',
+    'subscribe',
+    'DuaraWebPage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'subscribe.apps.SubscribeConfig'
 ]
 
 MIDDLEWARE = [
