@@ -4,15 +4,21 @@
   padding: 16px;
   border: none;
   margin-right: 10px;
+  width: 235px;
 }
 .submit-btn-sub{
-  background-color: #53a753;
+  background-color: rgba(78, 216, 139, 0.85);
   color: #fff;
   margin: 0;
   padding: 16px !important;
   width: 215px;
   display: block !important;
   border-radius: 30px !important;
+}
+.submit-btn-sub:focus, .submit-btn-sub:active:focus, .submit-btn-sub.active:focus {
+outline: none !important;
+color: #fff !important;
+
 }
 .pitch1{
   text-align: left;
