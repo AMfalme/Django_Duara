@@ -3,38 +3,38 @@
 	#D12D68
 	#778A91
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @font-face {
     font-family:  circular-book;
      font-display: auto;
     src: url("../Fonts/Circular Pro/circular-book.otf") format("opentype");
 }
 @font-face {
-    font-family: circular-pro-medium;
+    font-family: Rubik;
      font-display: auto;
      
 
     src: url("../Fonts/Circular Pro/CircularStd-Medium.otf") format("opentype");
 }
 @font-face {
-    font-family: circular-medium;
+    font-family: Rubik;
      font-display: auto;
-    src: url("../Fonts/Circular Pro/circular-medium.otf") format("opentype");
+    src: url("../Fonts/Circular Pro/Rubik.otf") format("opentype");
 }
 @font-face {
-    font-family: circular-std-Book;
+    font-family: Rubik;
      font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Book.otf") format("opentype");
 }
 @font-face {
-    font-family: circular-pro-Bold;
+    font-family: Rubik;
      font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
-}
+}*/
 body{
     margin: 0;
     color: #85969c;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 p {
@@ -44,9 +44,10 @@ p {
 ul li{
     list-style: none;
 }
-a:hover, a:active, a:visited, a:focus{
+a, a:hover, a:active, a:visited, a:focus{
     text-decoration: none !important;
     outline: none !important;
+    color: #fff !important;
 }
 /* .wow{
     visibility: hidden;
@@ -70,17 +71,17 @@ nav.navigation {
 nav.navigation ul li {
     padding: 30px;
     float: left;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
 }
 nav.navigation ul li a {
-    color: #ffb8f6;
+    color: #fff;
     text-transform: capitalize;
-    font-family: "circular-pro-Bold";
+    
     font-size: 15px;
 }.logo a img {
-       width: 115px;
-    margin: 20px;
+       width: 140px;
+    margin: 20px 0;
    
 }
 .menu-scroll li{
@@ -110,7 +111,7 @@ nav.navigation ul li a {
 	display: block !important;
     width: 35px;
     height: 5px;
-    background-color: purple;
+    background-color: #fff;
     padding: none;
     padding: 0 !important;
     margin-bottom: 5px;
@@ -147,9 +148,9 @@ nav.navigation ul li a {
 #home{
 	background-image: url(../images/Banner.png);
     background-size: cover;
-    height: 100vh;
+ 
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
 }
 .landing-section{
@@ -165,14 +166,14 @@ nav.navigation ul li a {
 }
 .centered {
     max-width: 800px;
-    font-family: circular-medium;
+    font-family: Rubik;
 }
 .landing-section h2 {
     color: #fff;
-    width: 455px;
+    
     text-align: left;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 45px;
+    
     margin-bottom: 20px;
 }
 .pitch {
@@ -180,18 +181,33 @@ nav.navigation ul li a {
     text-align: left;
     margin: 0px;
     font-size: 20px;
-    font-family: circular-std-Book;
-    width: 100%;
+    font-family: Rubik;
+    width: 90%;
+}
+.pitch2{
+    margin: 40px 0;
+    font-size:18px;
 }
 .buttons a {
     background-color: transparent;
-    border: 1.6px solid #fff;
-    padding: 10px;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 22px;
-    width: 250px !important;
+    
+    padding: 16px;
+border-radius: 30px;
+color: #fff;
+font-size: 18px;
+width: 220px ;
     float: left;
+}
+.signup-button{
+    background-color: #53a753 !important;
+border: none;
+}
+.signup-button a:active{
+    text-decoration: none !important;
+    color: #fff;
+}
+.button a:active, .button a:hover{
+    color: #fff !important;
 }
 .centered a:hover{
     color: #fff;
@@ -209,14 +225,13 @@ nav.navigation ul li a {
 #features h1 {
     text-align: center;
     margin: 50px auto;
-    color: #0c1b21;
-    font-weight: 600;
+    color: #6f1c5c;
+    
     line-height: 2;
 
 }
 #features img{
     width: 50px;
-    margin: 0 auto;
     display: block;
     height: 55px;
 }
@@ -229,26 +244,32 @@ nav.navigation ul li a {
 }
 .clompute h2 {
     font-size: 18px;
-    font-weight: 600;
+    
     letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #6d184e;
+    
+    text-align: left;
+    color: #000;
 }
 .clompute {
-    border-right: 1px solid grey;
-    box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+    
+    box-shadow: 0 2px 5px 0 rgba(199, 198, 198, 0.3);
     padding: 22px;
-        transition-duration: 1s;
+        transition-duration: 0.3s;
         margin: 50px auto;
-        background-color: rgb(239, 232, 232);
+        min-height: 320px;
+        
 }
+
 .clompute:hover{
-    transform: scale(1.1);
-    transition-duration: 1s;
+    background-color: purple;
+    color: #fff;
+    box-shadow: none;
+}
+.clompute:hover h2{
+    color: #fff;
 }
 .reduce p {
-    text-align: center;
+    text-align: left;
     margin: 20px auto;
     max-width: 650px;
     font-size: 15px;
@@ -258,7 +279,7 @@ nav.navigation ul li a {
 .pitch-spin {
     text-align: center;
     color: #611a4c;
-    
+    margin: 80px auto;
     font-size: 22px;
    
 }
@@ -280,85 +301,92 @@ nav.navigation ul li a {
     text-align: center;
     margin-bottom: 50px;
     width: 14%;
-    height: 150px;
+ 
+}
+.simple .simplicity {
+    border-radius: 50%;
+    border: 1px solid #80808052;
+    box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+    padding: 30px;
+    width: 115px;
 }
 p.simplicity{
-    font-size: 20px;
-    color: #611a4c;
     text-align: center;
     margin: -30px auto 50px;
     display: block;
-    height: 26px;
-    border-bottom: 1px solid #611a4c;
-    line-height: 0;
-    width: 200px;
+    background-color: #74005b;
+    width: 100px;
+    border-radius: 86px;
+    height: 5px;
+    padding: 3px;
 }
 .border-delay {
-    border-bottom: 2px solid grey;
-    width: 26.8%;
-    display: inline-block;
-    opacity: 0.7;
-    top: 50px;
-    position: relative;
+    top: 70px;
+    border: dotted 5px;
+    border-color: #752a94 transparent transparent transparent;
+    border-radius: 50%/100px 100px 0 0;
 }
 
 /* Products section */
 
 
 .bck-shade {
-    background-color: rgb(226, 223, 223);
+    background-image: linear-gradient(to right, #75007b 0%,#c85ec7 47%,#94348f 100%);
 }
 .bck-shade .container{
     width: 60%;
 }
 #products .heading {
     margin: 50px auto;
-    text-transform: uppercase;
-    font-size: 36px;
-    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 45px;
+   
     letter-spacing: 2px;
     line-height: 2;
+    color: #fff;
 }
+#products .icon{
+    float: left;
+}
+ #products .content{
+    float: left;
+    width: 75%;
+}
+
 .heading {
     text-align: center;
 }
 .section-bg div {
    
-    padding: 30px;
+    padding: 20px;
     transform: scale(1);
     transition-duration: 0.4s;
 }
 #products header h3 {
-    font-family: 'circular-pro-medium' !important;
-    text-align: center;
-    color: #ca0ea9;
+    font-family: 'Rubik' !important;
+    
+    color: #fff;
 }
 
 #products i {
     font-size: 41px;
-    text-align: center;
-    margin: 25px auto;
+    margin: 20px auto;
     display: block;
-    color: #5a1c5a;
+    color: #fff;
+    background-color: #d6a5d3bf;
+    padding: 11px;
+    border-radius: 62px;
 }
 
 #products p {
     font-size: 15px;
-}
-.section-bg div{
-    border: 1px solid #cec1cb;
-    margin: 10px;
-    min-height: 300px;
-    background-color: #fdfdfd;
-    
-}
-.section-bg .left{
-    border-left: 3px solid grey;
+    color: #fff;
+    margin: 50px auto;
 
 }
-.section-bg .right{
-    border-right: 3px solid grey;
-}
+
+
+
 
 .purple-shade {
     position: relative;
@@ -387,7 +415,7 @@ p.simplicity{
     min-width: 250px;
 }
 #home .buttons{
-    margin: 10px auto auto 25px;
+    margin: 10px auto auto 0;
 }
 
 /* Pricing section */
@@ -401,6 +429,7 @@ p.simplicity{
     text-transform: uppercase;
     font-weight: 300;
 }
+
 .limit-info {
     width: 100%;
     margin: 10px auto 30px;

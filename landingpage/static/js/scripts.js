@@ -136,11 +136,13 @@ loopThrough('.configure', 1000, 20,20);
                 
                 function(e){
                       
-                    if ($(this).scrollTop() > 150) {
+                    if ($(this).scrollTop() > 50) {
                         $('.identity-forms').addClass('identity-scroll');
                 
                         $('.menu-border').addClass('menu-scroll');
                         $('.logo-img').attr('src','../../static/images/horizontal.svg');
+                            $('.menu-trigger ul li').css({'background-color': 'purple'});
+
                     // } else if (N){
                     //  $
                     // }
@@ -149,6 +151,7 @@ loopThrough('.configure', 1000, 20,20);
                         $('.menu-border').removeClass('menu-scroll');
                         $('.logo-img').attr('src','../../static/images/transparent.png');
                         $('.identity-forms').removeClass('identity-scroll');
+                        $('.menu-trigger ul li').css({'background-color': '#fff'});
                     }}
                 
                 );

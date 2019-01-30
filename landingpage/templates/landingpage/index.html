@@ -9,7 +9,7 @@
         <div class="container ">
             <div class="row">
                 <div class="landing-section  purple-theme">
-                    <div class="col-md-offset-1 col-md-5">
+                    <div class="col-md-6">
                         <div class="centered">
                         <h2>
     
@@ -26,11 +26,17 @@
                                     <p class="pitch"> 
                                         We make it easy for developers and enterprises to deploy cloud applications at the click of a button.
                                     </p>
+                                    <p class="pitch pitch2">
+                                        Sign up to be part of our beta process.
+                                    </p>
                                 </div>
                                 <div class="buttons">
     
                                     <a href="#" class="signup-button">
-                                        Launching Soon
+                                        Get Started
+                                    </a>
+                                    <a href="#" class="">
+                                        Contact Us
                                     </a>
                                    
                             </div>
@@ -50,7 +56,7 @@
         <section id="features">
             <h1>Why choose Duara </h1>
             
-            <p class="simplicity">Simplicity at its core</p>
+            <p class="simplicity"></p>
             
         <div class="container">
             <div class="row reduce">
@@ -129,35 +135,44 @@
     
             <div class=" container">
             <div class=" simple row">
-                <div class="col-md-2 simplicity wow fadeIn" data-wow-duration="2s"  data-wow-delay=".4s">
+                <div class="col-md-2">
+                    <div class=" simplicity wow fadeIn" data-wow-duration="2s"  data-wow-delay=".4s">
                     <img class="" src="{% static 'images/signup.jpeg' %}">
                     
+                    
+                    </div>
                     <p>
                         Signup
-                    </p>
+                    </p>            
                 </div>
                 <div class="col-md-3 border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay=".6s">
                     
                 </div>
-    
-                <div class="col-md-2 simplicity wow fadeIn" data-wow-duration="2s" data-wow-delay=".8s">
-                    <img class="" src="{% static 'images/configure.png' %}">
-                    
-                    <p>
-                        Configure
-    
-                    </p>
+                <div class="col-md-2"> 
+                    <div class=" simplicity wow fadeIn" data-wow-duration="2s" data-wow-delay=".8s">
+                        <img class="" src="{% static 'images/configure.png' %}">
+                        
+                      
+                    </div>
+                      <p>
+                            Configure
+        
+                        </p>
                 </div>
+
                 <div class="col-md-3 border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
                     
                 </div>
-                <div class="col-md-2 simplicity wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">
-                    <img class="" src="{% static 'images/launch.png' %}">
-                    
-                    <p>
-                        Launch 
+                <div class="col-md-2">
+                    <div class=" simplicity wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">
+                        <img class="" src="{% static 'images/launch.png' %}">
                         
-                    </p>
+                        
+                    </div>
+                    <p>
+                            Launch 
+                            
+                        </p>
                 </div>
     
             </div>
@@ -175,70 +190,94 @@
 		<div class="row">
 			<h2 class="heading">Our Products</h2>
 			<div class="section-bg col-md-6"  >
-				<div class="left wow slideInLeft" data-wow-duration="2s">
-				<header>
-					<h3>
-						Virtual Machines
-					</h3>
-					<i class="fas fa-server"></i>
-				</header>
-				<article>
-					<p>
-						
-					These are compute instances on either Ubuntu, centOS or Fedora distributions
+				<div class="left">
+                    <div class="icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="content">
+                        <header>
+                            <h3>
+                                Virtual Machines
+                            </h3>
+                            
+                        </header>
+                        <article>
+                            <p>
+                                
+                            These are compute instances on either Ubuntu, centOS or Fedora distributions
 
-					</p>
-				</article>
+                            </p>
+                        </article>
+                    </div>
+				
 				</div>
 			</div>
-			<div class="section-bg col-md-6 "><div class="right wow slideInRight" data-wow-duration="2s">
-				<header>
-					<h3>
-						Block Storage
-					</h3>
-					<i class="far fa-hdd"></i>
-				</header>
-				<article>
-					<p>
-						
-					This is attached to the VM and allows you to increase its storage capacity without increasing its size
+			<div class="section-bg col-md-6 "><div class="right">
+                <div class="icon">
+                    <i class="far fa-hdd"></i>
+                </div>
+                <div class="content">
+                    <header>
+                    <h3>
+                        Block Storage
+                    </h3>
+                    
+                </header>
+                <article>
+                    <p>
+                        
+                    This is attached to the VM and allows you to increase its storage capacity without increasing its size
 
-					</p>
-				</article>
+                    </p>
+                </article>
+                </div>
+				
 				</div>
 			</div>
 			<div class="section-bg col-md-6 " >
-            <div class="left wow slideInLeft" data-wow-duration="2s">
-				<header>
-					<h3>
-						Floating IP
-					</h3>
-					<i class="fas fa-network-wired"></i>
-				</header>
-				<article>
-					<p>
-						
-					These support failovers and minimize downtime
-					as they can be moved from one VM to a redundant VM in the same cluster
+            <div class="left">
+                <div class="icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="content">
+                    <header>
+                    <h3>
+                        Floating IP
+                    </h3>
+                    
+                </header>
+                <article>
+                    <p>
+                        
+                    These support failovers and minimize downtime
+                    as they can be moved from one VM to a redundant VM in the same cluster
 
-					</p>
-				</article>
+                    </p>
+                </article>
+                </div>
+				
 				</div>
 			</div>
-			<div class="section-bg col-md-6 "><div class="right wow slideInRight" data-wow-duration="2s">
-				<header>
-					<h3>
-						Backups
-					</h3>
-					<i class="fas fa-shield-alt"></i>
-				</header>
-				<article>
-					<p>
-						
-					This provides for automatic back ups, with no interruptions and conducted at regular intervals
+			<div class="section-bg col-md-6 "><div class="right">
+                <div class="icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="content">
+                    <header>
+                    <h3>
+                        Backups
+                    </h3>
+                    
+                </header>
+                <article>
+                    <p>
+                        
+                    This provides for automatic back ups, with no interruptions and conducted at regular intervals
 
-					</p>
-				</article>
+                    </p>
+                </article>
+                </div>
+				
 				
 				</div>
 			</div>

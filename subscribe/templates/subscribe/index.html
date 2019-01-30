@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     {% block extrahead %}{% endblock %}
     <!-- end css external stylesheets -->
 </head>
@@ -61,12 +62,12 @@
       <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
     </div>
     {% endif %}
-        <section id="home">
+        <section id="home" style="height: 100vh !important;">
         <div class="container ">
             <div class="row">
                 <div class="landing-section  purple-theme">
                     
-                    <div class="col-md-offset-1 col-md-5">
+                    <div class="col-md-6">
                         <div class="centered">
                         <h2>
     
@@ -83,9 +84,8 @@
                                     <p class="pitch"> 
                                        We make it easy for developers and enterprises to deploy cloud applications at the click of a button.
                                     </p>
-                                    <p class="pitch1">
-                                        Launching soon!
-                                        Sign up to be part of our Beta process. 
+                                    <p class="pitch pitch2">
+                                        Sign up to be part of our beta process.
                                     </p>
                                 </div>
                                 <div class="buttons">
@@ -93,7 +93,7 @@
                                         {% csrf_token %}
                                         <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
                                    <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
-                                    </a>
+                                    
                                     </form>
                                    
                             </div>
