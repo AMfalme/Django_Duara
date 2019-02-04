@@ -21,7 +21,7 @@ from django.conf import settings
 app_name = 'landingpage'
 urlpatterns = [
     path('', include('subscribe.urls')),
-    # path('landingpage/', include('landingpage.urls'))   # not ready for prod
+    path('landingpage/', include('landingpage.urls'))
 
 ]
 

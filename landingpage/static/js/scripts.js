@@ -135,8 +135,8 @@ loopThrough('.configure', 1000, 20,20);
               
                 
                 function(e){
-                      
-                    if ($(this).scrollTop() > 50) {
+                    $('.menu-scroll').css('position', 'relative !important');
+                    if ($(this).scrollTop() > 700) {
                         $('.identity-forms').addClass('identity-scroll');
                 
                         $('.menu-border').addClass('menu-scroll');
@@ -155,7 +155,48 @@ loopThrough('.configure', 1000, 20,20);
                     }}
                 
                 );
+    
 		});
+$('.clompute').hover(
+    function () {
+      // body...
+      $(this).addClass('hover');
+      if ($(this).hasClass('simple-value')){
+        $(this).find('img').attr('src', '../../static/images/simple.svg');
+      }
+      else if ($(this).hasClass('reliable-value')){
+         $(this).find('img').attr('src', '../../static/images/reliable.svg');
+      }
+
+      else if ($(this).hasClass('transparent-value')){
+         $(this).find('img').attr('src', '../../static/images/transparent.svg');
+      }
+
+      else if ($(this).hasClass('support-value')){
+         $(this).find('img').attr('src', '../../static/images/support.svg');
+      }
+      
+    }, function(){
+      // body...
+      $(this).removeClass('hover');
+      if ($(this).hasClass('simple-value')){
+        $(this).find('img').attr('src', '../../static/images/simple colored.svg');
+      }
+      else if ($(this).hasClass('reliable-value')){
+         $(this).find('img').attr('src', '../../static/images/reliable colored.svg');
+      }
+
+      else if ($(this).hasClass('transparent-value')){
+         $(this).find('img').attr('src', '../../static/images/transparent colored.svg');
+      }
+
+      else if ($(this).hasClass('support-value')){
+         $(this).find('img').attr('src', '../../static/images/support colored.svg');
+      }
+      
+    }
+      
+      );
 		$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
     items:4,

@@ -1,0 +1,77 @@
+<svg id="Bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2069" height="968" viewBox="0 0 2069 968">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        opacity: 0.2;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+        stroke-dasharray: 8 10;
+        opacity: 0.3;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        opacity: 0.15;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="88.375" y1="447" x2="88.375" y2="967.969" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1702.815" y1="5" x2="1702.815" y2="517.688" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Down_copy_3" data-name="Down copy 3">
+    <path class="cls-1" d="M2.755,967.968s225.07-18.249,159.14-170.01c0,0-18.908-32.2-43.038-52-22.64-23.741-87.042-69.69-64.056-120.007S141.491,428.61,3.756,448.937Z"/>
+  </g>
+  <g id="Down_copy_2" data-name="Down copy 2">
+    <path class="cls-2" d="M1647.99,5S1365.42,23.249,1448.2,175.02c0,0,23.74,32.206,54.03,52.006,28.42,23.742,109.28,69.694,80.42,120.014S1491.57,528.338,1645,517c0,0,344.25-207.507,327-334C1972.76,53.527,1647.99,5,1647.99,5Z"/>
+    <path class="cls-3" d="M1639.99,505s-264.75,2.019-192.64-171.85c0,0,22.73-34.793,60.96-55.951s87.6-75.716,68.28-149.87,44.39-121.551,62.18-125.89S1639.99,505,1639.99,505Z"/>
+  </g>
+  <g id="Up_copy" data-name="Up copy">
+    <path class="cls-4" d="M3,134s69.05-16.584,102,58,90.589,95.3,136.1,92.281C287.668,281.193,328.854,283.8,385,201c0,0,28.157-63.982,171-39,0,0,85.3,12.347,140-73,0,0,50.172-81.747,138-63,0,0,82.706,10.655,137-26H3V134Z"/>
+  </g>
+</svg>
