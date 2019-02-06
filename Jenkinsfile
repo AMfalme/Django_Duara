@@ -42,16 +42,16 @@ pipeline {
             sh "docker login -u _json_key --password-stdin https://gcr.io < $GCR_KEY_FILE \
             && docker tag $NAME $GIT_SHA \
             && docker tag $NAME latest \
-            && docker push $NAME \
+            && docker push $NAME
           }
         }
       }
     }
   }
   post {
-        always {
-	          /* Use slackNotifier.groovy from shared library and provide current build result as parameter */
-            slackNotifier(currentBuild.currentResult)
-        }
+    always {
+      /* Use slackNotifier.groovy from shared library and provide current build result as parameter */
+      slackNotifier(currentBuild.currentResult)
+    }
   }
 }
