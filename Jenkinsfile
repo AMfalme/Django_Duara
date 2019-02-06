@@ -45,8 +45,7 @@ pipeline {
             && docker tag $GCR_IMAGE $GIT_SHA \
             && docker tag $GCR_IMAGE latest \
             && docker push $GCR_IMAGE_SHA \
-            && docker push $GCR_IMAGE_LATEST
-            "
+            && docker push $GCR_IMAGE_LATEST"
           }
         }
       }
