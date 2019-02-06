@@ -4,7 +4,18 @@
 {% load static %}
 
 {% block content%}
-    	
+    	   {% if message %} 
+    <div class="alert alert-success message">
+      {{ message }}
+      <button type="button" class="close" id="dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+
+    {% elif error_message %}
+    <div class="alert alert-warning message">
+    {{ error_message }}
+      <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    </div>
+    {% endif %}
 	<section id="home">
         <div class="container ">
             <div class="row">
@@ -24,17 +35,23 @@
                        
                         <div class="">
                                     <p class="pitch"> 
-                                        We make it easy for developers and enterprises to deploy cloud applications at the click of a button.
+                                        We make it easy for developers and enterprises to<br> deploy cloud applications instantly.
                                     </p>
                                     <p class="pitch pitch2">
-                                        Sign up to be part of our beta process.
+                                        Subscribe to be part of our beta process.
                                     </p>
                                 </div>
                                 <div class="buttons">
     
-                                    <a href="#" class="signup-button">
-                                        Get Started
-                                    </a>
+                                     <div class="buttons">
+                                    <form action="{% url 'index'  %}" method="POST">
+                                        {% csrf_token %}
+                                        <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
+                                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
+                                    
+                                    </form>
+                                   
+                            </div>
                                    
                                    
                             </div>
@@ -63,12 +80,11 @@
                         <div class="	clompute simple-value">
                             <img class="transparent-image" src="{% static 'images/simple colored.svg' %}">
                     <h2 >
-                        Simple.
+                        Simple
                     </h2>
                     
                     <p>
-                        Duara offers an intuitive and easy to use User Experience.
-                        Self provision of Compute instances can be achieved in <br> a few easy steps.
+                        Easily self-provision your compute instances on our intuitive platform.
     
                         </p>
                     
@@ -83,9 +99,8 @@
                     </h2>
                     
                     <p>
-                        Our Pricing module enables you to pay for only used resources giving
-                         an easy way to track your usage. 
-                        You only pay for what you use
+                        Only pay for resources used.
+
                         </p>
                     
                     </div>
@@ -99,9 +114,8 @@
                     
                     <p>
                             
-                        We guarantee a 99.99% uptime SLA. We ensure 
-                        round the clock availability thus keeping your
-                         applications up and running at all possible costs.
+                        We guarantee high availability keeping your
+                         applications up<br> and running at all times.
     
                         </p>
                     
@@ -118,8 +132,7 @@
                     
                     <p>
                             
-                        We offer round the clock support in the case that you need any assistance.
-                        We handle our customers professionally and patiently.
+                        We offer round the clock support.
     
                         </p>
                     
@@ -129,7 +142,7 @@
                 </div>
     
         </div>
-        <h3 class="pitch-spin wow fadeIn heavy-fontcolor" data-wow-delay=".2s" data-wow-duration="1s">Spin up your compute instances in three simple steps</h3>
+        <h3 class="pitch-spin wow fadeIn heavy-fontcolor" data-wow-delay=".2s" data-wow-duration="1s">Spin up your compute instances in <span>3</span> simple steps</h3>
                 <p class="simplicity"></p>
             <div class=" container">
             <div class=" simple row">
@@ -145,7 +158,7 @@
                     
                     </div>
                     <p class="heavy-fontcolor">
-                        Signup
+                        Sign up
                     </p>            
                 </div>
                
@@ -188,7 +201,7 @@
 	<div class="container">
 		<div class="row">
 			<h2 class="heading">Our Products</h2>
-			<div class="section-bg col-md-6"  >
+			<div class="section-bg col-md-4"  >
 				<div class="left">
                     <div class="icon">
                        <img class="" src="{% static 'images/virtual machines.svg' %}">
@@ -203,7 +216,7 @@
                         <article>
                             <p>
                                 
-                            These are compute instances on either<br> Ubuntu, centOS or Fedora distributions
+                            Scalable VMs that can run on any linux-based application.
 
                             </p>
                         </article>
@@ -211,7 +224,7 @@
 				
 				</div>
 			</div>
-			<div class="section-bg col-md-6 "><div class="left">
+			<div class="section-bg col-md-4 "><div class="left">
                 <div class="icon">
                     <img class="" src="{% static 'images/block storage.svg' %}">
                 </div>
@@ -225,7 +238,7 @@
                 <article>
                     <p>
                         
-                    This is attached to the VM and allows you to<br> increase its storage capacity without increasing<br> its size
+                   Additional storage attached to running VMs allowing for flexibility and scalability.
 
                     </p>
                 </article>
@@ -233,7 +246,7 @@
 				
 				</div>
 			</div>
-			<div class="section-bg col-md-6 " >
+			<div class="section-bg col-md-4 " >
             <div class="left">
                 <div class="icon">
                     <img class="" src="{% static 'images/floating IP.svg' %}">
@@ -247,31 +260,28 @@
                 </header>
                 <article>
                     <p>
-                        
-                    These support failovers and minimize<br> downtime
-                    as they can be moved from one<br> VM to a redundant VM in the same cluster
-
+                        Attach public IP addresses to VMs on a private network to make them reachable from the net. 
                     </p>
                 </article>
                 </div>
 				
 				</div>
 			</div>
-			<div class="section-bg col-md-6 "><div class="left">
+			<div class="section-bg col-md-4 "><div class="left">
                 <div class="icon">
-                    <img class="" src="{% static 'images/backups.svg' %}">
+                    <img class="" style="width: 45px; margin-top: -1px;" src="{% static 'images/backups.svg' %}">
                 </div>
                 <div class="content">
                     <header>
                     <h3>
-                        Backups
+                        Backups and snapshots
                     </h3>
                     
                 </header>
                 <article>
                     <p>
                         
-                    This provides for automatic back ups, with no<br> interruptions and conducted at regular intervals
+                    Create images of your instances at a particular time. Images can also be used to spin up clones of a running instance.
 
                     </p>
                 </article>
@@ -280,6 +290,50 @@
 				
 				</div>
 			</div>
+            <div class="section-bg col-md-4 "><div class="left">
+                <div class="icon">
+                    <img class="" src="{% static 'images/backups.svg' %}">
+                </div>
+                <div class="content">
+                    <header>
+                    <h3>
+                        Private Networking
+                    </h3>
+                    
+                </header>
+                <article>
+                    <p>
+                        
+                    Deploy your instances on a private network.
+
+                    </p>
+                </article>
+                </div>
+                
+                
+                </div>
+            </div>
+            <div class="section-bg col-md-4 "><div class="left">
+                <div class="icon">
+                    <img class="" src="{% static 'images/backups.svg' %}">
+                </div>
+                <div class="content">
+                    <header>
+                    <h3>
+                        Firewall-as-a-service
+                    </h3>
+                    
+                </header>
+                <article>
+                    <p>
+                        Easily create firewall rulesand provision them to your instances as needed.
+                    </p>
+                </article>
+                </div>
+                
+                
+                </div>
+            </div>
 			
 		</div>
 	</div>
@@ -343,40 +397,61 @@
                 <div class="pricing-table">
                         <table class="table ">
                             <tr class="thead-dark">
-                                <th></th>
-                                <th>CPU Core</th>
                                 <th>Memory</th>
+                                <th>VCPUs</th>
                                 <th>Storage</th>
-                                <th>Transfer</th>
+                                <th>International  Transfer</th>
+                                <th>Price</th>
                             </tr>
                             
                             <tr>
-                                <td>5$/month</td>
-                                <td>1 CPU Core</td>
-                                <td>1 GB</td>
-                                <td>25 GB Storage</td>
-                                <td>40GB Transfer</td>
+                                <td>512MB</td>
+                                <td>1 VCPU</td>
+                                <td>10 GB</td>
+                                <td>1 TB</td>
+                                <td>$5/mo  $0.007/hr</td>
                             </tr>
                             <tr>
-                                <td>10$/month</td>
-                                <td>2 CPU Core</td>
-                                <td>2 GB</td>
-                                <td>50 GB Storage</td>
-                                <td>80GB Transfer</td>
+                                <td>1GB</td>
+                                <td>1 VCPU</td>
+                                <td>20GB</td>
+                                <td>1TB</td>
+                                <td>$10/mo  $0.015/hr</td>
                             </tr>
                             <tr>
-                                <td>20$/month</td>
-                                <td>4 CPU Core</td>
-                                <td>3 GB</td>
-                                <td>75 GB Storage</td>
-                                <td>120GB Transfer</td>
+                                <td>2GB</td>
+                                <td>1 VCPU</td>
+                                <td>40 GB</td>
+                                <td>2TB</td>
+                                <td>$20/mo   $0.03/hr</td>
                             </tr>
                             <tr>
-                                <td>30$/month</td>
-                                <td>5 CPU Core</td>
-                                <td>4 GB</td>
-                                <td>100 GB Storage</td>
-                                <td>200GB Transfer</td>
+                                <td>2GB</td>
+                                <td>2 VCPUs</td>
+                                <td>50 GB</td>
+                                <td>3 TB</td>
+                                <td>$30/mo $0.045/hr</td>
+                            </tr>
+                            <tr>
+                                <td>4GB</td>
+                                <td>2 VCPUs</td>
+                                <td>80 GB</td>
+                                <td>4 TB</td>
+                                <td>$40/mo $0.06/hr</td>
+                            </tr>
+                            <tr>
+                                <td>8GB</td>
+                                <td>4 VCPUs</td>
+                                <td>160 GB</td>
+                                <td>5 TB</td>
+                                <td>$80/mo $0.119/hr</td>
+                            </tr>
+                            <tr>
+                                <td>16GB</td>
+                                <td>6 VCPUs</td>
+                                <td>320 GB</td>
+                                <td>6 TB</td>
+                                <td>$160/mo $0.238/hr</td>
                             </tr>
                         </table>
                 </div>
@@ -437,27 +512,30 @@
 <p class="simplicity"></p>
 <div class="container contact-card">
     <div class="row">
-   
+            <div class="toast">
+                <h3>We appreciate feedback</h3>
+            </div>
         <div class="col-md-6">
             <div class="contact">
-                <form>
+                <form id="sendMailForm" method="POST">
+                    {% csrf_token %}
                   <div class="form-row">
                     <div class="form-group">
                         <div class="col-md-12">
                             
-                          <input type="text" class="form-control" placeholder="Name*">
+                          <input type="text" class="form-control" name="name" placeholder="Name*">
                         </div>
                         
                         
                     <div class=" col-md-12">
                       
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email*">
+                      <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email*">
                     </div>
                     
                     </div>
                     <div class="form-group col-md-12">
                        
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message*"></textarea>
+                        <textarea class="form-control" id="mailMessage" name="message" rows="3" placeholder="Your Message*"></textarea>
                         <button type="submit" class="submit-btn btn ">Submit</button>
                       </div>
 
@@ -466,23 +544,8 @@
             </div>
         </div>
         <div class="col-md-5">
-            <h2>
-                Africa's Cloud
-            </h2>
-            <p>
-                Duara compute takes care of the overhead for you thus allowing you to simply create, manage and deploy your personal virtual server with so much ease.
-            </p>
-        </div>
-    </div>
-</div>
-</section>
-
-
-<footer class="container-fluid">
-<div class="row">
-    <div class="col-md-3 toast">
+                <div class=" toast">
         
-       <img class="" src="{% static 'images/transparent.png' %}">
         <ul class="channels">
             <li>
                  <i class="fa fa-phone" aria-hidden="true"></i>
@@ -508,155 +571,36 @@
 
                 
             
-           <!--  <li class="linkedin">
-                <img src="{% static 'images/slack.png' %}" width="50">
-                <img src="{% static 'images/linkedin.jpg' %}">
-            </li> -->
-        </ul>
-    </div>
-    <div class="col-md-3" style="padding-left: 120px;">
-        <h3>Support</h3>
-        <ul class="channels">
-            <li>
-                   <a href="#">
-                       User Dashboard
-                   </a>
-                
-            </li>
-             <li>
-                
-                   <a href="#cotactus">
-                       Contact Us
-                   </a>
-               
-            </li>
-            
-            <li>
-                
-                  <a href="#">FAQ</a>
-               
-
-            </li>
-            <li>
-                <a href="#">
-                    Slack
-                </a>
-            </li>
-
-
-            <li>
-                <a href="#">
-                    Live Support
-                </a>
-            </li>
-
-
-                
-                
            
         </ul>
-    </div>
-    <div class="col-md-2">
-         <h3>Products</h3>
-        <ul class="channels">
-            <li>
-                <a href="#">
-                   Virtual Machines
+        <ul class="media-icons ">
+             <li class="linkedin">
+                <a href="https://twitter.com/duarasystems" target="_blank">
+                    <img src="{% static 'images/twitter.svg' %}">
                 </a>
             </li>
-             <li>
-                <a href="#">
-                   Block Storage
-               </a>
-            </li>
-            
             <li>
-                <a href="#">
-                  Floating IPs
-               </a>
-
+                <a target="_blank" href="https://join.slack.com/t/duara-systems/shared_invite/enQtNTQ0NTk0NjEzMTQzLTRjYmMwNjA0MDk1Mjk4NmJkOTNlZGVmYjI2NGQxY2Y4ZjY3OTU0ZjhlZjY1NWM1YjJiOGVkMzVkMzRiM2JkY2Y">
+                <img src="{% static 'images/slack.svg' %}">
+                 
             </li>
-            <li>
-                <a href="#">
-                    Backups
-                </a>
-            </li>
-
-
-                
-                
-           
-          
         </ul>
+    </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<footer class="container-fluid">
+<div class="row">
+    <div class="col-md-12 toast">
+        
+       <img class="" src="{% static 'images/transparent.png' %}">
         
     </div>
-     <div class="col-md-2">
-         <h3>Links</h3>
-        <ul class="channels">
-            <li>
-                <a href="#">
-                   Home
-                </a>
-            </li>
-             <li>
-                <a href="#">
-                   Products
-               </a>
-            </li>
-            
-            <li>
-                <a href="#">
-                  Pricing
-               </a>
+ 
 
-            </li>
-            <li>
-                <a href="#">
-                    Contact Us
-                </a>
-            </li>
-
-
-                
-                
-           
-          
-        </ul>
-        
-    </div>
-    <div class="col-md-2">
-         <h3>Follow Us</h3>
-        <ul class="channels">
-            <li>
-                <a href="#">
-                   Slack
-                </a>
-            </li>
-             <li>
-                <a href="#">
-                   Twitter
-               </a>
-            </li>
-            
-            <li>
-                <a href="#">
-                  LinkedIn
-               </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    Github
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                 Medium
-                </a>
-            </li>
-</ul>
-    </div>
     <br>
     <div class="border-hr">
         
@@ -678,6 +622,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><script>new WOW().init();</script>
 
 <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mail.js' %}"></script>
 <script> 
 function afterReveal( el ) 
 {

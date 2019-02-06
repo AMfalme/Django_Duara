@@ -7,7 +7,7 @@ $(function(){
           var anchor = $(this);
           $('html, body').stop().animate({
 
-              scrollTop: $(anchor.attr('href')).offset().top - 100
+              scrollTop: $(anchor.attr('href')).offset().top - 60
           }, 1000);
 
       });
@@ -197,6 +197,18 @@ $('.clompute').hover(
     }
       
       );
+    $(document).ready(function(){
+    window.setTimeout(function() {
+  $(".alert").fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove();
+  });
+}, 5000);
+$('#dismiss').on(
+    'click', function(){
+        $('.alert').hide();
+    }
+);
+ } );
 		$(document).ready(function(){
 				$(".owl-carousel").owlCarousel({
     items:4,

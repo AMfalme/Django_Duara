@@ -20,8 +20,7 @@ from django.conf import settings
 
 app_name = 'landingpage'
 urlpatterns = [
-    path('', include('subscribe.urls')),
-    path('landingpage/', include('landingpage.urls'))
+    path('', include('landingpage.urls')),
 
 ]
 

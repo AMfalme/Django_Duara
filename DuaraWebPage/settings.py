@@ -42,7 +42,7 @@ LOGGING = {
 		'file': {
 			'level': 'DEBUG',
 			'class': 'logging.FileHandler',
-			'filename': '/var/log/home/home.log',
+			'filename': 'home.log',
 		},
 	},
 	'loggers': {
@@ -158,3 +158,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# development environment
+from .local_settings import *
