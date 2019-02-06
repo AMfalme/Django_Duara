@@ -42,8 +42,8 @@ pipeline {
         script {
           withCredentials([[$class: 'FileBinding', credentialsId: "gcr-jenkins-ci-secret", variable: 'GCR_KEY_FILE']]) {
             sh "docker login -u _json_key --password-stdin https://gcr.io < $GCR_KEY_FILE \
-            && docker tag $GCR_IMAGE $GIT_SHA \
-            && docker tag $GCR_IMAGE latest \
+            && docker tag $GCR_IMAGE $GCR_IMAGE_SHA \
+            && docker tag $GCR_IMAGE $GCR_IMAGE_LATEST \
             && docker push $GCR_IMAGE_SHA \
             && docker push $GCR_IMAGE_LATEST"
           }
