@@ -10,8 +10,8 @@ pipeline {
     NAME = "${env.JOB_NAME}"
     GIT_SHA = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
     GCR_IMAGE = "$DOCKER_REGISTRY/$PROJECT_ID/$NAME"
-    GCR_IMAGE_SHA = "GCR_IMAGE:$GIT_SHA"
-    GCR_IMAGE_LATEST = "GCR_IMAGE:latest"
+    GCR_IMAGE_SHA = "$GCR_IMAGE:$GIT_SHA"
+    GCR_IMAGE_LATEST = "$GCR_IMAGE:latest"
 
     CONTAINER_PORT="80"
     PROD_HOST_PORT="8080"
