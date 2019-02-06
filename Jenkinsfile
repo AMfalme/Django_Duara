@@ -32,7 +32,7 @@ pipeline {
     stage('Publish Image') {
       when {
         anyOf {
-          branch 'master'
+          branch 'master';
           branch 'release'
         }
       }
