@@ -10,6 +10,8 @@ pipeline {
     NAME = "${env.JOB_NAME}"
     GIT_SHA = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
     GCR_IMAGE = "$DOCKER_REGISTRY/$PROJECT_ID/$NAME"
+    GCR_IMAGE_SHA = "GCR_IMAGE:$GIT_SHA"
+    GCR_IMAGE_LATEST = "GCR_IMAGE:latest"
 
     CONTAINER_PORT="80"
     PROD_HOST_PORT="8080"
@@ -42,7 +44,9 @@ pipeline {
             sh "docker login -u _json_key --password-stdin https://gcr.io < $GCR_KEY_FILE \
             && docker tag $GCR_IMAGE $GIT_SHA \
             && docker tag $GCR_IMAGE latest \
-            && docker push $GCR_IMAGE"
+            && docker push $GCR_IMAGE_SHA \
+            && docker push $GCR_IMAGE_LATEST
+            "
           }
         }
       }
