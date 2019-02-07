@@ -160,4 +160,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # development environment
-from DuaraWebPage.local_settings import *
+try:
+    from local_settings import *
+except ImportError:
+    pass
