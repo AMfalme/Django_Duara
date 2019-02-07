@@ -71,6 +71,7 @@ pipeline {
                 stage('Pull and Run image') {
                   sshCommand remote: remote, command: "docker pull $GCR_IMAGE_LATEST"
                     sshCommand remote: remote, command: "docker stop $CONTAINER_NAME || true"
+                    sshCommand remote: remote, command: "docker rm $CONTAINER_NAME || true"
                     sshCommand remote: remote, command: "docker run -d -p $STAGING_HOST_PORT:$CONTAINER_PORT -e STAGE=$STAGE --env-file $ENV_FILE --network $DOCKER_NET --dns=$DNS_SERVER --restart=always --name $CONTAINER_NAME $GCR_IMAGE_LATEST"
                     sshCommand remote: remote, command: "docker system prune -f"
                 }
