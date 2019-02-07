@@ -1,100 +1,65 @@
-$(function(){
-			   /*-------------------------------------------------------------------------*
-     *                   04. Smooth scroll to anchor                           *
+ /*-------------------------------------------------------------------------*
+     *                   On document ready                          *
      *-------------------------------------------------------------------------*/
-      $('a.nav_scroll').on("click", function (e) {
-          e.preventDefault();
-          var anchor = $(this);
-          $('html, body').stop().animate({
+$(
+   /*-------------------------------------------------------------------------*
+     *                   01. Smooth scroll to anchor                           *
+     *-------------------------------------------------------------------------*/
+  function(){
+    $('a.nav_scroll').on("click", function (e)
+      {
+        e.preventDefault();
+        var anchor = $(this);
+        $('html, body').stop().animate(
+        {
+          scrollTop: $(anchor.attr('href')).offset().top - 60
+        }, 1000);
 
-              scrollTop: $(anchor.attr('href')).offset().top - 60
-          }, 1000);
-
-      });
-
-    
-      	   /*-------------------------------------------------------------------------*
+      }
+    );
+    /*-------------------------------------------------------------------------*
+    *                     02. Ensure landing section is responsive to screen size
+                              for better user experience
+    *
+    *-------------------------------------------------------------------------*/
+    function refactor(){
+      if ($(window).width() < 990) {
+        $('.landing-section').removeClass('purple-theme');
+        $('.landing-section').css({'padding': '80px'});
+        $('.centered').css({'margin-bottom':'100px'});
+        $('.navigation').css({'display':'none'});
+      } 
+      if ($(window).width()> 990) {
+        $('.landing-section').addClass('purple-theme');
+        $('.landing-section').css({'padding': '0px'});
+        $('.navigation').css({'display':'block'});
+      }
+    }
+    /*If browser resized, call function refactor to check width again */
+     $(window).resize(function() {
+      refactor();
+    });
+    /*check width on load page */
+      refactor();
+    /*-------------------------------------------------------------------------*
      *                   04. Pricing section tabbable area                          *
      *-------------------------------------------------------------------------*/
-			$('.info').click(
-				function(){
-					target = $(this).attr('id');
-					console.log(target);
-					$('.target-info> .info-active').removeClass('info-active');
-					$('.'+target).addClass('info-active');
-					$('.info').removeClass('active');
-					$(this).addClass('active');
+    $('.info').click(
+      function(){
+        target = $(this).attr('id');
+				console.log(target);
+				$('.target-info> .info-active').removeClass('info-active');
+				$('.'+target).addClass('info-active');
+				$('.info').removeClass('active');
+				$(this).addClass('active');
+			}
+		);
 
-				}
-				);
-
-
-      $('.menu-trigger').click(
-        function(e){
-          e.preventDefault();
-          $(' .navigation').toggle('triggered');
-        }
-        );
-      function refactor(){
-        if ($(window).width() < 990) {
-   
-     $('.landing-section').removeClass('purple-theme');
-     $('.landing-section').css({'padding': '80px'});
-     $('.centered').css({
-      'margin-bottom':'100px'
-     });
-        $('.navigation').css({'display':'none'});
-    }
-    if ($(window).width()> 990) {
-       $('.landing-section').addClass('purple-theme');
-     $('.landing-section').css({'padding': '0px'});
-      $('.navigation').css({'display':'block'});
-    }
-  }
-      $(window).resize(function() {
-    /*If browser resized, check width again */
-      refactor();
-
-    
- });
-      refactor();
+     
+				   
 				   /*-------------------------------------------------------------------------*
-     *                  seerves no purpose as is expected to call the animate simplicity fxn                         *
-     *-------------------------------------------------------------------------*/
-			
-			$('.identity-forms').click(
-					function(e){
-						e.stopPropagation();
-					}
-					);
-				   /*-------------------------------------------------------------------------*
-     *                   04.Helps to display or hide the form on clicking the signup button 
-			*****************Is commented out since we need to direct the signup on click button to********************
-			*****************horizon but will eventually be ported and handled as a solo django app*****************
-
-     *
-     *-------------------------------------------------------------------------*/
-			// $('#signup').click( function(e){
-			// 	e.stopPropagation();
-			// 	e.preventDefault();
- 		// 		$('.identity-forms').toggleClass('identity-active');
-			// 	 console.log( $( this ).text() );
-			// 	$('#signup').removeClass('active');
-			// 	$(this).addClass('active');
-			// 	$('.border-active').removeClass('border-signup');
-			// 	$('.transform').removeClass('login-active');
-			// $('.border-active').css('display','block');	
-			// });
-				   /*-------------------------------------------------------------------------*
-     *                   was used to trigger the dropdown menu which have since been depricated         *
-     *-------------------------------------------------------------------------*/
-			$('.menu-hover').click(function(e){
-					e.preventDefault();
-					e.stopPropagation();
-					$('#dropdown').toggle();
-				});
-				   /*-------------------------------------------------------------------------*
-     *                  Helps in hiding any event triggered forms or div so as to clear the space for viewer or visitor*
+     *           Helps in hiding any event triggered forms or div (signup or login/since been depricated)
+                 so as to clear the space for viewer or visitor*
      *-------------------------------------------------------------------------*/
 			$("body").click(function(e) {
             
@@ -109,7 +74,7 @@ $('#signup').removeClass('active');
 
 
 *			A function to loop through a series of words to indicate why developers should choose duara compute   *
-
+      Not used at the moment
 
 *----------------------------------------------------*/
 
@@ -134,29 +99,44 @@ loopThrough('.configure', 1000, 20,20);
 		$(window).scroll(
               
                 
-                function(e){
-                    $('.menu-scroll').css('position', 'relative !important');
-                    if ($(this).scrollTop() > 700) {
-                        $('.identity-forms').addClass('identity-scroll');
-                
-                        $('.menu-border').addClass('menu-scroll');
-                        $('.logo-img').attr('src','../../static/images/horizontal.svg');
-                            $('.menu-trigger ul li').css({'background-color': 'purple'});
+/*---------------------------------------------------------------------------------*
 
-                    // } else if (N){
-                    //  $
-                    // }
-                }
-                     else  {
-                        $('.menu-border').removeClass('menu-scroll');
+
+*     
+      A function to change the background color of the menu-nav on scroll past 100 from top 
+      and vice versa
+
+
+*----------------------------------------------------*/
+                function(e){
+                  if ($(this).scrollTop() > 100) {
+                    $('.menu-nav').addClass('menu-fff');
+                    $('.logo-img').attr('src','../../static/images/logo.svg');
+                    $('.menu-scroll ul').addClass('menu-scroll-color')
+
+                        
+                          }
+                      else  {
+                        $('.menu-nav').removeClass('menu-fff');
                         $('.logo-img').attr('src','../../static/images/transparent.png');
                         $('.identity-forms').removeClass('identity-scroll');
-                        $('.menu-trigger ul li').css({'background-color': '#fff'});
-                    }}
+                         $('.menu-scroll ul').removeClass('menu-scroll-color')
+                        
+                    
+                    }
+                  }
                 
                 );
     
 		});
+
+/*---------------------------------------------------------------------------------*
+
+
+*     A function to change the background of the why choose us sections into a purple gradient and 
+      change the image as well to a white svg for easy readability and visibility
+
+*----------------------------------------------------*/
 $('.clompute').hover(
     function () {
       // body...
@@ -197,6 +177,8 @@ $('.clompute').hover(
     }
       
       );
+
+
     $(document).ready(function(){
     window.setTimeout(function() {
   $(".alert").fadeTo(500, 0).slideUp(500, function(){

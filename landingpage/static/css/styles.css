@@ -49,6 +49,9 @@ a, a:hover, a:active, a:visited, a:focus{
     outline: none !important;
     color: #fff !important;
 }
+input.subscribeemail{
+    color: #000 !important;
+} 
 /* .wow{
     visibility: hidden;
     opacity: 0.3;
@@ -59,7 +62,7 @@ color: #fff !important;
 }
 .menu-border{
 	backface-visibility: hidden;
-	transition-duration: 1s;
+
 	position: absolute;
 	width: 100%;
 	left: 0;
@@ -67,8 +70,25 @@ color: #fff !important;
     
     
 }
-
-
+.menu-nav{
+    position: absolute !important;
+    z-index: 100;
+    width: 100%;
+    background-image: none !important;
+    background-color: transparent !important;
+}
+.menu-nav .navbar-collapse{
+    background-color: transparent !important;
+}
+.menu-nav .navbar-brand{
+  float: none;
+    
+}
+.menu-nav.navbar-default{
+    border: none;
+   box-shadow: none;
+   border-radius: 0;
+}
 nav.navigation {
     margin: 0 auto;
 }
@@ -83,38 +103,44 @@ nav.navigation ul li a {
     text-transform: capitalize;
     
     font-size: 13px;
-}.logo a img {
+}.logo-img {
        width: 140px;
-    margin: 20px 0;
+       margin: -20px auto;
+        position: absolute;
    
 }
+.menu-fff{
+    background-color: #fff !important;
+    background-image: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075) !important;
+    transition-duration: .5s; 
+}
 .menu-scroll li{
-    padding: 15px 30px 15px 30px !important;
+    padding: 0px 10px !important;
 }
 .menu-scroll .logo-img{
-    margin: 5px !important;
-    width: 80px;
-    margin: 0 auto;
+    
     display: block; 
-    height: 45px;
+ 
 }
 .right {
     float: right !important;
 }
 .menu-trigger{
 	height: 40px;
-    width: 40px;
+   
     float: right;
     cursor: pointer;
-    position: absolute;
-    right: 60px;
-    top: 15px;
+    margin-right: 0;
+    margin-top: 15px;
     display: none;
+    z-index: 100000000;
+    border: 1px solid #000;
 }
 .menu-trigger ul li{
 	display: block !important;
-    width: 35px;
-    height: 5px;
+    width: 28px;
+    height: 1px;
     background-color: #fff;
     padding: none;
     padding: 0 !important;
@@ -123,11 +149,11 @@ nav.navigation ul li a {
 
 
 .menu-scroll{
-    position: fixed;
-    transition-duration: 1s;   
+    position: fixed !important;
+       
     backface-visibility: hidden;
-    
-
+    padding-right: 45px;
+    padding-left: 65px;
     background: #fff;
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
     width: 100%;
@@ -141,10 +167,13 @@ nav.navigation ul li a {
     width: 150px;
 }
 .menu-scroll a{
-    color: purple !important;
+    color: #fff !important;
 }
 .menu-scroll .menu-hover:after{
     
+}
+.menu-scroll-color a{
+    color: purple !important;
 }
 /* home section */
 
@@ -252,6 +281,7 @@ padding-top: 45px;
 }
 #features img{
     width: 70px;
+    height: 70px;
     display: block;
  
 }
@@ -272,20 +302,26 @@ font-weight: bold;
 }
 .clompute {
     
-    box-shadow: 0px 5px 20px 6px rgba(165, 7, 104, 0.15);
+    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.03);
     padding: 22px;
     background-color: #fff;
         transition-duration: 0.3s;
         margin: 50px auto;
         height: 290px;
         border-radius: 5px;
+        position: relative;
+
         
 }
 .clompute::before{
-    background-image: url('static/images/signup.svg');
+/*    background-image: url('../images/Purple Shadow.png');*/
     position: absolute;
     content: '';
-    width: 100%
+    width: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .simple-value.hover,.transparent-value.hover, .reliable-value.hover, .support-value.hover{
     background-image: linear-gradient(to bottom left, #89389d 0%,#d74589 100%);
@@ -293,7 +329,7 @@ font-weight: bold;
     box-shadow: none;
 }
 {
-    background-image: url('static/images/signup.svg');
+    background-image: url('../images/signup.svg');
 }
 .clompute:hover{
     
@@ -324,8 +360,8 @@ color: rgb(116, 114, 130);
 
 
 .simple {
-    margin: 110px auto !important;
-    width: 100%;
+    margin: 50px auto 100px !important;
+    width: 95%;
     position: relative !important;
 }
 .simple p{
@@ -362,6 +398,7 @@ color: rgb(116, 114, 130);
     box-shadow:-4px 8px 20px 0px rgba(50, 50, 50, 0.15);
     padding: 30px;
     width: 125px;
+    height: 125px;
     background-color: #fff;
     z-index: 10;
     margin: 0 auto;
@@ -385,25 +422,16 @@ height: 280px;
 width: 100%;
 }
 .border-delay {
-    top: -27px;
-
-background-image: url(../images/wave.svg);
-
-position: relative !important;
-
-height: 230px;
-
-background-repeat: no-repeat;
-
-width: 90%;
-
-background-size: 90% !important;
-
-background-position: center;
-
-margin: 0 auto;
-
-z-index: 0;
+    top: 0;
+    background-image: url('../images/dotted line.svg');
+    position: relative !important;
+    height: 142px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 90% !important;
+    background-position: center;
+    margin: 0 auto;
+    z-index: 0;
 }
 
 /* Products section */
@@ -465,7 +493,7 @@ background-repeat: no-repeat;
 }
  #products .content{
     float: right;
-    width: 75%;
+    width: 80%;
 }
 
 .heading {
@@ -499,7 +527,7 @@ margin: 3px auto;
 #products p {
     font-size: 13px;
     color: #fff;
-    margin: 30px auto 50px;
+    margin: 20px auto 50px;
 
 }
 
@@ -534,9 +562,10 @@ margin: 3px auto;
 }
 #home .buttons{
     margin: 10px auto auto 0;
-    z-index: 100000;
+    z-index: 10;
 position: relative;
 height: 100px;
+min-width: 390px;
 }
 
 /* Pricing section */
@@ -567,6 +596,9 @@ height: 100px;
     background-image: linear-gradient(to right, #89389d 0%,#d74589 100%);
     border-radius: 60px;
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
+}
+.info:hover{
+        box-shadow: 0px 0px 20px 3px rgb(165, 76, 149) !important;
 }
 .info.active h6, .info:hover h6 {
     font-weight: 700;
@@ -639,7 +671,7 @@ height: 100px;
 }
 .table > tbody > tr th{
     text-align: center;
-padding: 20px !important;
+padding-top: 20px !important;
 color: #64606f;
 font-size: 15px;
 
@@ -785,6 +817,7 @@ font-size: 15px;
 }
 .contact .form-group textarea{
     min-height: 150px;
+  
 }
 .submit-btn {
     background-color: #40c78a;
@@ -805,7 +838,7 @@ font-size: 15px;
 }
 .media-icons img{
   width: 18px;
-margin-right: 20px;
+margin-left: 20px;
 }
 .media-icons i{
 color: #7bcae4 !important;
@@ -860,13 +893,62 @@ footer .row{
     bottom: 0;
     clear: both;
 }
+  .contact .mailLabel{
+        color: #fff;
+        position: absolute;
+        bottom: 10px;
+        padding: 25px;
+        padding-bottom: 0;
+        overflow: hidden; 
+        z-index: -1;
+    }
+    .contact .TextArea{
+        top: 0 !important;
+    }
+    input:-internal-autofill-previewed,
+    input:-internal-autofill-selected,
+    textarea:-internal-autofill-previewed,
+    textarea:-internal-autofill-selected, 
+    select:-internal-autofill-previewed,
+    select:-internal-autofill-selected {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: rgb(255,255,255) !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #fff !important;
+    background-clip: content-box;
+    -webkit-transition-property: background-color !important;
+
+}
 /* Media Queries section */
+
+/* Screen above 1650px wide */
+@media only screen and (min-width: 1650px) {
+    .bck-shade{
+        min-height: 900px;
+    }
+    .section-bg{
+        margin: 48px auto;
+    }
+}
+/* Screen below 690px wide */
+@media only screen and (max-width: 690px) {
+
+    .centered{
+        padding-top: 0px !important;
+        margin-top: -40px;
+    }
+
+}
 /* Screen below 990px wide */
 
 @media only screen and (max-width: 992px) {
     .menu-trigger{
 		display: block !important;
 	}
+    .border-delay{
+        display: none;
+    }
     .duara-cloud{
         display: none;
         visibility: hidden;
@@ -886,6 +968,7 @@ footer .row{
     padding: 30px;
     padding-top: 55px;
     }
+
     .toast{
         width: 70%;
     margin: 0 auto;
@@ -923,6 +1006,7 @@ footer .row{
   border: none;
   margin-right: 10px;
   width: 185px;
+  color: #000 !important;
 }
 .subscribemail::placeholder{
     text-align: center;
