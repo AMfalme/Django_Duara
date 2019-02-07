@@ -8,30 +8,40 @@ import json
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 import logging
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .messages import LANDING_PAGE_ERROR, LANDING_PAGE_MESSAGE
 
 logger = logging.getLogger("DuaraWebPage.subscribe")
 
 def index(request):
+    if request.method == 'GET':
+        return render(request, 'landingpage/index.html')
+
+def subscribe(request):
     message = None
-    error_message = None
+    error = None
+
     if request.method == 'POST':
-        logger.debug("index() - POST")
+        data = json.loads(request.body.decode('utf-8'))
         try:
-            email = request.POST.get('email')
+            email = data["email"]
             validate_email(email)
             new_subscriber = Subscribers(email = email)
             new_subscriber.save()
-            message = "Thank you for your interest, %s. We will keep you updated on our progress." % email
+            message = LANDING_PAGE_MESSAGE["subscribe_successful"]
             logger.info("New user: %s" % email)
         except ValidationError as e:
-            error_message = "Invalid e-mail address. Kindly input a valid e-mail address and try again."
+            error = LANDING_PAGE_ERROR["invalid_email"]
             logger.info("Invalid e-mail address submitted.")
         except IntegrityError:
-            error_message = "You are already subscribed. We will keep you updated on our progress."
+            error = LANDING_PAGE_ERROR["duplicate_email"]
             logger.info("Duplicate subscription")
 
-    return render(request, 'landingpage/index.html', { "message": message, "error_message": error_message })
+    return JsonResponse({
+        "message": message,
+        "error": error
+    })
 
 
 def send_contact_message(request):
@@ -51,6 +61,6 @@ def send_contact_message(request):
 			'mfalmegriffin@gmail.com',
 			['info@duara.io']
 		)
-		
+
 	else:
 		return HttpResponse('400')
