@@ -3,3 +3,4 @@ __MACOSX/
 *.pyc
 .vscode
 local_settings.py
+home.log
