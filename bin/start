@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ "$STAGE" = "prod"] || [ "$STAGE" = "staging" ]; then
+    echo "Running db migrations..."
+    python3 manage.py migrate
+else
+    echo "Skipping db migrations"
+fi
+
+echo "Starting application"
+exec uwsgi uwsgi.ini

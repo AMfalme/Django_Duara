@@ -15,7 +15,7 @@ RUN ["pip3", "install","-r", "requirements.txt"]
 
 COPY . /opt/home
 RUN ["python3", "manage.py", "collectstatic"]
-VOLUME /opt/home
+#VOLUME /opt/home
 
 EXPOSE 80
-CMD ["uwsgi", "uwsgi.ini"]
+CMD ["./bin/start"]
