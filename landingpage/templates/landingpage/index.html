@@ -24,6 +24,7 @@
             <div class="buttons">
               <div class="buttons">
                 <form id="subscribeForm">
+                  {% csrf_token %}
                   <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
                 </form>
@@ -392,6 +393,7 @@
         <div class="col-md-6">
           <div class="contact">
             <form id="sendInquiryForm">
+              {% csrf_token %}
               <div class="form-row">
                 <div class="form-group">
                   <div class="col-md-12">

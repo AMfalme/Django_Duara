@@ -1,3 +1,0 @@
-LANDING_PAGE_INQUIRY_RECIPIENT = "info@duara.io"
-LANDING_PAGE_INQUIRY_SENDER = "no-reply@duara.io"
-

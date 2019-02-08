@@ -159,6 +159,25 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS=True
+
+# Load .env file for development environment
+STAGE = os.environ.get('STAGE')
+if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
+    from dotenv import load_dotenv
+    load_dotenv()
+
+# Configure SMTP
+EMAIL_HOST = os.environ.get("NO_REPLY_EMAIL_HOST")
+EMAIL_PORT = os.environ.get("NO_REPLY_EMAIL_PORT")
+EMAIL_HOST_USER = os.environ.get("NO_REPLY_EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("NO_REPLY_EMAIL_HOST_PASSWORD")
+
+
+# Duara Settings
+LANDING_PAGE_INQUIRY_RECIPIENT = "info@duara.io "
+LANDING_PAGE_INQUIRY_SENDER = "no-reply@duara.io"
 
 # development environment
 from .local_settings import *

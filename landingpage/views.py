@@ -1,6 +1,6 @@
-from .config import *
 from .messages import LANDING_PAGE_ERROR, LANDING_PAGE_MESSAGE
 from .models import Subscribers
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.mail import send_mail
 from django.core.validators import validate_email
@@ -71,8 +71,8 @@ def send_inquiry(request):
         send_mail(
             'Landing Page Inquiry',
             email_body,
-            LANDING_PAGE_INQUIRY_SENDER,
-            [LANDING_PAGE_INQUIRY_RECIPIENT],
+            settings.LANDING_PAGE_INQUIRY_SENDER,
+            [settings.LANDING_PAGE_INQUIRY_RECIPIENT],
             fail_silently=False
         )
         response_message = LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
