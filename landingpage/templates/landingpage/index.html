@@ -4,18 +4,6 @@
 {% load static %}
 
 {% block content%}
-{% if message %} 
-<div class="alert alert-success message">
-  {{ message }}
-  <button type="button" class="close" id="dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
-</div>
-
-{% elif error_message %}
-<div class="alert alert-warning message">
-  {{ error_message }}
-  <button type="button" id="dismiss" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-</div>
-{% endif %}
 <section id="home">
   <div class="container ">
     <div class="row">
@@ -39,7 +27,7 @@
                   <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
                 </form>
-                <div id="subscribeMessage">
+                <div id="subscribeResponse">
                 </div>
               </div>
             </div>
@@ -391,32 +379,6 @@
     </div>
   </div>
 </section>
-<!-- <div class="container-fluid purple-shade">
-  <div class="row">
-  <div class="col-md-12">
-  <h2>
-  Africa's Cloud
-  </h2>
-
-  <p>
-  Ever wondered how a virtual machine can be acquired. Duara compute takes care of the overhead for you thus alowing you to simply create, manage and deploy your personal virtual server with so much ease.
-  </p>
-  <div class="">
-  <div class="buttons">
-
-  <a href="#" class="signup-button">
-  Launching Soon
-  </a>
-
-  </div>
-  </div>
-
-  <div class="globe">
-
-  </div>
-  </div>
-  </div>
-  </div> -->
   <section id="contact" class="">
     <h1 class="contact-header heavy-fontcolor">
       Contact us
@@ -429,35 +391,28 @@
         </div>
         <div class="col-md-6">
           <div class="contact">
-            <form id="sendMailForm" method="POST">
-              {% csrf_token %}
+            <form id="sendInquiryForm">
               <div class="form-row">
                 <div class="form-group">
                   <div class="col-md-12">
-
                     <input type="text" class="form-control" name="name" placeholder="Name*">
                   </div>
-
-
                   <div class=" col-md-12">
-
                     <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email*">
                   </div>
-
                 </div>
                 <div class="form-group col-md-12">
-
                   <textarea class="form-control" id="mailMessage" name="message" rows="3" placeholder="Your Message*"></textarea>
                   <button type="submit" class="submit-btn btn ">Submit</button>
                 </div>
-
               </div>
             </form>
+            <div id="sendInquiryResponse">
+            </div>
           </div>
         </div>
         <div class="col-md-5">
           <div class=" toast">
-
             <ul class="channels">
               <li>
                 <i class="fa fa-phone" aria-hidden="true"></i>
@@ -470,13 +425,11 @@
                 support@duara.io
                 </p>
               </li>
-
               <li>
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>
                 Galana Plaza, 7th Floor Galana road, Nairobi
                 </p>
-
               </li>
             </ul>
             <ul class="media-icons ">

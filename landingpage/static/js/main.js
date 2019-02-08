@@ -1,4 +1,5 @@
 $(function() {
+  var csrftoken = getCookie('csrftoken');
   function getFormData($form){
     var unindexed_array = $form.serializeArray();
     var indexed_array = {};
@@ -25,38 +26,38 @@ $(function() {
     }
     return cookieValue;
   }
-  var csrftoken = getCookie('csrftoken');
-  $( "#sendMailForm" ).submit(function( event ) {
+
+  $( "#sendInquiryForm" ).submit(function( event ) {
     event.preventDefault();
     var form = $(this);
     var data = getFormData(form);
-    data.message = $("#mailMessage").val();
 
     $.ajax({
       type: "POST",
       contentType: "application/json",
-      url: "mail",
+      url: "send_inquiry",
       headers:{
         "X-CSRFToken": csrftoken
       },
-      data: JSON.stringify(data['name']),
+      data: JSON.stringify(data),
       success: function (response, status) {
-
-        console.log(data);
-        console.log(status);
+        if (response.error) {
+          $("#sendInquiryResponse").html("<p>" + response.error.message + "</p>");
+        }
+        else {
+          $("#sendInquiryForm").hide();
+          $("#sendInquiryResponse").html("<p>" + response.message + "</p>");
+        }
       },
       error: function(response, error) {
-        // var err = eval("(" + xhr.responseText + ")");
-        // alert(err.Message);
-
-        console.log(data);
+        console.log(response);
         console.log(status);
       }
-
     });
   });
 
   $("#subscribeForm").submit(function(event) {
+    event.preventDefault();
     var form = $(this);
     var data = getFormData(form);
     $.ajax({
@@ -70,19 +71,16 @@ $(function() {
       success: function (response, status) {
         if (response.error) {
           if (response.error.code == 0) {
-            $("#subscribeMessage").html("<p>" + response.error.message + "</p>");
-            console.log(response.error.message)
+            $("#subscribeResponse").html("<p>" + response.error.message + "</p>");
           }
           else if (response.error.code == 1) {
             $("#subscribeForm").hide();
-            $("#subscribeMessage").html("<p>" + response.error.message + "</p>");
-            console.log(response.error.message)
+            $("#subscribeResponse").html("<p>" + response.error.message + "</p>");
           }
         }
         else {
           $("#subscribeForm").hide();
-          $("#subscribeMessage").html("<p>" + response.message + "</p>");
-          console.log(response.message);
+          $("#subscribeResponse").html("<p>" + response.message + "</p>");
         }
       },
       error: function(response, error) {
@@ -90,6 +88,5 @@ $(function() {
         console.log(status);
       }
     });
-    return false;
   });
 }); 
