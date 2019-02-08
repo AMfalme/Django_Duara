@@ -4,11 +4,12 @@
 {% load static %}
 
 {% block content%}
+
 <section id="home">
   <div class="container ">
     <div class="row">
       <div class="landing-section  purple-theme">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-5">
           <div class="centered">
             <h2>
               Providing on-demand cloud solutions in Africa
@@ -20,24 +21,33 @@
               <p class="pitch pitch2">
               Subscribe to be part of our beta process.
               </p>
-            </div>
-            <div class="buttons">
-              <div class="buttons">
-                <form id="subscribeForm">
-                  <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
-                  <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
-                </form>
-                <div id="subscribeResponse">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="duara-cloud fadeInUp">
-            <img src="{% static 'images/Image_VM.svg' %}">
-          </div>
-        </div>
+
+    	  
+                                </div>
+                                <div class="buttons">
+    
+                                     <div class="buttons">
+                                    <form action="{% url 'index'  %}" method="POST">
+                                        {% csrf_token %}
+                                        <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
+                                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
+                                    
+                                    </form>
+                                   
+                            </div>
+                                   
+                                   
+                            </div>
+                    </div>
+                    
+                    </div>
+                    <div class="col-md-6 col-lg-7">
+                        <div class="duara-cloud fadeInUp">
+                            <img src="{% static 'images/Image_VM.svg' %}">
+                        </div>
+                    </div>
+    
+
       </div>
     </div>
   </div>
@@ -390,12 +400,14 @@
           <h3>We appreciate feedback</h3>
         </div>
         <div class="col-md-6">
+
           <div class="contact">
             <form id="sendInquiryForm">
               <div class="form-row">
                 <div class="form-group">
                   <div class="col-md-12">
                     <input type="text" class="form-control" name="name" placeholder="Name*">
+
                   </div>
                   <div class=" col-md-12">
                     <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email*">
@@ -441,6 +453,7 @@
               <li>
                 <a target="_blank" href="https://join.slack.com/t/duara-systems/shared_invite/enQtNTQ0NTk0NjEzMTQzLTRjYmMwNjA0MDk1Mjk4NmJkOTNlZGVmYjI2NGQxY2Y4ZjY3OTU0ZjhlZjY1NWM1YjJiOGVkMzVkMzRiM2JkY2Y">
                   <img src="{% static 'images/slack.svg' %}">
+              </a>
               </li>
             </ul>
           </div>

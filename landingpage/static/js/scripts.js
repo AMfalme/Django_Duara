@@ -17,6 +17,7 @@ $(
 
       }
     );
+
     /*-------------------------------------------------------------------------*
     *                     02. Ensure landing section is responsive to screen size
                               for better user experience
@@ -38,8 +39,8 @@ $(
     /*If browser resized, call function refactor to check width again */
      $(window).resize(function() {
       refactor();
-    });
-    /*check width on load page */
+      });
+     /*check width on load page */
       refactor();
     /*-------------------------------------------------------------------------*
      *                   04. Pricing section tabbable area                          *
@@ -136,47 +137,47 @@ loopThrough('.configure', 1000, 20,20);
 *     A function to change the background of the why choose us sections into a purple gradient and 
       change the image as well to a white svg for easy readability and visibility
 
-*----------------------------------------------------*/
-$('.clompute').hover(
-    function () {
-      // body...
-      $(this).addClass('hover');
-      if ($(this).hasClass('simple-value')){
-        $(this).find('img').attr('src', '../../static/images/simple.svg');
-      }
-      else if ($(this).hasClass('reliable-value')){
-         $(this).find('img').attr('src', '../../static/images/reliable.svg');
-      }
+// *----------------------------------------------------*/
+// $('.clompute').hover(
+//     function () {
+//       // body...
+//       $(this).addClass('hover');
+//       if ($(this).hasClass('simple-value')){
+//         $(this).find('img').attr('src', '../../static/images/simple.svg');
+//       }
+//       else if ($(this).hasClass('reliable-value')){
+//          $(this).find('img').attr('src', '../../static/images/reliable.svg');
+//       }
 
-      else if ($(this).hasClass('transparent-value')){
-         $(this).find('img').attr('src', '../../static/images/transparent.svg');
-      }
+//       else if ($(this).hasClass('transparent-value')){
+//          $(this).find('img').attr('src', '../../static/images/transparent.svg');
+//       }
 
-      else if ($(this).hasClass('support-value')){
-         $(this).find('img').attr('src', '../../static/images/support.svg');
-      }
+//       else if ($(this).hasClass('support-value')){
+//          $(this).find('img').attr('src', '../../static/images/support.svg');
+//       }
       
-    }, function(){
-      // body...
-      $(this).removeClass('hover');
-      if ($(this).hasClass('simple-value')){
-        $(this).find('img').attr('src', '../../static/images/simple colored.svg');
-      }
-      else if ($(this).hasClass('reliable-value')){
-         $(this).find('img').attr('src', '../../static/images/reliable colored.svg');
-      }
+//     }, function(){
+//       // body...
+//       $(this).removeClass('hover');
+//       if ($(this).hasClass('simple-value')){
+//         $(this).find('img').attr('src', '../../static/images/simple colored.svg');
+//       }
+//       else if ($(this).hasClass('reliable-value')){
+//          $(this).find('img').attr('src', '../../static/images/reliable colored.svg');
+//       }
 
-      else if ($(this).hasClass('transparent-value')){
-         $(this).find('img').attr('src', '../../static/images/transparent colored.svg');
-      }
+//       else if ($(this).hasClass('transparent-value')){
+//          $(this).find('img').attr('src', '../../static/images/transparent colored.svg');
+//       }
 
-      else if ($(this).hasClass('support-value')){
-         $(this).find('img').attr('src', '../../static/images/support colored.svg');
-      }
+//       else if ($(this).hasClass('support-value')){
+//          $(this).find('img').attr('src', '../../static/images/support colored.svg');
+//       }
       
-    }
+//     }
       
-      );
+//       );
 
 
     $(document).ready(function(){
