@@ -227,6 +227,7 @@ nav.navigation ul li a {
     font-size: 20px;
     font-family: Rubik;
     width: 100%;
+    min-width: 435px;
 }
 .pitch2{
     margin: 40px 0 20px;
