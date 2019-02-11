@@ -3,30 +3,8 @@
 	#D12D68
 	#778A91
 */
-/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@font-face {
-    font-family:  circular-book;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/circular-book.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-     
-
-    src: url("../Fonts/Circular Pro/CircularStd-Medium.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/Rubik.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/CircularStd-Book.otf") format("opentype");
-}
-@font-face {
+@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+/*@font-face {
     font-family: Rubik;
      font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
@@ -54,6 +32,18 @@ a, a:hover, a:active, a:visited, a:focus{
 input.subscribeemail{
     color: #000 !important;
 } 
+#subscribeResponse{
+    margin: 20px auto;
+}
+#sendInquiryResponse p{
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    color: #c13e8d;
+}
+#sendInquiryResponse{
+    overflow: hidden;
+}
 /* .wow{
     visibility: hidden;
     opacity: 0.3;
@@ -735,6 +725,7 @@ font-size: 15px;
     position: relative;
     z-index: 10;
     box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
+    min-height: 606px;
 }
 .contact-card::before{
     content: '';
@@ -747,6 +738,7 @@ font-size: 15px;
     left: 0;
     background-size: cover;
     background-size: 200% 150%;
+    transform: rotateY(180deg);
 }
 .contact-card h2{
     color: #fff;

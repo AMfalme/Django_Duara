@@ -181,11 +181,11 @@ loopThrough('.configure', 1000, 20,20);
 
 
     $(document).ready(function(){
-    window.setTimeout(function() {
-  $(".alert").fadeTo(500, 0).slideUp(500, function(){
-      $(this).remove();
-  });
-}, 5000);
+//     window.setTimeout(function() {
+//   $(".alert").fadeTo(500, 0).slideUp(500, function(){
+//       $(this).remove();
+//   });
+// }, 5000);
 $('#dismiss').on(
     'click', function(){
         $('.alert').hide();

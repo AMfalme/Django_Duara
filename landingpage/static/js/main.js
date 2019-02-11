@@ -43,10 +43,12 @@ $(function() {
       data: JSON.stringify(data),
       success: function (response, status) {
         if (response.error) {
+          $("#sendInquiryResponse").addClass("alert alert-warning");   
           $("#sendInquiryResponse").html("<p>" + response.error.message + "</p>");
         }
         else {
           $("#sendInquiryForm").hide();
+             $("#sendInquiryResponse").addClass("alert alert-success");   
           $("#sendInquiryResponse").html("<p>" + response.message + "</p>");
         }
       },
@@ -71,16 +73,21 @@ $(function() {
       data: JSON.stringify(data),
       success: function (response, status) {
         if (response.error) {
+          console.log(response);
+        console.log(status);
           if (response.error.code == 0) {
+            $("#subscribeResponse").addClass("alert alert-warning");
             $("#subscribeResponse").html("<p>" + response.error.message + "</p>");
           }
           else if (response.error.code == 1) {
             $("#subscribeForm").hide();
+            $("#subscribeResponse").addClass("alert alert-warning");
             $("#subscribeResponse").html("<p>" + response.error.message + "</p>");
           }
         }
         else {
           $("#subscribeForm").hide();
+          $("#subscribeResponse").addClass("alert alert-success");
           $("#subscribeResponse").html("<p>" + response.message + "</p>");
         }
       },
