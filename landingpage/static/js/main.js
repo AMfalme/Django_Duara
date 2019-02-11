@@ -50,7 +50,6 @@ $(function() {
         else {
           $("#sendInquiryForm").hide();
           $("#sendInquiryResponse").css('display','block');
-             $("#sendInquiryResponse").addClass("alert alert-success");   
           $("#sendInquiryResponse").html("<p>" + response.message + "</p>");
         }
       },

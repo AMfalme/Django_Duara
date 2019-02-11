@@ -34,9 +34,13 @@ input.subscribeemail{
 } 
 #subscribeResponse{
     margin: 20px auto;
+    width: 80%;
+}
+.alert#subscribeResponse p{
+    margin-top: 0;
 }
 #sendInquiryResponse p{
-    margin-top: 0;
+    margin-top: 100px;
     text-align: left;
     width: 100%;
     color: #c13e8d;
@@ -218,7 +222,7 @@ nav.navigation ul li a {
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 20px;
-    min-width: 455px;
+
 }
 .pitch {
     color: #fff;
@@ -227,11 +231,15 @@ nav.navigation ul li a {
     font-size: 20px;
     font-family: Rubik;
     width: 100%;
-    min-width: 435px;
 }
 .pitch2{
     margin: 40px 0 20px;
     font-size:20px;
+}
+.region{
+    text-align: center;
+    color: rgb(56, 56, 56) !important;
+    font-size: 23px;
 }
 .buttons a {
     background-color: transparent;
@@ -676,6 +684,8 @@ font-size: 15px;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none !important;
+    width: 20%;
+    vertical-align: middle !important;
 }
 .border-shadow{
  
@@ -1042,11 +1052,50 @@ input:-internal-autofill-previewed.subscribemail,
         width: 14%;
     }
 }
+/*screen below 650px wide*/
+@media only screen and (max-width: 650px) {
+.table > tbody > tr th, .table > tbody > tr td {
+    font-size: 12px !important;
+    padding: 0px !important;
+}
+
+
+}
+
+/* screen below 450px wide */
+@media only screen and (max-width: 450px) {
+    .landing-section h2{
+        font-size: 25px;
+    }
+    .centered{
+        width: 120%;
+        margin-left: -30px;
+
+    }
+    .pitch{
+        font-size: 16px;
+    }
+    .subscribemail{
+        clear: both;
+        float: none !important;
+        margin: 10px auto;
+    }
+    .clompute{
+        height: 318px;
+    }
+    .contact{
+        width: 100%;
+    }
+    th.shorten{
+    font-size: 10px !important;
+}
+
+}
 /* subscribe styling */
 .subscribemail{
   float: left;
   border-radius: 30px;
-  padding: 10px;
+  padding: 11px;
   border: none;
   margin-right: 10px;
   width: 185px;
