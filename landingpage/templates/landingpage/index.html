@@ -16,7 +16,7 @@
             </h2>
             <div class="">
               <p class="pitch"> 
-              We make it easy for developers and enterprises to<br> deploy cloud applications instantly.
+              We make it easy for developers and enterprises to deploy cloud applications instantly.
               </p>
               <p class="pitch pitch2">
               Subscribe to be part of our beta process.
@@ -26,7 +26,7 @@
               <div class="buttons">
                 <form id="subscribeForm">
                   {% csrf_token %}
-                  <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
+                  <input class="subscribemail" type="email" name="email" placeholder="Your Email Address">
                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
                 </form>
                 <div id="subscribeResponse">
@@ -108,7 +108,7 @@
   <div class=" container">
     <div class=" simple row">
       <div class="placed-position">
-        <div class="border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+        <div class="border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
         </div>
       </div>
       <div class="col-md-2">
@@ -128,7 +128,7 @@
         </p>
       </div>
       <div class="col-md-2 col-md-offset-3">
-        <div class=" simplicity wow fadeIn"  data-wow-delay="1.2s">
+        <div class=" simplicity wow fadeIn"  data-wow-delay="1s">
           <img class="" style="transform: rotate(13deg);" src="{% static 'images/launch colored.svg' %}">
         </div>
         <p class="heavy-fontcolor">
@@ -470,7 +470,7 @@
       </div>
     </div>
   </footer>
-  <script src="{% static 'js/jquery.min.js' %}"></script>jquery.min.js
+  <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery.validate.js' %}"></script>
   <script src="{% static 'js/wow.js' %}"></script><script>new WOW().init();</script>
   <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>

@@ -43,7 +43,8 @@ $(function() {
       data: JSON.stringify(data),
       success: function (response, status) {
         if (response.error) {
-          $("#sendInquiryResponse").addClass("alert alert-warning");   
+          $("#sendInquiryResponse").addClass("alert alert-warning");  
+          $("#sendInquiryResponse").css('display','block');
           $("#sendInquiryResponse").html("<p>" + response.error.message + "</p>");
         }
         else {

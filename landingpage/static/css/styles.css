@@ -3,7 +3,7 @@
 	#D12D68
 	#778A91
 */
-@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');*/
 /*@font-face {
     font-family: Rubik;
      font-display: auto;
@@ -37,12 +37,14 @@ input.subscribeemail{
 }
 #sendInquiryResponse p{
     margin-top: 0;
-    text-align: center;
+    text-align: left;
     width: 100%;
     color: #c13e8d;
 }
 #sendInquiryResponse{
     overflow: hidden;
+    
+    display: none;
 }
 /* .wow{
     visibility: hidden;
@@ -214,7 +216,7 @@ nav.navigation ul li a {
     
     text-align: left;
     font-size: 45px;
-    
+    font-weight: 400;
     margin-bottom: 20px;
 }
 .pitch {
@@ -226,7 +228,7 @@ nav.navigation ul li a {
     width: 100%;
 }
 .pitch2{
-    margin: 40px 0;
+    margin: 40px 0 20px;
     font-size:20px;
 }
 .buttons a {
@@ -725,7 +727,6 @@ font-size: 15px;
     position: relative;
     z-index: 10;
     box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
-    min-height: 606px;
 }
 .contact-card::before{
     content: '';
@@ -796,6 +797,7 @@ font-size: 15px;
     width: 90%;
     margin: 0 auto;
     overflow:hidden;
+    min-height: 390px;
 }
 .contact .form-group input:first-child {
     margin-bottom: 30px;
@@ -1042,7 +1044,7 @@ input:-internal-autofill-previewed.subscribemail,
 .subscribemail{
   float: left;
   border-radius: 30px;
-  padding: 6px;
+  padding: 10px;
   border: none;
   margin-right: 10px;
   width: 185px;
