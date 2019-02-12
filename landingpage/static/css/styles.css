@@ -35,15 +35,17 @@ input.subscribeemail{
 #subscribeResponse{
     margin: 20px auto;
     width: 80%;
+    float: left;
 }
-.alert#subscribeResponse p{
-    margin-top: 0;
+.alert p{
+    margin-top: 0 !important;
+    color: #c13e8d !important;
 }
 #sendInquiryResponse p{
     margin-top: 100px;
     text-align: left;
     width: 100%;
-    color: #c13e8d;
+    color: #fff;
 }
 #sendInquiryResponse{
     overflow: hidden;

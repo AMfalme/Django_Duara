@@ -5,7 +5,7 @@ $(
    /*-------------------------------------------------------------------------*
      *                   01. Smooth scroll to anchor                           *
      *-------------------------------------------------------------------------*/
-  function(){
+  function scrollView(){
     $('a.nav_scroll').on("click", function (e)
       {
         e.preventDefault();
@@ -14,10 +14,15 @@ $(
         {
           scrollTop: $(anchor.attr('href')).offset().top - 60
         }, 1000);
-
+        // $('.navbar-collapse').toggle('in');
+        // $('.navbar-toggle').toggle('collapsed');
+        $('.navbar-toggle').click();
       }
     );
+// scrollView();
+// function closeMenu(){
 
+// }
     /*-------------------------------------------------------------------------*
     *                     02. Ensure landing section is responsive to screen size
                               for better user experience
