@@ -22,7 +22,40 @@ $(function(){
       }
     );
   }
+  $('.navbar-toggle').click(
+    function(){
+      if (!$('.menu-scroll').hasClass('menu-fff')) {
+        
+        // .navbar-collapse.in {background-image: linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%);}
+        $('.navbar-collapse').css('background-image', 'linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%)');
+        console.log('add purple');
+      }
+      else{
+        $('.navbar-collapse.in').css('background-image', 'none');
+      }
+    }
+    );
   scrollView();
+      /*---------------------------------------------------------------------------------*
+        *  
+        02. A function to change the background color of the menu-nav on scroll past 100 from top 
+            and vice versa
+      *----------------------------------------------------*/
+    $(window).scroll(
+      function(e){
+        if ($(this).scrollTop() > 100) {
+          $('.menu-nav').addClass('menu-fff');
+          $('.logo-img').attr('src','../../static_files/images/logo.svg');
+          $('.menu-scroll ul').addClass('menu-scroll-color');
+          }
+          else  {
+            $('.menu-nav').removeClass('menu-fff');
+            $('.logo-img').attr('src','../../static_files/images/transparent.png');
+            $('.identity-forms').removeClass('identity-scroll');
+            $('.menu-scroll ul').removeClass('menu-scroll-color');
+
+          }
+        });
     /*-------------------------------------------------------------------------*
       *                     02. Ensure landing section is responsive to screen size
                                 for better user experience
@@ -100,26 +133,7 @@ $(function(){
     }
     loopThrough('#flashing-text', 2000, 200, -10);
     loopThrough('.configure', 1000, 20,20); 
-      /*---------------------------------------------------------------------------------*
-        *     
-        A function to change the background color of the menu-nav on scroll past 100 from top 
-        and vice versa
-      *----------------------------------------------------*/
-    $(window).scroll(
-      function(e){
-        if ($(this).scrollTop() > 100) {
-          $('.menu-nav').addClass('menu-fff');
-          $('.logo-img').attr('src','../../static_files/images/logo.svg');
-          $('.menu-scroll ul').addClass('menu-scroll-color');
-          }
-          else  {
-            $('.menu-nav').removeClass('menu-fff');
-            $('.logo-img').attr('src','../../static_files/images/transparent.png');
-            $('.identity-forms').removeClass('identity-scroll');
-            $('.menu-scroll ul').removeClass('menu-scroll-color');
-
-          }
-        });
+  
 
 
   });
