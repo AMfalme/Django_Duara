@@ -964,7 +964,7 @@ input:-internal-autofill-previewed.subscribemail,
     .landing-section h2{
         line-height: 1.4;
     }
-    .landing-section{
+    .landing-section .pitch{
         line-height: 2;
     }
     .duara-cloud img{
