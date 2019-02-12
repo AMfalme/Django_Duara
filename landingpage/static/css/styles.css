@@ -452,6 +452,7 @@ right: 0;
 }
 .section-bg{
     overflow: hidden;
+    height: 160px;
 }
 .bck-shade {
     background-image: url(../images/ProductsOverlay.svg);
