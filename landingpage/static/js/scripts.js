@@ -109,12 +109,12 @@ $(function(){
       function(e){
         if ($(this).scrollTop() > 100) {
           $('.menu-nav').addClass('menu-fff');
-          $('.logo-img').attr('src','../../static/images/logo.svg');
+          $('.logo-img').attr('src','../../static_files/images/logo.svg');
           $('.menu-scroll ul').addClass('menu-scroll-color');
           }
           else  {
             $('.menu-nav').removeClass('menu-fff');
-            $('.logo-img').attr('src','../../static/images/transparent.png');
+            $('.logo-img').attr('src','../../static_files/images/transparent.png');
             $('.identity-forms').removeClass('identity-scroll');
             $('.menu-scroll ul').removeClass('menu-scroll-color');
 
