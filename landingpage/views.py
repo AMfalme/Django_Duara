@@ -62,6 +62,7 @@ def send_inquiry(request):
             raise ValidationError("Missing either 'name' or 'message'")
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
+        logger.warning(e)
         error = LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,
