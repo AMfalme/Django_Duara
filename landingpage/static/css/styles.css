@@ -3,12 +3,12 @@
 	#D12D68
 	#778A91
 */
-/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');*/
-/*@font-face {
+
+@font-face {
     font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
-}*/
+    font-display: auto;
+    src: url("../Fonts/Rubik/Rubik-Regular.otf") format("opentype");
+}
 body{
     margin: 0;
     color: #85969c;
@@ -52,10 +52,6 @@ input.subscribeemail{
     
     display: none;
 }
-/* .wow{
-    visibility: hidden;
-    opacity: 0.3;
-} */
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn:hover {
 outline: none !important;
 color: #fff !important;
@@ -535,7 +531,8 @@ margin: 3px auto;
     font-size: 13px;
     color: #fff;
     margin: 20px 0 50px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 
 }
 
@@ -741,6 +738,7 @@ font-size: 15px;
     position: relative;
     z-index: 10;
     box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
+    width: 85%;
 }
 .contact-card::before{
     content: '';
@@ -837,7 +835,8 @@ font-size: 15px;
     color: #fff;
     margin: 20px auto;
     display: block;
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     padding: 10px !important;
     display: block !important;
     border-radius: 20px !important;
@@ -964,7 +963,7 @@ input:-internal-autofill-previewed.subscribemail,
     .landing-section h2{
         line-height: 1.4;
     }
-    .landing-section{
+    .landing-section .pitch{
         line-height: 2;
     }
     .duara-cloud img{
@@ -1020,18 +1019,18 @@ input:-internal-autofill-previewed.subscribemail,
         padding-bottom: 200px;
     }
     .contact{
-        width: 70%;
+        width: 90%;
     padding: 30px;
     padding-top: 55px;
     }
 
     .toast{
-        width: 70%;
+        width: 100%;
     margin: 0 auto;
     padding: 30px;
     }
     .toast h3{
-        text-align: left;
+        text-align: center;
     }
     .channels {
         margin-left: -30px;
@@ -1064,8 +1063,8 @@ input:-internal-autofill-previewed.subscribemail,
 
 }
 
-/* screen below 450px wide */
-@media only screen and (max-width: 450px) {
+/* screen below 500px wide */
+@media only screen and (max-width: 500px) {
     .landing-section h2{
         font-size: 25px;
     }
@@ -1081,6 +1080,10 @@ input:-internal-autofill-previewed.subscribemail,
         clear: both;
         float: none !important;
         margin: 10px auto;
+        width: 200px !important;
+    }
+    .submit-btn-sub{
+        width: 200px !important;
     }
     .clompute{
         height: 318px;
