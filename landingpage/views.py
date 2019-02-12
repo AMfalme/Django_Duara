@@ -50,18 +50,19 @@ def subscribe(request):
 
 @require_http_methods(["POST"])
 def send_inquiry(request):
-    data = json.loads(request.body.decode('utf-8'))
     response_message = None
     error = None
 
     try:
+        data = json.loads(request.body.decode('utf-8'))
         name = data["name"]
         email = data["email"]
         message = data["message"]
         if not (name and message):
             raise ValidationError("Missing either 'name' or 'message'")
         validate_email(email)
-    except (ValidationError, KeyError) as e:
+    except (ValidationError, KeyError, ValueError) as e:
+        logger.warning(e)
         error = LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,

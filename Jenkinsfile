@@ -15,7 +15,7 @@ pipeline {
         GCR_IMAGE_LATEST = "$GCR_IMAGE:latest"
 
         CONTAINER_PORT="80"
-        PROD_HOST_PORT="8080"
+        PROD_HOST_PORT="8081"
         STAGING_HOST_PORT="9080"
         DOCKER_NET="docker-net"
         // Machines
