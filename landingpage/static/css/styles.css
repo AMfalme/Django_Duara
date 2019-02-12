@@ -3,12 +3,12 @@
 	#D12D68
 	#778A91
 */
-/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');*/
-/*@font-face {
+
+@font-face {
     font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
-}*/
+    font-display: auto;
+    src: url("../Fonts/Rubik/Rubik-Regular.otf") format("opentype");
+}
 body{
     margin: 0;
     color: #85969c;
@@ -535,7 +535,8 @@ margin: 3px auto;
     font-size: 13px;
     color: #fff;
     margin: 20px 0 50px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 
 }
 
@@ -741,6 +742,7 @@ font-size: 15px;
     position: relative;
     z-index: 10;
     box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
+    width: 85%;
 }
 .contact-card::before{
     content: '';
@@ -837,7 +839,8 @@ font-size: 15px;
     color: #fff;
     margin: 20px auto;
     display: block;
-    width: 200px;
+    max-width: 200px;
+    width: 100%;
     padding: 10px !important;
     display: block !important;
     border-radius: 20px !important;
@@ -1020,18 +1023,18 @@ input:-internal-autofill-previewed.subscribemail,
         padding-bottom: 200px;
     }
     .contact{
-        width: 70%;
+        width: 90%;
     padding: 30px;
     padding-top: 55px;
     }
 
     .toast{
-        width: 70%;
+        width: 100%;
     margin: 0 auto;
     padding: 30px;
     }
     .toast h3{
-        text-align: left;
+        text-align: center;
     }
     .channels {
         margin-left: -30px;

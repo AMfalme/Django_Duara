@@ -14,8 +14,7 @@ $(
         {
           scrollTop: $(anchor.attr('href')).offset().top - 60
         }, 1000);
-        // $('.navbar-collapse').toggle('in');
-        // $('.navbar-toggle').toggle('collapsed');
+        // checks whether navbar-toggle is not collapsed
         if ($('.navbar-toggle').hasClass('collapsed') == false) {
           $('.navbar-toggle').click();
         }
