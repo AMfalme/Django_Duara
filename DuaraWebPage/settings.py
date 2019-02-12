@@ -65,7 +65,6 @@ ADMINS = ["cmetto@duara.io"]
 # Application definition
 INSTALLED_APPS = [
     'landingpage',
-    'subscribe',
     'DuaraWebPage',
     'django.contrib.admin',
     'django.contrib.auth',
