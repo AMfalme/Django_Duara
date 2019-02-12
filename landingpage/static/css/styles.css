@@ -942,6 +942,9 @@ input:-internal-autofill-previewed.subscribemail,
         color: #000 !important;
         -webkit-text-fill-color: #000 !important;
     }
+    .purple-fy {
+    background-image: none;
+}
 /* Media Queries section */
 
 @media (min-width: 1345px) and (max-width: 1470px){
@@ -1001,9 +1004,9 @@ input:-internal-autofill-previewed.subscribemail,
         padding-top: 0px !important;
         margin-top: -40px;
     }
-   /* .navbar-collapse.in {
+    .purple-fy {
     background-image: linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%);
-}*/
+}
 .menu-fff .navbar-collapse.in{
     background-image: none !important;
 }

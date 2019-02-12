@@ -22,16 +22,13 @@ $(function(){
       }
     );
   }
-  $('.navbar-toggle').click(
+  $('.navbar-toggle.collapsed').click(
     function(){
       if (!$('.menu-scroll').hasClass('menu-fff')) {
         
         // .navbar-collapse.in {background-image: linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%);}
-        $('.navbar-collapse').css('background-image', 'linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%)');
+        $('.navbar-collapse').toggleClass('purple-fy');
         console.log('add purple');
-      }
-      else{
-        $('.navbar-collapse.in').css('background-image', 'none');
       }
     }
     );
