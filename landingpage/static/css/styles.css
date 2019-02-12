@@ -3,30 +3,8 @@
 	#D12D68
 	#778A91
 */
-/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
-@font-face {
-    font-family:  circular-book;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/circular-book.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-     
-
-    src: url("../Fonts/Circular Pro/CircularStd-Medium.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/Rubik.otf") format("opentype");
-}
-@font-face {
-    font-family: Rubik;
-     font-display: auto;
-    src: url("../Fonts/Circular Pro/CircularStd-Book.otf") format("opentype");
-}
-@font-face {
+/*@import url('https://fonts.googleapis.com/css?family=Rubik:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');*/
+/*@font-face {
     font-family: Rubik;
      font-display: auto;
     src: url("../Fonts/Circular Pro/CircularStd-Bold.otf") format("opentype");
@@ -36,7 +14,9 @@ body{
     color: #85969c;
     font-family: 'Rubik', sans-serif !important;
 }
-
+*{
+    -webkit-font-smoothing: antialiased;
+}
 p {
     font-size: 15px;
 
@@ -52,6 +32,24 @@ a, a:hover, a:active, a:visited, a:focus{
 input.subscribeemail{
     color: #000 !important;
 } 
+#subscribeResponse{
+    margin: 20px auto;
+    width: 80%;
+}
+.alert#subscribeResponse p{
+    margin-top: 0;
+}
+#sendInquiryResponse p{
+    margin-top: 100px;
+    text-align: left;
+    width: 100%;
+    color: #c13e8d;
+}
+#sendInquiryResponse{
+    overflow: hidden;
+    
+    display: none;
+}
 /* .wow{
     visibility: hidden;
     opacity: 0.3;
@@ -158,6 +156,8 @@ nav.navigation ul li a {
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
     width: 100%;
     z-index: 12;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .menu-scroll .Title{
     color: #fff;
@@ -220,8 +220,9 @@ nav.navigation ul li a {
     
     text-align: left;
     font-size: 45px;
-    
+    font-weight: 400;
     margin-bottom: 20px;
+
 }
 .pitch {
     color: #fff;
@@ -232,8 +233,13 @@ nav.navigation ul li a {
     width: 100%;
 }
 .pitch2{
-    margin: 40px 0;
+    margin: 40px 0 20px;
     font-size:20px;
+}
+.region{
+    text-align: center;
+    color: rgb(56, 56, 56) !important;
+    font-size: 23px;
 }
 .buttons a {
     background-color: transparent;
@@ -302,7 +308,7 @@ font-weight: bold;
 }
 .clompute {
     
-    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.03);
+    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.1);
     padding: 22px;
     background-color: #fff;
         transition-duration: 0.3s;
@@ -332,11 +338,9 @@ font-weight: bold;
     background-image: url('../images/signup.svg');
 }
 .clompute:hover{
-    
+    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
 }
-.clompute:hover h2{
-    color: #fff;
-}
+
 .reduce p {
     text-align: left;
 margin: 20px auto;
@@ -492,8 +496,9 @@ background-repeat: no-repeat;
     float: left;
 }
  #products .content{
-    float: right;
+    float: left;
     width: 80%;
+    margin-left: 15px;
 }
 
 .heading {
@@ -527,7 +532,8 @@ margin: 3px auto;
 #products p {
     font-size: 13px;
     color: #fff;
-    margin: 20px auto 50px;
+    margin: 20px 0 50px;
+    width: 300px;
 
 }
 
@@ -678,6 +684,8 @@ font-size: 15px;
 }
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     border-top: none !important;
+    width: 20%;
+    vertical-align: middle !important;
 }
 .border-shadow{
  
@@ -730,6 +738,7 @@ font-size: 15px;
     margin-bottom: -200px;
     position: relative;
     z-index: 10;
+    box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
 }
 .contact-card::before{
     content: '';
@@ -742,6 +751,7 @@ font-size: 15px;
     left: 0;
     background-size: cover;
     background-size: 200% 150%;
+    transform: rotateY(180deg);
 }
 .contact-card h2{
     color: #fff;
@@ -799,6 +809,7 @@ font-size: 15px;
     width: 90%;
     margin: 0 auto;
     overflow:hidden;
+    min-height: 390px;
 }
 .contact .form-group input:first-child {
     margin-bottom: 30px;
@@ -920,15 +931,52 @@ footer .row{
     -webkit-transition-property: background-color !important;
 
 }
+input:-internal-autofill-previewed.subscribemail,
+    input:-internal-autofill-selected.subscribemail,
+    textarea:-internal-autofill-previewed.subscribemail,
+    textarea:-internal-autofill-selected.subscribemail.subscribemail, 
+    select:-internal-autofill-previewed.subscribemail,
+    select:-internal-autofill-selected.subscribemail {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
 /* Media Queries section */
 
 /* Screen above 1650px wide */
-@media only screen and (min-width: 1650px) {
+@media only screen and (min-width: 1350px) {
     .bck-shade{
         min-height: 900px;
     }
     .section-bg{
         margin: 48px auto;
+    }
+    .menu-scroll{
+        padding: 20px 177px;
+    }
+    .container{
+        width: 80% !important;
+    }
+    .centered{
+        margin: 30px auto;
+    }
+    .landing-section h2{
+        line-height: 1.4;
+    }
+    .landing-section{
+        line-height: 2;
+    }
+    .duara-cloud img{
+        width: 146%;
+    }
+    .border-delay{
+        top: -25px;
+        height: 200px;
+    }
+    .products .container{
+        width: 65%;
+    }
+    #features h1{
+        margin: 0 auto;
     }
 }
 /* Screen below 690px wide */
@@ -938,6 +986,12 @@ footer .row{
         padding-top: 0px !important;
         margin-top: -40px;
     }
+    .navbar-collapse.in {
+    background-image: linear-gradient(to bottom left, #89389d 0%,#bb4d8f 100%);
+}
+.menu-fff .navbar-collapse.in{
+    background-image: none !important;
+}
 
 }
 /* Screen below 990px wide */
@@ -998,11 +1052,50 @@ footer .row{
         width: 14%;
     }
 }
+/*screen below 650px wide*/
+@media only screen and (max-width: 650px) {
+.table > tbody > tr th, .table > tbody > tr td {
+    font-size: 12px !important;
+    padding: 0px !important;
+}
+
+
+}
+
+/* screen below 450px wide */
+@media only screen and (max-width: 450px) {
+    .landing-section h2{
+        font-size: 25px;
+    }
+    .centered{
+        width: 120%;
+        margin-left: -30px;
+
+    }
+    .pitch{
+        font-size: 16px;
+    }
+    .subscribemail{
+        clear: both;
+        float: none !important;
+        margin: 10px auto;
+    }
+    .clompute{
+        height: 318px;
+    }
+    .contact{
+        width: 100%;
+    }
+    th.shorten{
+    font-size: 10px !important;
+}
+
+}
 /* subscribe styling */
 .subscribemail{
   float: left;
   border-radius: 30px;
-  padding: 10px;
+  padding: 11px;
   border: none;
   margin-right: 10px;
   width: 185px;

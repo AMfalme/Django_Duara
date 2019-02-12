@@ -1,21 +1,22 @@
-
+ 
 
 {% extends 'landingpage/base.html' %}
 {% load static %}
 
 {% block content%}
+
 <section id="home">
   <div class="container ">
     <div class="row">
       <div class="landing-section  purple-theme">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-5">
           <div class="centered">
             <h2>
               Providing on-demand cloud solutions in Africa
             </h2>
             <div class="">
               <p class="pitch"> 
-              We make it easy for developers and enterprises to<br> deploy cloud applications instantly.
+              We make it easy for developers and enterprises to deploy cloud resources.
               </p>
               <p class="pitch pitch2">
               Subscribe to be part of our beta process.
@@ -23,18 +24,23 @@
             </div>
             <div class="buttons">
               <div class="buttons">
-                <form id="subscribeForm">
+                <form id="subscribeForm" method="POST">
                   {% csrf_token %}
-                  <input class="subscribemail" type="text" name="email" placeholder="Your Email Address">
+                  <div class="input-group">
+                  <input class="subscribemail" type="email" name="email" placeholder="Your Email Address">
                   <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
+                  </div>
                 </form>
                 <div id="subscribeResponse">
+                  <div id="dismiss">
+                    
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-7">
           <div class="duara-cloud fadeInUp">
             <img src="{% static 'images/Image_VM.svg' %}">
           </div>
@@ -57,7 +63,7 @@
             Simple
           </h2>
             <p>
-            Easily self-provision your compute instances on our intuitive platform.
+            Easily self-provision your infrastructure on our intuitive platform.
             </p>
         </div>
       </div>
@@ -68,7 +74,7 @@
             Transparent 
           </h2>
             <p>
-            Only pay for resources used.
+            Only pay for resources used. Resources are billed per hour.
             </p>
         </div>
       </div>
@@ -79,8 +85,7 @@
             Reliable
           </h2>
             <p>
-            We guarantee high availability keeping your
-            applications up<br> and running at all times.
+            We guarantee a 99.99% uptime SLA.
             </p>
         </div>
       </div>
@@ -104,7 +109,7 @@
   <div class=" container">
     <div class=" simple row">
       <div class="placed-position">
-        <div class="border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+        <div class="border-delay  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
         </div>
       </div>
       <div class="col-md-2">
@@ -124,7 +129,7 @@
         </p>
       </div>
       <div class="col-md-2 col-md-offset-3">
-        <div class=" simplicity wow fadeIn"  data-wow-delay="1.2s">
+        <div class=" simplicity wow fadeIn"  data-wow-delay="1s">
           <img class="" style="transform: rotate(13deg);" src="{% static 'images/launch colored.svg' %}">
         </div>
         <p class="heavy-fontcolor">
@@ -154,7 +159,7 @@
           </header>
           <article>
             <p>
-            Scalable VMs that can run on any linux-based application.
+            Scalable VMs that can run any linux operating system.
             </p>
           </article>
         </div>
@@ -172,31 +177,13 @@
             </header>
             <article>
               <p>
-              Additional storage attached to running VMs allowing for flexibility and scalability.
+              Additional storage volumes attached to running VMs allowing for flexibility and scalability.
               </p>
             </article>
           </div>
         </div>
       </div>
-      <div class="section-bg col-md-4 " >
-        <div class="left">
-          <div class="icon">
-            <img class="" src="{% static 'images/floating IP.svg' %}">
-          </div>
-        <div class="content">
-          <header>
-            <h3>
-              Floating IP
-            </h3>
-          </header>
-          <article>
-            <p>
-            Attach public IP addresses to VMs on a private network to make them reachable from the net. 
-            </p>
-          </article>
-        </div>
-        </div>
-      </div>
+      
       <div class="section-bg col-md-4 "><div class="left">
           <div class="icon">
             <img class="" style="width: 45px; margin-top: -1px;" src="{% static 'images/backups.svg' %}">
@@ -209,7 +196,8 @@
             </header>
             <article>
               <p>
-              Create images of your instances at a particular time. Images can also be used to spin up clones of a running instance.
+                Create backups of your storage volumes and snapshots of your running VMs. 
+              
               </p>
             </article>
           </div>
@@ -228,10 +216,29 @@
             </header>
             <article>
               <p>
-              Deploy your instances on a private network.
+              Launch your instances on a private network.
               </p>
             </article>
           </div>
+        </div>
+      </div>
+      <div class="section-bg col-md-4 " >
+        <div class="left">
+          <div class="icon">
+            <img class="" src="{% static 'images/floating IP.svg' %}">
+          </div>
+        <div class="content">
+          <header>
+            <h3>
+              Floating IP Addresses
+            </h3>
+          </header>
+          <article>
+            <p>
+            Public IP addresses attached to VMs on a private network to allow access from the public internet. 
+            </p>
+          </article>
+        </div>
         </div>
       </div>
       <div class="section-bg col-md-4 "><div class="left">
@@ -246,7 +253,7 @@
             </header>
             <article>
               <p>
-              Easily create firewall rulesand provision them to your instances as needed.
+                Easily create firewall rules and apply them to your instances.
               </p>
             </article>
           </div>
@@ -301,60 +308,61 @@
                   <th>Memory</th>
                   <th>VCPUs</th>
                   <th>Storage</th>
-                  <th>International  Transfer</th>
+                  <th class="shorten">International <br> Transfer</th>
                   <th>Price</th>
                 </tr>
 
                 <tr>
                   <td>512MB</td>
-                  <td>1 VCPU</td>
+                  <td>1 </td>
                   <td>10 GB</td>
                   <td>1 TB</td>
-                  <td>$5/mo  $0.007/hr</td>
+                  <td>$5/mo <br> $0.007/hr</td>
                 </tr>
                 <tr>
                   <td>1GB</td>
-                  <td>1 VCPU</td>
+                  <td>1</td>
                   <td>20GB</td>
                   <td>1TB</td>
-                  <td>$10/mo  $0.015/hr</td>
+                  <td>$10/mo <br> $0.015/hr</td>
                 </tr>
                 <tr>
                   <td>2GB</td>
-                  <td>1 VCPU</td>
+                  <td>1 </td>
                   <td>40 GB</td>
                   <td>2TB</td>
-                  <td>$20/mo   $0.03/hr</td>
+                  <td>$20/mo  <br> $0.03/hr</td>
                 </tr>
                 <tr>
                   <td>2GB</td>
-                  <td>2 VCPUs</td>
+                  <td>2 </td>
                   <td>50 GB</td>
                   <td>3 TB</td>
-                  <td>$30/mo $0.045/hr</td>
+                  <td>$30/mo<br> $0.045/hr</td>
                 </tr>
                 <tr>
                   <td>4GB</td>
-                  <td>2 VCPUs</td>
+                  <td>2 </td>
                   <td>80 GB</td>
                   <td>4 TB</td>
-                  <td>$40/mo $0.06/hr</td>
+                  <td>$40/mo<br> $0.06/hr</td>
                 </tr>
                 <tr>
                   <td>8GB</td>
-                  <td>4 VCPUs</td>
+                  <td>4 </td>
                   <td>160 GB</td>
                   <td>5 TB</td>
-                  <td>$80/mo $0.119/hr</td>
+                  <td>$80/mo<br> $0.119/hr</td>
                 </tr>
                 <tr>
                   <td>16GB</td>
-                  <td>6 VCPUs</td>
+                  <td>6 </td>
                   <td>320 GB</td>
                   <td>6 TB</td>
-                  <td>$160/mo $0.238/hr</td>
+                  <td>$160/mo<br> $0.238/hr</td>
                 </tr>
               </table>
+              
             </div>
           </div>
           <div class="block-storage info-info">
@@ -374,8 +382,13 @@
             <p>
             Increase your compute resources as your business demands. Give your end user a seemless experience as you scale up your applications.
             </p>
-          </div>					
+          </div>
+
         </div>
+        <p class="region">
+                Nairobi (Kenya) is the only supported data center region.
+                More regions coming soon.
+              </p>
       </div>
     </div>
   </div>
@@ -392,25 +405,26 @@
         </div>
         <div class="col-md-6">
           <div class="contact">
-            <form id="sendInquiryForm">
+            <div id="sendInquiryResponse">
+            </div>
+            <form id="sendInquiryForm" method="POST">
               {% csrf_token %}
               <div class="form-row">
                 <div class="form-group">
                   <div class="col-md-12">
-                    <input type="text" class="form-control" name="name" placeholder="Name*">
+                    <input type="text" class="form-control" name="name" placeholder="Name*" required>
                   </div>
                   <div class=" col-md-12">
-                    <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email*">
+                    <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email*" required>
                   </div>
                 </div>
                 <div class="form-group col-md-12">
-                  <textarea class="form-control" id="mailMessage" name="message" rows="3" placeholder="Your Message*"></textarea>
+                  <textarea class="form-control" id="mailMessage" name="message" rows="3" placeholder="Your Message*" required></textarea>
                   <button type="submit" class="submit-btn btn ">Submit</button>
                 </div>
               </div>
             </form>
-            <div id="sendInquiryResponse">
-            </div>
+            
           </div>
         </div>
         <div class="col-md-5">
@@ -424,7 +438,7 @@
               <li>
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <p>
-                support@duara.io
+                info@duara.io
                 </p>
               </li>
               <li>
@@ -443,6 +457,7 @@
               <li>
                 <a target="_blank" href="https://join.slack.com/t/duara-systems/shared_invite/enQtNTQ0NTk0NjEzMTQzLTRjYmMwNjA0MDk1Mjk4NmJkOTNlZGVmYjI2NGQxY2Y4ZjY3OTU0ZjhlZjY1NWM1YjJiOGVkMzVkMzRiM2JkY2Y">
                   <img src="{% static 'images/slack.svg' %}">
+              </a>
               </li>
             </ul>
           </div>
@@ -465,11 +480,10 @@
       </div>
     </div>
   </footer>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery.validate.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script><script>new WOW().init();</script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/wow.js' %}"></script><script>new WOW().init();</script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
   <script> 
