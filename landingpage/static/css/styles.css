@@ -52,10 +52,6 @@ input.subscribeemail{
     
     display: none;
 }
-/* .wow{
-    visibility: hidden;
-    opacity: 0.3;
-} */
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn:hover {
 outline: none !important;
 color: #fff !important;
@@ -1067,8 +1063,8 @@ input:-internal-autofill-previewed.subscribemail,
 
 }
 
-/* screen below 450px wide */
-@media only screen and (max-width: 450px) {
+/* screen below 500px wide */
+@media only screen and (max-width: 500px) {
     .landing-section h2{
         font-size: 25px;
     }
@@ -1084,6 +1080,10 @@ input:-internal-autofill-previewed.subscribemail,
         clear: both;
         float: none !important;
         margin: 10px auto;
+        width: 200px !important;
+    }
+    .submit-btn-sub{
+        width: 200px !important;
     }
     .clompute{
         height: 318px;
