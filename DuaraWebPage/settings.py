@@ -181,6 +181,6 @@ LANDING_PAGE_INQUIRY_SENDER = "no-reply@duara.io"
 
 # development environment
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
