@@ -16,7 +16,10 @@ $(
         }, 1000);
         // $('.navbar-collapse').toggle('in');
         // $('.navbar-toggle').toggle('collapsed');
-        $('.navbar-toggle').click();
+        if ($('.navbar-toggle').hasClass('collapsed') == false) {
+          $('.navbar-toggle').click();
+        }
+        
       }
     );
 // scrollView();
