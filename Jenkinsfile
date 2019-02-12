@@ -62,20 +62,48 @@ pipeline {
       steps {
         script {
           def remote = [:]
-            remote.name = "$STAGING_MACHINE"
-            remote.host = "$STAGING_MACHINE"
-            remote.allowAnyHosts = true
-            withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-private-key', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
-              remote.user = userName
-                remote.identityFile = identity
-                stage('Pull and Run image') {
-                  sshCommand remote: remote, command: "docker pull $GCR_IMAGE_LATEST"
-                    sshCommand remote: remote, command: "docker stop $CONTAINER_NAME || true"
-                    sshCommand remote: remote, command: "docker rm $CONTAINER_NAME || true"
-                    sshCommand remote: remote, command: "docker run -d -p $STAGING_HOST_PORT:$CONTAINER_PORT -e STAGE=$STAGE --env-file $ENV_FILE --network $DOCKER_NET --dns=$DNS_SERVER --restart=always --name $CONTAINER_NAME $GCR_IMAGE_LATEST"
-                    sshCommand remote: remote, command: "docker system prune -f"
-                }
+          remote.name = "$STAGING_MACHINE"
+          remote.host = "$STAGING_MACHINE"
+          remote.allowAnyHosts = true
+          withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-private-key', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+            remote.user = userName
+            remote.identityFile = identity
+            stage('Pull and Run image') {
+              sshCommand remote: remote, command: "docker pull $GCR_IMAGE_LATEST"
+              sshCommand remote: remote, command: "docker stop $CONTAINER_NAME || true"
+              sshCommand remote: remote, command: "docker rm $CONTAINER_NAME || true"
+              sshCommand remote: remote, command: "docker run -d -p $STAGING_HOST_PORT:$CONTAINER_PORT -e STAGE=$STAGE --env-file $ENV_FILE --network $DOCKER_NET --dns=$DNS_SERVER --restart=always --name $CONTAINER_NAME $GCR_IMAGE_LATEST"
+              sshCommand remote: remote, command: "docker system prune -f"
             }
+          }
+        }
+      }
+    }
+    stage('Deploy Production') {
+      when {
+        branch 'release'
+      }
+      environment {
+        ENV_FILE = "~/.env/ddash.staging.env"
+        STAGE = "prod"
+      }
+      steps {
+        script {
+          def remote = [:]
+          remote.name = "$PROD_MACHINE"
+          remote.host = "$PROD_MACHINE"
+          remote.allowAnyHosts = true
+          withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-private-key', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'userName')]) {
+            remote.user = userName
+            remote.identityFile = identity
+            stage('Pull and Run image') {
+              sshCommand remote: remote, command: "docker pull $GCR_IMAGE_LATEST"
+              sshCommand remote: remote, command: "docker stop $CONTAINER_NAME || true"
+              sshCommand remote: remote, command: "docker rm $CONTAINER_NAME || true"
+              sshCommand remote: remote, command: "docker run -d -p $PROD_HOST_PORT:$CONTAINER_PORT -e STAGE=$STAGE --env-file $ENV_FILE --network $DOCKER_NET --dns=$DNS_SERVER --restart=always --name $CONTAINER_NAME $GCR_IMAGE_LATEST"
+              sshCommand remote: remote, command: "docker system prune -f"
+            }
+          }
         }
       }
     }

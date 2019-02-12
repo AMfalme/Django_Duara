@@ -8,9 +8,13 @@ LANDING_PAGE_ERROR = {
         "message" : "You are already subscribed. We will keep you updated on our progress."
 
     },
-    "inquiry_email_send_failure" : {
+    "contact_form_email_send_failure" : {
         "code" : 2,
         "message" : "We are unable to send your message at the moment. Please try again later."
+    },
+    "bad_input" : {
+        "code" : 3,
+        "message" : "Please fix input errors and submit again."
     }
 }
 

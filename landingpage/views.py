@@ -34,7 +34,7 @@ def subscribe(request):
         new_subscriber = Subscribers(email = email)
         new_subscriber.save()
         message = LANDING_PAGE_MESSAGE["subscribe_successful"]
-        logger.info("New user: %s" % email)
+        logger.info("New user")
     except ValidationError as e:
         error = LANDING_PAGE_ERROR["invalid_email"]
         logger.info("Invalid e-mail address submitted.")
@@ -51,6 +51,24 @@ def subscribe(request):
 @require_http_methods(["POST"])
 def send_inquiry(request):
     data = json.loads(request.body.decode('utf-8'))
+    response_message = None
+    error = None
+
+    try:
+        name = data["name"]
+        email = data["email"]
+        message = data["message"]
+        if not (name and message):
+            raise ValidationError("Missing either 'name' or 'message'")
+        validate_email(email)
+    except (ValidationError, KeyError) as e:
+        error = LANDING_PAGE_ERROR["bad_input"]
+        return JsonResponse({
+            "message" : None,
+            "error" : LANDING_PAGE_ERROR["bad_input"]
+        })
+
+
     email_body = """
     From: %s
     E-mail: %s
@@ -62,14 +80,12 @@ def send_inquiry(request):
             data["message"]
             )
 
-    response_message = None
-    error = None
 
-    subject = "Landing Page Inquiry"
+    subject = "Home Page Inquiry: %s" % data["name"]
 
     try:
         send_mail(
-            'Landing Page Inquiry',
+            subject,
             email_body,
             settings.LANDING_PAGE_INQUIRY_SENDER,
             [settings.LANDING_PAGE_INQUIRY_RECIPIENT],
@@ -79,7 +95,7 @@ def send_inquiry(request):
     except SMTPException as e:
         logger.error("Failed to send email inquiry")
         logger.error(e)
-        error = LANDING_PAGE_ERROR["inquiry_email_send_failure"]
+        error = LANDING_PAGE_ERROR["contact_form_email_send_failure"]
 
     return JsonResponse({
         "message": response_message,
