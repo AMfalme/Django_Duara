@@ -16,6 +16,8 @@ body{
 }
 *{
     -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 p {
     font-size: 15px;
@@ -103,6 +105,7 @@ nav.navigation ul li a {
        width: 140px;
        margin: -20px auto;
         position: absolute;
+        height: 50px;
    
 }
 .menu-fff{
@@ -306,7 +309,7 @@ font-weight: bold;
 }
 .clompute {
     
-    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.1);
+    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.05);
     padding: 22px;
     background-color: #fff;
         transition-duration: 0.3s;
@@ -336,7 +339,7 @@ font-weight: bold;
     background-image: url('../images/signup.svg');
 }
 .clompute:hover{
-    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
+    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.1);
 }
 
 .reduce p {
@@ -410,7 +413,7 @@ p.simplicity{
     text-align: center;
     margin: 60px auto;
     display: block;
-    background-image: linear-gradient(to right, #f80073 0%,#bc00b9 47%,#7506c3 100%);
+    background-image: linear-gradient(to bottom left, #89389d 0%,#d74589 100%);
     width: 74px;
     border-radius: 86px;
     height: 3px;
@@ -604,7 +607,8 @@ min-width: 390px;
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
 }
 .info:hover{
-        box-shadow: 0px 0px 20px 3px rgb(165, 76, 149) !important;
+        
+         box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
 }
 .info.active h6, .info:hover h6 {
     font-weight: 700;
@@ -732,7 +736,7 @@ font-size: 15px;
     font-size: 38px !important;
 }
 .contact-card{
-    background-image: linear-gradient(to right, #89389d 0%,#d74589 100%);
+    background-image: linear-gradient(to bottom left, #89389d 0%,#d74589 100%);
     border-radius: 25px;
     padding: 20px;
     margin-bottom: -200px;
@@ -740,18 +744,20 @@ font-size: 15px;
     z-index: 10;
     box-shadow: 0px 0px 20px 7px rgba(33, 28, 35, 0.21);
     width: 85%;
+    overflow-x: hidden;
 }
 .contact-card::before{
     content: '';
     position: absolute;
     width: 100%;
+    min-width: 900px;
     height: 100%;
     background-image: url(../images/dotted-world-map.png);
     display: block !important;
     top: 0;
     left: 0;
     background-size: cover;
-    background-size: 200% 150%;
+    background-size: 100% 110%;
     transform: rotateY(180deg);
 }
 .contact-card h2{
@@ -1122,6 +1128,9 @@ input:-internal-autofill-previewed.subscribemail,
   margin-right: 10px;
   width: 185px;
   color: #000 !important;
+}
+.subscribemail:focus, .subscribemail:active{
+    outline: none;
 }
 .subscribemail::placeholder{
     text-align: center;
