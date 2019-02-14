@@ -76,13 +76,13 @@ def send_inquiry(request):
 
     %s
 
-    """ % ( data["name"],
-            data["email"],
-            data["message"]
+    """ % ( name,
+            email,
+            message
             )
 
 
-    subject = "Home Page Inquiry: %s" % data["name"]
+    subject = "Home Page Inquiry: %s" % email
 
     try:
         send_mail(
