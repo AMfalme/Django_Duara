@@ -757,7 +757,7 @@ font-size: 15px;
     top: 0;
     left: 0;
     background-size: cover;
-    background-size: 100% 110%;
+
     transform: rotateY(180deg);
 }
 .contact-card h2{
@@ -848,6 +848,9 @@ font-size: 15px;
     display: block !important;
     border-radius: 20px !important;
     float: right;
+}
+.submit-btn:hover{
+    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
 }
 .media-icons{
     margin: 0 auto;
@@ -1128,6 +1131,7 @@ input:-internal-autofill-previewed.subscribemail,
   margin-right: 10px;
   width: 185px;
   color: #000 !important;
+  text-align: center;
 }
 .subscribemail:focus, .subscribemail:active{
     outline: none;
@@ -1147,6 +1151,9 @@ color: #fff;
 outline: none !important;
 color: #fff !important;
 
+}
+.submit-btn-sub:hover{
+    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
 }
 .pitch1{
   text-align: left;
