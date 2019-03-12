@@ -96,6 +96,9 @@ nav.navigation ul li {
     font-size: 15px;
     font-weight: 500;
 }
+.menu-nav .container{
+    padding-right: 0;
+}
 nav.navigation ul li a {
     color: #fff;
     text-transform: capitalize;
@@ -187,6 +190,7 @@ nav.navigation ul li a {
     overflow: hidden;
     min-height: 121vh;
 }
+
 #home:after{
     background-image: url('../images/homepage curve.svg');
     content: '';
@@ -955,7 +959,11 @@ input:-internal-autofill-previewed.subscribemail,
     background-image: none;
 }
 /* Media Queries section */
-
+@media (min-width: 1200px){}
+ #home .container {
+    max-width: 1485px;
+}
+}
 @media (min-width: 1345px) and (max-width: 1470px){
     .landing-section h2{
         min-width: 470px;
@@ -981,7 +989,7 @@ input:-internal-autofill-previewed.subscribemail,
         padding: 20px 177px;
     }
     .container{
-        width: 80% !important;
+        width: 1515px !important;
     }
     .centered{
         margin: 30px auto;
