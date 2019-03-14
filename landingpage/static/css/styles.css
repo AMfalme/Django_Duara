@@ -154,8 +154,8 @@ nav.navigation ul li a {
     position: fixed !important;
        
     backface-visibility: hidden;
-    padding-right: 45px;
-    padding-left: 65px;
+    padding-right: 40px;
+    padding-left: 40px;
     background: #fff;
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
     width: 100%;
@@ -985,12 +985,8 @@ input:-internal-autofill-previewed.subscribemail,
     .section-bg{
         margin: 48px auto;
     }
-    .menu-scroll{
-        padding: 20px 177px;
-    }
-    .container{
-        width: 1515px !important;
-    }
+    
+
     .centered{
         margin: 30px auto;
     }
