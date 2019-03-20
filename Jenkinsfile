@@ -109,8 +109,7 @@ pipeline {
     }
     stage ('Cleanup') {
       steps {
-        sh "docker rmi $GCR_IMAGE_SHA || true \
-            && docker rmi \$(docker images -q --filter 'dangling=true')"
+        sh "docker rmi $GCR_IMAGE_SHA || true && docker rmi $LIQUIBASE_GCR_IMAGE_SHA || true"
       }
     }
   }
