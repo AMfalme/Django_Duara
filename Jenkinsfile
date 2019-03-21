@@ -107,6 +107,11 @@ pipeline {
         }
       }
     }
+    stage ('Cleanup') {
+      steps {
+        sh "docker rmi $GCR_IMAGE_SHA || true"
+      }
+    }
   }
   
   post {
