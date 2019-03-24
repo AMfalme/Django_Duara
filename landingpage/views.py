@@ -12,14 +12,17 @@ from django.views.decorators.http import require_http_methods
 from smtplib import SMTPException
 import json
 import logging
-
+from django.conf import settings
 
 logger = logging.getLogger("DuaraWebPage.subscribe")
 
 
 @require_http_methods(["GET"])
 def index(request):
-    return render(request, 'landingpage/index.html')
+    
+    INTERCOM_APPID = getattr(settings, "INTERCOM_APPID", None)
+    context = {'INTERCOM_APPID': INTERCOM_APPID}
+    return render(request, 'landingpage/index.html', context)
 
 
 @require_http_methods(["POST"])
