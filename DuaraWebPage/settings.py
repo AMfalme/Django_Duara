@@ -16,6 +16,16 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+INTERCOM_APPID = "lstoqvzn"
+
+# Load .env file for development environment
+STAGE = os.environ.get('STAGE')
+if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
+    from dotenv import load_dotenv
+    load_dotenv()
+
+if STAGE is None or STAGE == 'staging':
+    INTERCOM_APPID = "azwrgw1i"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -162,10 +172,10 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS=True
 
 # Load .env file for development environment
-STAGE = os.environ.get('STAGE')
-if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
-    from dotenv import load_dotenv
-    load_dotenv()
+# STAGE = os.environ.get('STAGE')
+# if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
+#     from dotenv import load_dotenv
+#     load_dotenv()
 
 # Configure SMTP
 EMAIL_HOST = os.environ.get("NO_REPLY_EMAIL_HOST")
