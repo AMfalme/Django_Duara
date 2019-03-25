@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-INTERCOM_APPID = "lstoqvzn"
+INTERCOM_APPID = "azwrgw1i"
 
 # Load .env file for development environment
 STAGE = os.environ.get('STAGE')
@@ -24,8 +24,8 @@ if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
     from dotenv import load_dotenv
     load_dotenv()
 
-if STAGE is None or STAGE == 'staging':
-    INTERCOM_APPID = "azwrgw1i"
+if STAGE == 'prod':
+    INTERCOM_APPID = "lstoqvzn"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
