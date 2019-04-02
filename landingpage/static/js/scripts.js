@@ -8,7 +8,7 @@ $(function(){
   function scrollView(){
     $('a.nav_scroll').on("click", function (e)
       {
-        e.preventDefault();
+
         var anchor = $(this);
         $('html, body').stop().animate(
         {

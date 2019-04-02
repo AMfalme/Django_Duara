@@ -584,7 +584,7 @@ min-width: 390px;
 /* Pricing section */
 
 #pricing {
-   margin: -60px auto 20px;
+   margin: 50px auto 20px;
     padding: 20px;
 }
 #pricing h3 {
@@ -709,7 +709,12 @@ font-size: 15px;
     height: 70px;
 }
 .heavy-fontcolor{
-    color: #64606f !important;
+    color: #fff !important;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 37px;
+    margin: 100px auto -30px;
 }
 .info-active {
     display: block !important;

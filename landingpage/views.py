@@ -105,3 +105,8 @@ def send_inquiry(request):
         "message": response_message,
         "error": error
     })
+@require_http_methods(["GET"])
+
+def pricing(request):
+    return render(request, 'landingpage/pricing.html')
+    

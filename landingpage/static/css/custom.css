@@ -1,0 +1,13 @@
+
+.outlay{
+	background-image: linear-gradient(to bottom left, #89389d 0%,#d74589 100%);
+	min-height: 300px;
+	width: 100%;
+
+}
+.pay-pitch{
+	color: aliceblue;
+    font-size: 17px;
+    text-align: center;
+    margin: -40px;
+}
