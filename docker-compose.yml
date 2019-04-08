@@ -1,0 +1,21 @@
+version: '3.7'
+secrets:
+  home.env:
+    external: true
+services:
+  home:
+    image: gcr.io/robotic-fuze-194312/home:latest
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 500M
+      restart_policy:
+        condition: on-failure
+    secrets:
+      - home.env
+    ports:
+    - "8000:8000"
+    volumes:
+    - /var/log/home:/var/log
