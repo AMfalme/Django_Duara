@@ -11,3 +11,18 @@
     text-align: center;
     margin: -40px;
 }
+.contact_nav ul{
+	width: 330px;
+	height: 50px;
+	margin:0 auto;
+}
+.contact_nav ul li{
+	display: inline-block;
+padding: 10px;
+background: #57144599;
+border-radius: 15px;
+color: #fff;
+}
+.contact_nav{
+	margin: 40px auto -60px;
+}

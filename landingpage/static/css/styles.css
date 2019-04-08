@@ -285,7 +285,7 @@ padding-top: 45px;
 #features h1 {
     text-align: center;
     margin: 30px auto;
-    color: #6f1c5c;
+ 
     
     line-height: 2;
 
@@ -596,7 +596,7 @@ min-width: 390px;
 }
 
 .limit-info {
-    width: 100%;
+    width: 880px;
     margin: 10px auto ;
     animation-delay: 12s;
     -webkit-animation: 25s infinite linear;
@@ -623,8 +623,7 @@ min-width: 390px;
     
     z-index: 30;
     color: #fff;
-    display: block;
-    margin: 0 auto;
+
 }
 
 .info h6 {
@@ -640,7 +639,7 @@ min-width: 390px;
  font-weight: 100;
 }
 .info {
-    width: 200px;
+    width: 260px;
    
 
     border: 1px solid #cebcca;
@@ -708,13 +707,16 @@ font-size: 15px;
 .pricing-table table tr{
     height: 70px;
 }
-.heavy-fontcolor{
+.heavy-font{
     color: #fff !important;
     text-align: center;
     text-transform: capitalize;
     font-weight: 300;
     font-size: 37px;
     margin: 100px auto -30px;
+}
+.heavy-fontcolor{
+    color: #64606f !important;
 }
 .info-active {
     display: block !important;
@@ -892,12 +894,24 @@ font-size: 50px;
     margin-top: 50px;
 text-align: center;
 }
+.quick_nav li{
+    margin-left: -37px;
+    padding: 5px 0px;
+
+}
+.quick_nav{
+   min-height: 275px;
+   margin-top: 40px;
+}
+.shade{
+    background-color: purple;
+}
 footer img, footer i {
     display: inline-block;
 }
 footer img {
     height: 65px;
-   margin: 0 auto;
+   margin-left: 40px;
     display: block;
 }
 footer {

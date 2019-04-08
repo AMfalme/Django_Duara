@@ -109,4 +109,7 @@ def send_inquiry(request):
 
 def pricing(request):
     return render(request, 'landingpage/pricing.html')
-    
+@require_http_methods(["GET"])
+
+def contact(request):
+    return render(request, 'landingpage/contactus.html')
