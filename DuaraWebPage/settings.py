@@ -38,7 +38,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "localhost",
     "duara.io",
-    "duara.io.10.0.0.2.xip.io"
+    "duara.io.172.16.0.5.xip.io"
 ]
 
 ADMIN_ENABLED = False

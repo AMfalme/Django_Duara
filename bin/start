@@ -1,11 +1,12 @@
 #!/bin/sh
 
-if [ "$STAGE" = "prod"] || [ "$STAGE" = "staging" ]; then
-    echo "Running db migrations..."
-    python3 manage.py migrate
-else
-    echo "Skipping db migrations"
-fi
+: ${ENV_SECRETS_DIR:=/run/secrets}
+: ${SECRET_NAME:=home.env}
+
+export $(grep -v '^#' $ENV_SECRETS_DIR/$SECRET_NAME | xargs)
+
+echo "Running db migrations..."
+python3 manage.py migrate
 
 echo "Starting application"
 exec uwsgi uwsgi.ini
