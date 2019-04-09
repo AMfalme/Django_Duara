@@ -5,6 +5,52 @@
 	width: 100%;
 
 }
+.features-top{
+	min-height: 630px;
+
+}
+.features-pitch{
+	background-color: #fff;
+	min-height: 600px;
+	width: 80%;
+	margin: -350px auto 50px;
+	border-radius: 20px;
+	border: 1px solid #eee;
+}
+.features-pitch:before{
+	background-image: url('../images/rounded white.svg');
+    position: absolute;
+    width: 61%;
+    height: 53%;
+    content: '';
+    min-width: 380px;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.feature-compute h2{
+	text-align: center;
+}
+.feature-compute li{
+	list-style: disc;
+	margin: 15px;
+}
+.feature-compute .icon{
+	width: 50px;
+    height: 50px;
+    background-color: #afa9b0;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 30px auto;
+}
+.feature-compute{
+	min-height: 500px;
+}
+.feature-info{
+	margin-left: 40px;
+	width: 70%;
+}
 .pay-pitch{
 	color: aliceblue;
     font-size: 17px;

@@ -108,11 +108,11 @@ nav.navigation ul li a {
 .drop-down{
     display: none;
     position: absolute;
-    border: 1px rgba(147, 76, 153, 0.51) solid;
+    border: 1px #eee solid;
     border-radius: 13px;
     padding: 8px;
     margin-left: -15px;
-    background-color: rgba(147, 76, 153, 0.51);
+    background-color: #fff;
     color: purple;
     transition: 5s;
 }
@@ -121,7 +121,7 @@ nav.navigation ul li a {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid rgba(147, 76, 153, 0.51);
+    border-bottom: 10px solid #fff;
     content: '';
     position: absolute;
     top: -10px;
@@ -129,7 +129,7 @@ nav.navigation ul li a {
 
 }
 .drop-down li a{
-    color: #fff !important;
+    color: #333 !important;
 }
 .drop-down li:hover{
     border-bottom: 1px rgba(105, 77, 105, 0.51) solid;
@@ -850,11 +850,7 @@ font-size: 15px;
     margin-top: 50px;
 }
 
-.channels img {
-    width: 60%;
-    width: 25px;
-    margin: 10px auto;
-}
+
 .right-line {
     border-right: 1px solid #0c0c0e;
     height: 285px;
@@ -952,7 +948,6 @@ footer img, footer i {
 }
 footer img {
     height: 55px;
-   margin-left: 40px;
     display: block;
 }
 footer h3{
