@@ -49,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><img class="logo-img" title="Duara Logo" alt="Duara Logo" src="{% static 'images/white logo.svg' %}"></a>
+      <a class="nav_scroll navbar-brand" href="#home"><img class="logo-img" title="Duara Logo" alt="Duara Logo" src="{% static 'images/white logo.svg' %}"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,10 +57,28 @@
      
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav_scroll" href="#home">Home</a></li>
-        <li><a class="nav_scroll" href="#products">Products</a></li>
+       
+          <li class="drop"><a class="nav_scroll" href="about">About</a>
+            <div class="drop-down">
+               <ul>
+                  <li><a href="#"> Openstack</a></li>
+                  <li><a href="#"> About Us</a></li>
+                </ul>
+              </div>
+          </li>
+        <li class="drop"><a class="nav_scroll" href="features">Features</a>
+           
+        </li>
+          <li class="drop"><a class="nav_scroll" href="services">Services</a>
+            <div class="drop-down">
+               <ul>
+                  <li><a href="#"> Public Cloud</a></li>
+                  <li><a href="#">Private Cloud</a></li>
+                </ul>
+              </div>
+          </li>
         <li><a class="" href="/pricing">Pricing</a></li>
-         <li><a class="nav_scroll" href="https://abcxyz-beta-docs.duara.io/">Docs</a></li>
+       
          
         <li><a class="nav_scroll" href="#contact">Contact Us</a></li>
         

@@ -104,7 +104,48 @@ nav.navigation ul li a {
     text-transform: capitalize;
     
     font-size: 13px;
-}.logo-img {
+}
+.drop-down{
+    display: none;
+    position: absolute;
+    border: 1px rgba(241, 213, 241, 0.88) solid;
+    border-radius: 13px;
+    padding: 8px;
+    margin-left: -15px;
+    background-color: #fff;
+    color: purple;
+    transition: 5s;
+}
+.drop-down:before{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 48px;
+
+}
+.drop-down li a{
+    color: grey !important;
+}
+.drop-down li:hover{
+    border-bottom: 1px rgba(105, 77, 105, 0.51) solid;
+}
+.drop ul li{
+   margin-left: -30px;
+    width: 105px;
+    padding: 8px !important;
+    
+    color: purple;
+}
+.drop:hover .drop-down{
+    display: block;
+    transition: 5s;
+}
+.logo-img {
        width: 140px;
        margin: -20px auto;
         position: absolute;
@@ -615,7 +656,6 @@ min-width: 390px;
          box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
 }
 .info.active h6, .info:hover h6 {
-    font-weight: 700;
     color: #fff;
 }
 .info.active {
@@ -658,11 +698,11 @@ min-width: 390px;
 .target-info{
     width: 100%;
     margin: 47px auto;
-    min-height: 350px;
     background-color: #fff;
 }
 .target-info div {
     display: none;
+    min-height: 350px;
 }
 
 .table > tbody > tr:nth-of-type(2n) {
@@ -794,7 +834,7 @@ font-size: 15px;
     float: left;
 }
 .channels p {
-    font-size: 15px;
+    font-size: 12px;
     margin-left: 10px;
     max-width: 180px;
 }
@@ -897,6 +937,7 @@ text-align: center;
 .quick_nav li{
     margin-left: -37px;
     padding: 5px 0px;
+    font-size: 12px;
 
 }
 .quick_nav{
@@ -910,9 +951,12 @@ footer img, footer i {
     display: inline-block;
 }
 footer img {
-    height: 65px;
+    height: 55px;
    margin-left: 40px;
     display: block;
+}
+footer h3{
+    font-size: 21px;
 }
 footer {
     background-color: #0f0038;

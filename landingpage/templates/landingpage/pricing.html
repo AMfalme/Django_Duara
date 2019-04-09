@@ -23,12 +23,28 @@
      
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav_scroll" href="/">Home</a></li>
-        <li><a class="nav_scroll" href="/">Products</a></li>
+         <li class="drop"><a class="nav_scroll " href="about">About</a>
+             <div class="drop-down">
+               <ul>
+                  <li><a href="#"> About Openstack</a></li>
+                  <li><a href="#"> About Us</a></li>
+                </ul>
+              </div>
+         </li>
+        
+        <li><a class="nav_scroll" href="features">Features</a></li>
+          <li class="drop"><a class="nav_scroll" href="services">Services</a>
+            <div class="drop-down">
+               <ul>
+                  <li><a href="#"> Public Cloud</a></li>
+                  <li><a href="#"> Private Cloud</a></li>
+                </ul>
+              </div>
+          </li>
         <li><a class="nav_scroll" href="#pricing">Pricing</a></li>
-         <li><a class="nav_scroll" href="https://abcxyz-beta-docs.duara.io/">Docs</a></li>
          
-        <li><a class="nav_scroll" href="/contact">Contact Us</a></li>
+         
+        <li><a class="nav_scroll" href="contact">Contact Us</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -65,10 +81,10 @@
             <div class="info active borderless" id="cloudcompute">
               <h6>Virtual Machines</h6>
             </div> 
-            <div class="info  borderless" id="cloudcompute">
+            <div class="info  borderless" id="block">
               <h6>Block Storage</h6>
             </div>  
-            <div class="info borderless" id="cloudcompute">
+            <div class="info borderless" id="floating">
               <h6>Back ups and snapshot</h6>
             </div>  
 
@@ -159,6 +175,20 @@
             </p>
           </div>
 
+        </div>
+
+        <div class="target-info">
+          <div class="floating">
+          </div>
+        </div>
+        <div class="target-info">
+          <div class="block">
+            <h2>Block Storage</h2>
+            We offer very friendly charges that are reliable and transparent, all based on your usage.
+            <br>
+            $0.2 per GB per month.
+
+          </div>
         </div>
         <p class="region">
                 Nairobi (Kenya) is currently the only supported data center region.
