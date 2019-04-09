@@ -105,11 +105,32 @@ def send_inquiry(request):
         "message": response_message,
         "error": error
     })
-@require_http_methods(["GET"])
 
+
+@require_http_methods(["GET"])
 def pricing(request):
     return render(request, 'landingpage/pricing.html')
-@require_http_methods(["GET"])
 
+
+@require_http_methods(["GET"])
 def contact(request):
     return render(request, 'landingpage/contactus.html')
+
+
+@require_http_methods(["GET"])
+def about(request):
+    return render(request, 'landingpage/about.html')
+
+@require_http_methods(["GET"])
+def openstack(request):
+    return render(request, 'landingpage/openstack.html')
+    
+
+@require_http_methods(["GET"])
+def features(request):
+    return render(request, 'landingpage/features.html')
+
+@require_http_methods(["GET"])
+def services(request):
+    return render(request, 'landingpage/services.html')
+

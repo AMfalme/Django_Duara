@@ -33,7 +33,7 @@ if STAGE == 'prod':
 SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -123,10 +123,10 @@ WSGI_APPLICATION = 'DuaraWebPage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'diam.staging',
-        'NAME': 'launching_soon',
-        'USER': 'launching_soon',
-        'PASSWORD': 'ATiCEntaLTuR',
+        'HOST': 'localhost',
+        'NAME': 'Duara_Beta',
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
