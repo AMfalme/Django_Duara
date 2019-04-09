@@ -30,11 +30,15 @@
     z-index: 0;
 }
 .feature-compute h2{
-	text-align: center;
+	text-align: left;
+	margin-left: 30px;
+	font-size: 35px;
 }
 .feature-compute li{
 	list-style: disc;
 	margin: 15px;
+
+	color: #5f5f5f;
 }
 .feature-compute .icon{
 	width: 50px;
@@ -42,14 +46,17 @@
     background-color: #afa9b0;
     padding: 15px;
     border-radius: 30px;
-    margin: 30px auto;
+    margin: 30px;
 }
 .feature-compute{
 	min-height: 500px;
+	padding: 30px;
 }
 .feature-info{
-	margin-left: 40px;
+	margin-left: 30px;
 	width: 70%;
+	color: #5f5f5f;
+
 }
 .pay-pitch{
 	color: aliceblue;
