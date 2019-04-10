@@ -1017,7 +1017,7 @@ input:-internal-autofill-previewed.subscribemail,
     background-image: none;
 }
 /* Media Queries section */
-@media (min-width: 1200px){}
+@media (min-width: 1200px){
 .container {
     max-width: 1485px;
     

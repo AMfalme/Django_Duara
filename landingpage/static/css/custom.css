@@ -6,29 +6,19 @@
 
 }
 .features-top{
-	min-height: 630px;
+	min-height: 585px;
+	background-image: url('../images/ProductsOverlay.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-position: 109% 150%;
 
 }
 .features-pitch{
-	background-color: #fff;
-	min-height: 600px;
-	width: 80%;
-	margin: -235px auto 50px;
-	border-radius: 20px;
-	border: 1px solid #eee;
+	margin: -195px auto 50px;
+min-height: 790px;
 }
-.features-pitch:before{
-	background-image: url('../images/rounded white.svg');
-    position: absolute;
-    width: 61%;
-    height: 53%;
-    content: '';
-    min-width: 380px;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 0;
-}
+
 .feature-compute h2{
 	text-align: left;
 	margin-left: 30px;
@@ -101,34 +91,79 @@
     margin-top: 75px;
 }
 .features-products{
-	margin-top: -360px;
+	margin-top: -525px;
 	overflow: hidden;
 }
 .products-info blockquote{
-	font-size: 26px;
+	font-size: 16px;
 	text-align: center;
 	color: #64606f !important;
-	padding: 130px;
+	padding: 285px;
+	border-left: none;
 }
 .products-info p{
 	font-size: 26px;
 text-align: center;
-color: #1f143c !important;
-margin: 100px auto 300px;
+color: #85969c !important;
+margin: 120px auto 480px;
 }
 .products-left{
-	float: left;
-	width: 20%;
+	position: absolute;
+	width: 30%;
     min-width: 150px;
+
+    z-index: 8;
+
+margin-top: -15px;
+margin-left: 100px;
 }
 .products-left .first{
-	margin-right: -120px;
+	margin-left: 250px;
+}
+.products-left .second{
+	margin-left: 0;
+}
+.products-right{
+
+	float: right;
+	width: 30%;
+	margin-top: -15px;
+
+	
+margin-right: 75px;
+z-index: 8;
+}
+.products-right .first{
+	margin-right: 325px;
+}
+
+.products-icons p{
+	width: 220px;
+font-size: 15px;
+margin: 40px;
+    margin-left: 40px;
+text-align: left;
+margin-left: -25px;
+}
+.products-right .second{
+	margin-right: 90px;
+
+
+}
+.products-right .third{
+	margin-right: 325px;
 }
 .products-icons{
-	margin: 50px auto;
+	margin: 100px auto;
+	cursor: pointer;
+	z-index: 100000;
 }
 .products-left .third{
-	margin: 0 -120px auto auto;
+	margin: 60px 220px;
+}
+.product-info{
+	position: absolute;
+	width: 100%;
 }
 .product-info 	blockquote:before {
 	content: "❞";
