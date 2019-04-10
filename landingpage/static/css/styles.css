@@ -223,7 +223,7 @@ nav.navigation ul li a {
 /* home section */
 
 #home{
-	background-image: linear-gradient(to bottom left, #89389d 0%,#d74589 100%);
+	background-image:linear-gradient(to bottom left, #89389d 0%,#ae326c 100%);
     background-size: cover;
     width: 100%;
     position: relative;
@@ -442,7 +442,7 @@ color: rgb(116, 114, 130);
 .simplicity i.fa-paper-plane{
    color:  #c9438c;
 }
-.simple .simplicity {
+.simple .simplicity,.products-icons {
     border-radius: 50%;
     
     box-shadow:-4px 8px 20px 0px rgba(50, 50, 50, 0.15);

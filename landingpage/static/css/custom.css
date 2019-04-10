@@ -13,7 +13,7 @@
 	background-color: #fff;
 	min-height: 600px;
 	width: 80%;
-	margin: -350px auto 50px;
+	margin: -235px auto 50px;
 	border-radius: 20px;
 	border: 1px solid #eee;
 }
@@ -41,9 +41,9 @@
 	color: #5f5f5f;
 }
 .feature-compute .icon{
-	width: 50px;
-    height: 50px;
-    background-color: #afa9b0;
+	width: 80px;
+    height: 80px;
+
     padding: 15px;
     border-radius: 30px;
     margin: 30px;
@@ -58,6 +58,87 @@
 	color: #5f5f5f;
 
 }
+.features-nav{
+
+	width: 720px;
+	margin: -70px auto;
+}
+.features-nav ul li{
+	padding: 10px;
+	display:inline-block;
+	width: 220px;
+	text-align: center;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	font-size: 16px;
+}
+
+.features-nav ul li.active:after, .features-nav ul li:hover:after {
+	background-image: linear-gradient(to bottom left, #e8d3ec 0%,#940a4a 100%);
+	text-align: center;
+    margin: 10px auto;
+    display: block;
+    content: '';
+    width: 74px;
+    border-radius: 86px;
+    height: 3px;
+    padding: 2px;
+}
+
+.features-nav ul li.active:before{
+	width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    content: '';
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 22px;
+}
+.features-target{
+	z-index: 0;
+    margin-top: 75px;
+}
+.features-products{
+	margin-top: -360px;
+	overflow: hidden;
+}
+.products-info blockquote{
+	font-size: 26px;
+	text-align: center;
+	color: #64606f !important;
+	padding: 130px;
+}
+.products-info p{
+	font-size: 26px;
+text-align: center;
+color: #1f143c !important;
+margin: 100px auto 300px;
+}
+.products-left{
+	float: left;
+	width: 20%;
+    min-width: 150px;
+}
+.products-left .first{
+	margin-right: -120px;
+}
+.products-icons{
+	margin: 50px auto;
+}
+.products-left .third{
+	margin: 0 -120px auto auto;
+}
+.product-info 	blockquote:before {
+	content: "❞";
+	font-family: 'icons';
+	font-size: 62px;
+	width: 100%;
+	display: block;
+}
+
+
 .pay-pitch{
 	color: aliceblue;
     font-size: 17px;
