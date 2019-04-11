@@ -6,22 +6,25 @@
 
 }
 .features-top{
-	min-height: 585px;
-	background-image: url('../images/ProductsOverlay.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100%;
-	background-position: 109% 150%;
+	min-height: 664px;
+    background-image: url(../images/ProductsOverlay.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
 
 }
 .features-top .heading{
-	top: 80px;
-	position: relative;	
+	margin-top: 230px;
+    position: relative;
 }
 .features-pitch{
 	margin: -195px auto 50px;
 min-height: 790px;
 }
+
+
+
 
 /*.features-nav ul li.active:after, .features-nav ul li:hover:after {
 	background-image: linear-gradient(to bottom left, #e8d3ec 0%,#940a4a 100%);
@@ -100,7 +103,7 @@ min-height: 790px;
     border-radius: 36px;
     text-align: center;
     width: 120px;
-	
+
 }
 .products-info blockquote{
 	font-size: 16px;
@@ -108,12 +111,33 @@ min-height: 790px;
 	color: #64606f !important;
 	padding: 285px;
 	border-left: none;
+	position: relative;
+	padding-top: 320px;
 }
 .products-info p{
-	font-size: 26px;
+	font-size: 30px;
 text-align: center;
 color: #85969c !important;
-margin: 100px auto 480px;
+margin: 35px auto 0;
+
+}
+.feature-center{
+	margin: 150px auto; 
+}
+.feature-center:before{
+	width: 920px;
+    height: 1000px;
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom left, rgba(202, 221, 255, 0.42) 0%,rgba(238, 238, 238, 0.5) 50%, rgba(255, 255, 255, 0.32) 100%);
+    transform: rotate(313deg);
+    margin-left: -110px;
+    margin-top: 122px;
+}
+.feature-center .pitch1{
+	color: #64606f;
+	width: 400px;
+	margin: 40px auto 0 0;
 }
 .products-left{
 	position: absolute;
@@ -123,7 +147,7 @@ margin: 100px auto 480px;
     z-index: 8;
 
 margin-top: -15px;
-margin-left: 100px;
+margin-left: 150px;
 }
 .products-left .first{
 	margin-left: 250px;
@@ -138,7 +162,7 @@ margin-left: 100px;
 	margin-top: -15px;
 
 	
-margin-right: 75px;
+margin-right: 150px;
 z-index: 8;
 }
 .products-right .first{
@@ -153,8 +177,11 @@ margin: 40px;
 text-align: left;
 margin-left: -25px;
 }
+.products-icons.active, .products-icons:hover{
+	background-color: #681761;
+}
 .products-right .second{
-	margin-right: 90px;
+	margin-right: 35px;
 
 
 }
@@ -181,16 +208,39 @@ margin-left: -25px;
 	width: 100%;
 	display: block;
 }
+.info-vm{
+	position: absolute;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
 
-
+.over-lay-shadow:before{
+	background-image: url(../images/greyish.jpg);
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 475px;
+    border-radius: 77%;
+    margin: 150px auto;
+    display: block;
+}
+.over-lay-shadow{
+	position: relative;
+    width: 70%;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 810px;}
 .pay-pitch{
 	color: aliceblue;
     font-size: 17px;
     text-align: center;
-    margin: -40px auto;
+    margin: -70px auto;
 }
 .pay-pitch div{
-	width: 150px;
+	width: 65px;
 	display: inline-block;
 }
 .contact_nav ul{
@@ -208,4 +258,58 @@ color: #fff;
 .contact_nav{
 	margin: 40px auto -60px;
 	width: 585px;
+}
+.left{
+	width: 50%;
+	min-width: 200px;
+	float: left;
+	margin-top: 30px;
+}
+.right{
+	width: 50%;
+	min-width: 200px;
+	float: right;
+	margin-top: 30px; 
+}
+.left li{
+	margin-top: 10px;
+	list-style: disc;
+}
+.dashboard{
+	background-image: url(../images/dashboard.png);
+    width: 100%;
+    height: 544px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+
+}
+.feature-icon{
+	width: 260px;
+    min-height: 300px;
+    box-shadow: 3px 4px 10px 0px rgba(163, 163, 163, 0.31);
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+.feature-icon.two{
+	margin-bottom: 40px;
+}
+.feature-icon h3{
+	color: #85969c;
+	font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+}
+.feature-icon ul li{
+	list-style: circle;
+    font-size: 16px;
+    color: #465357;
+    margin: 20px;
+}
+.col-md-3 .feature-icon.two:first-child{
+	margin-top: -150px;
+}
+.feature-icon-table{
+	margin: 200px auto; 
 }
