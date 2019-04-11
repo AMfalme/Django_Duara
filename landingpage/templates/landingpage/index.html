@@ -27,9 +27,10 @@
               <div class="buttons">
                 <form id="subscribeForm" method="POST">
                   {% csrf_token %}
-                  <div class="input-group">
-                  <input class="subscribemail" type="email" name="email" placeholder="Your Email Address">
-                  <button type="submit" class="submit-btn-sub btn ">Subscribe</button>
+                  <div class="input-group subscribe-button">
+                  <input class="subscribemail" type="email" name="email" placeholder="Enter your Email address">
+                  <div class="input-alert">Enter your email address</div>
+                  <button type="submit" class="submit-btn-sub btn "><p>></p></button>
                   </div>
                 </form>
                 <div id="subscribeResponse">

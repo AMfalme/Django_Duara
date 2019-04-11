@@ -213,6 +213,7 @@ nav.navigation ul li a {
 }
 .menu-scroll a{
     color: #fff !important;
+    
 }
 .menu-scroll .menu-hover:after{
     
@@ -1189,28 +1190,40 @@ input:-internal-autofill-previewed.subscribemail,
 }
 /* subscribe styling */
 .subscribemail{
-  float: left;
-  border-radius: 30px;
-  padding: 11px;
-  border: none;
-  margin-right: 10px;
-  width: 185px;
-  color: #000 !important;
-  text-align: center;
+  background-color: rgb(37, 184, 104);
+    float: left;
+    border-radius: 30px;
+    padding: 11px;
+    border: none;
+    margin-right: 10px;
+    width: 280px;
+    color: #000 !important;
+    text-align: left;
+    height: 62px;
+    font-weight: 500;
+    font-size: 16px;
 }
 .subscribemail:focus, .subscribemail:active{
     outline: none;
 }
 .subscribemail::placeholder{
-    text-align: center;
+    text-align: left;
+    color: #fff;
+}
+.input-alert{
+    display: none;
 }
 .submit-btn-sub{
-  background-color: rgba(78, 216, 139, 0.85);
-width: 185px;
-padding: 10px !important;
-display: block !important;
-border-radius: 20px !important;
-color: #fff;
+  margin: 6px auto;
+    position: absolute;
+    width: 50px;
+    padding: 10px !important;
+    display: block !important;
+    border-radius: 28px !important;
+    color: #fff;
+    height: 50px;
+    right: 20px;
+    background-color: #fb5a59;
 }
 .submit-btn-sub:focus, .submit-btn-sub:active:focus, .submit-btn-sub.active:focus {
 outline: none !important;
@@ -1219,6 +1232,12 @@ color: #fff !important;
 }
 .submit-btn-sub:hover{
     box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.2);
+}
+.submit-btn-sub p{
+    font-size: 25px;
+    font-weight: 800;
+    padding: 0;
+    margin: -3px;
 }
 .pitch1{
   text-align: left;
