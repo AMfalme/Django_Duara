@@ -8,29 +8,104 @@
    {% block nav %}
    {% include 'landingpage/nav.html' %}
    {% endblock %}
+  
 <div class="outlay features-top">
   <div class="container ">
     <div class="row">
-      <div class="heading">
-        <h3 class="heavy-font">
-          kick off your development in a few simple steps.
+       <div class="col-md-6">
+        <div class="heading">
+          <h3 class="heavy-font">
+             ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            
 
-        </h3>
-        <p class="simplicity" style="background-image: linear-gradient(to bottom left, #e8d3ec 0%,#940a4a 100%);"></p>
-        <div class="pay-pitch"> <div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Launch!</div></div>      
+          </h3>
+          
+          <div class="pay-pitch"> <div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Launch!</div></div>      
+
+        </div>
+      </div>  
+      <div class="col-md-6">
+
 
       </div>
     </div>
   </div>
 </div>
+<div class="container features-target">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/vm.svg">
+            </div>
+            <h2>
+              Compute Instances
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
 
-<div class="features-pitch">
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+          </div>
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/virtual%20machines.svg">
+            </div>
+            <h2>
+              Block Storage
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/virtual%20machines.svg">
+            </div>
+            <h2>
+             Floating IP address.
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+   <!--
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+              <div class="features-pitch">
  
   <div class="features-target">
     <div class="products-info">
-      <p>
-        Products
-      </p>
+      
       <div class="features-products">
         <div class="products-left">
           <ul>
@@ -51,11 +126,27 @@
         <div class="product-info">
           <div class="info-vm">
             <div class="over-lay-shadow">
-              <blockquote cite="">  
+              <blockquote class="token vm active" cite="">  
                 Scalable VMs that can run any linux operating system.
               </blockquote>
+               <blockquote class="token bs" cite="">  
+                Easily attach a block storage to a compute instance.
+              </blockquote>
+               <blockquote class="token snapshot" cite="">  
+                
+              </blockquote>
+               <blockquote class="token FI" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+               <blockquote class="token Faas" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+               <blockquote class="token network" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+
             </div>
-      </div><!--#mb-wrap-->
+      </div>
       
      
            
@@ -72,7 +163,7 @@
             </li>
             <li class="products-icons third">
               <img src="/static_files/images/snapshots.svg">
-              <p><i>Backups & Snapshots</i></p>
+              <p><i>Firewall-as-a-servie</i></p>
             </li>
           </ul>
         </div>
@@ -80,7 +171,35 @@
       </div>
     </div>
   </div>
-
+    </div>
+  </div>
+</div>
+ -->
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+       
+       <div class="images">
+          <h2>Linux distro images on-demand</h2>
+          <div class="ubuntu-16">
+           <img src="/static_files/images/debian.png">
+         </div>
+         <div class="ubuntu-18">
+           <img src="/static_files/images/ubuntu16.png">
+         </div>
+           <div class="ubuntu-16">
+           <img src="/static_files/images/fedora.jpeg">
+         </div>
+           <div class="ubuntu-16">
+           <img src="/static_files/images/centos.svg">
+         </div>
+           <!-- <div class="ubuntu-16">
+           <img src="/static_files/images/centos.png">
+         </div> -->
+       </div>
+     </div>
+   </div>
+ </div>
 <div class="container">
   <div class="row feature-center">
     <div class="col-md-6">
@@ -113,74 +232,6 @@
     </div>
   </div>
 </div>
-<div class="container feature-icon-table">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="feature-icon">
-        <h3>
-          Compute instances
-        </h3>
-        <ul>
-          <li>Deploy in a few steps</li>
-          <li>Root access</li>
-          <!-- <li><b>Secure:</b><span>SSH access only </span></li> -->
-     <!--      <li>Easy backup and recovery</li> -->
-          <li> Highly redundant</li>
-          <li>Easily scalable</li>
-          <li>Reliable & stable </li>
-
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="feature-icon two">
-        <h3>Storage</h3>
-        <ul>
-          <li>Scalable.</li>
-          <li>Redundant</li>
-          <li>Backup & Recovery</li>
-          <li>Distributed</li>
-          <li>Flexible Pricing</li>
-
-        </ul>
-      </div>
-       <div class="feature-icon two">
-        <h3>Security</h3>
-        <ul>
-          <li>SSH access only</li>
-          <li>Security Groups</li>
-          <li>Local firewall</li>
-          <li>Full unrestricted access</li>
-          <li>DDOS protection</li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-3">
-       <div class="feature-icon two">
-        <h3>
-          Network
-        </h3>
-        <ul>
-          <li>FLoating IPs</li>
-          <li>Load Balancing</li>
-          <li>Easily customize-able</li>
-          <li>Security Groups</li>
-          <li>Low latency</li>
-        </ul>
-      </div>
-       <div class="feature-icon two">
-        
-      </div>
-    </div>
-    <div class="col-md-3">
-       <div class="feature-icon">
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 
 

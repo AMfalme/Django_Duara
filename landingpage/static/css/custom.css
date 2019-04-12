@@ -5,6 +5,13 @@
 	width: 100%;
 
 }
+.outlay-fff{
+	height: 85px;
+	background-color: #7c0071;
+}
+.outlay-fff li a{
+	color: purple !important;
+}
 .features-top{
 	min-height: 664px;
     background-image: url(../images/ProductsOverlay.svg);
@@ -59,7 +66,7 @@ min-height: 790px;
     margin: 30px;
 }
 .feature-compute{
-	min-height: 500px;
+	min-height: 350px;
 	padding: 30px;
 }
 .feature-info{
@@ -109,7 +116,7 @@ min-height: 790px;
 	font-size: 16px;
 	text-align: center;
 	color: #64606f !important;
-	padding: 285px;
+	
 	border-left: none;
 	position: relative;
 	padding-top: 320px;
@@ -129,7 +136,7 @@ margin: 35px auto 0;
     height: 1000px;
     content: '';
     position: absolute;
-    background-image: linear-gradient(to bottom left, rgba(202, 221, 255, 0.42) 0%,rgba(238, 238, 238, 0.5) 50%, rgba(255, 255, 255, 0.32) 100%);
+    background-image: linear-gradient(to bottom left, rgba(149, 118, 118, 0.02) 0%,rgba(48, 23, 45, 0.02) 25%, rgba(238, 238, 238, 0.5) 50%, rgba(255, 255, 255, 0.32) 100%);
     transform: rotate(313deg);
     margin-left: -110px;
     margin-top: 122px;
@@ -189,10 +196,11 @@ margin-left: -25px;
 	margin-right: 325px;
 }
 .products-icons{
-	margin: 100px auto;
+	margin: 120px auto;
 	cursor: pointer;
 	z-index: 10;
-    position: relative;
+    position: relative;width: 100px;
+    height:100px;
 }
 .products-left .third{
 	margin: 60px 220px;
@@ -229,14 +237,14 @@ margin-left: -25px;
 }
 .over-lay-shadow{
 	position: relative;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     min-width: 500px;
     max-width: 810px;}
 .pay-pitch{
 	color: aliceblue;
     font-size: 17px;
-    text-align: center;
+    text-align: left;
     margin: -70px auto;
 }
 .pay-pitch div{
@@ -286,8 +294,8 @@ color: #fff;
 
 }
 .feature-icon{
-	width: 260px;
-    min-height: 300px;
+	width: 230px;
+    min-height: 280px;
     box-shadow: 3px 4px 10px 0px rgba(163, 163, 163, 0.31);
     border-radius: 4px;
     border: 1px solid #fff;
@@ -297,13 +305,13 @@ color: #fff;
 }
 .feature-icon h3{
 	color: #85969c;
-	font-size: 20px;
+	font-size: 18px;
     text-align: left;
     margin-left: 40px;
 }
 .feature-icon ul li{
 	list-style: circle;
-    font-size: 16px;
+    font-size: 14px;
     color: #465357;
     margin: 20px;
 }
@@ -312,4 +320,29 @@ color: #fff;
 }
 .feature-icon-table{
 	margin: 200px auto; 
+	width: 75% !important;
+	min-width: 800px;
+}
+.images div{
+	width: 200px;
+	display: inline;
+	overflow: hidden;
+}
+.images img{
+	width: 100px;
+}
+.images{
+	width: 450px;
+	margin: 0 auto;
+	display: block;
+}
+.images h2{
+	text-align: center;
+	margin: 40px auto;
+	color: #8b999e;
+}
+.block-pricing{
+	width: 300px;
+	height: 500px;
+	border: 1px solid #eee;
 }
