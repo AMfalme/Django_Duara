@@ -80,16 +80,20 @@ $(function(){
    /*-------------------------------------------------------------------------*
      *                   03. Pricing section tabbable area                          *
      *-------------------------------------------------------------------------*/
-  $('.info').click(
-    function(){
+  $('.target').click(
+    function(e){
+      e.preventDefault();
+
       target = $(this).attr('id');
       console.log(target);
-      $('.target-info> .info-active').removeClass('info-active');
+      $('.trigger-target> .info-active').removeClass('info-active');
       $('.'+target).addClass('info-active');
-      $('.info').removeClass('active');
+      $('.target').removeClass('active');
       $(this).addClass('active');
     }
   );
+
+
 
          /*-------------------------------------------------------------------------*
      *           Helps in hiding any event triggered forms or div (signup or login/since been depricated)
