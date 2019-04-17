@@ -18,11 +18,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INTERCOM_APPID = "azwrgw1i"
 
-# Load .env file for development environment
-STAGE = os.environ.get('STAGE')
-if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
-    from dotenv import load_dotenv
-    load_dotenv()
+# # Load .env file for development environment
+# STAGE = os.environ.get('STAGE')
+# if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
+#     from dotenv import load_dotenv
+#     load_dotenv()
 
 if STAGE == 'prod':
     INTERCOM_APPID = "lstoqvzn"
@@ -38,7 +38,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "duara.io",
-    "duara.io.172.16.0.5.xip.io"
+    "duara.io.172.16.0.5.xip.io",
+    "*"
 ]
 
 ADMIN_ENABLED = False
