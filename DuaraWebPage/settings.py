@@ -24,8 +24,8 @@ INTERCOM_APPID = "azwrgw1i"
 #     from dotenv import load_dotenv
 #     load_dotenv()
 
-if STAGE == 'prod':
-    INTERCOM_APPID = "lstoqvzn"
+# if STAGE == 'prod':
+#     INTERCOM_APPID = "lstoqvzn"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
