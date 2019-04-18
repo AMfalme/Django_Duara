@@ -425,3 +425,6 @@ padding-top: 10px;
 
 border-radius: 0 !important;
 }
+.none{
+	display: none;
+}
