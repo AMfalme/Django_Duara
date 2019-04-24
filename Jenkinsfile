@@ -48,7 +48,7 @@ pipeline {
         branch 'master'
       }
       environment {
-        STAGING_SWARM_MASTER_IP = "172.16.0.30"
+        STAGING_SWARM_MASTER_IP = "172.16.1.112"
         STAGING_SWARM_MASTER_PORT = "2335"
         DOCKER_COMPOSE_OVERRIDE = "docker-compose-staging.yml"
       }
