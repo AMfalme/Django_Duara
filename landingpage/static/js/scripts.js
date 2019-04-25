@@ -85,7 +85,6 @@ $(function(){
       e.preventDefault();
 
       target = $(this).attr('id');
-      console.log(target);
       $('.trigger-target> .info-active').removeClass('info-active');
       $('.'+target).addClass('info-active');
       $('.target').removeClass('active');
