@@ -264,8 +264,11 @@ border-radius: 15px;
 color: #fff;
 }
 .contact_nav{
-	margin: 40px auto -60px;
-	width: 585px;
+	margin: 40px auto 160px;
+	width: 50%;
+}
+.general, .support,.sales{
+	display: none;
 }
 .left{
 	width: 50%;

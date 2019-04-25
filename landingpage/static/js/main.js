@@ -28,15 +28,18 @@ $(function() {
     return cookieValue;
   }
 
-  $( "#sendInquiryForm" ).submit(function( event ) {
-    event.preventDefault();
+  function submitFormData(event) {
+     event.preventDefault();
     var form = $(this);
     var data = getFormData(form);
-
-    $.ajax({
+    var endPoint = form[0] ? form[0].id : null;
+    data['form_id'] = endPoint
+    console.log(endPoint);
+    if (endPoint) {
+       $.ajax({
       type: "POST",
       contentType: "application/json",
-      url: "send_inquiry",
+      url: "InquiryForm",
       headers:{
         "X-CSRFToken": csrftoken
       },
@@ -45,12 +48,12 @@ $(function() {
         if (response.error) {
           $("#sendInquiryResponse").addClass("alert alert-warning");  
           $("#sendInquiryResponse").css('display','block');
-          $("#sendInquiryResponse").html("<p>" + response.error.message + "</p>");
+          $("#sendInquiryResponse").html("<p>" + response.error.message +  form_id + "</p>");
         }
         else {
           $("#sendInquiryForm").hide();
           $("#sendInquiryResponse").css('display','block');
-          $("#sendInquiryResponse").html("<p>" + response.message + "</p>");
+          $("#sendInquiryResponse").html("<p>" + response.message + response.form_id + "</p>");
         }
       },
       error: function(response, error) {
@@ -58,8 +61,14 @@ $(function() {
         console.log(status);
       }
     });
-  });
+    }
+    else {
+      console.log("Bad End Point")
+    }
+  }
 
+  $( "#sendInquiryForm").submit(submitFormData);
+  $("#supportForm").submit(submitFormData);
   $("#subscribeForm").submit(function(event) {
     event.preventDefault();
     var form = $(this);
@@ -67,7 +76,7 @@ $(function() {
     $.ajax({
       type: "POST",
       contentType: "application/json",
-      url: "subscribe",
+      url: "subscribeForm",
       headers:{
         "X-CSRFToken": csrftoken
       },
@@ -98,4 +107,6 @@ $(function() {
       }
     });
   });
+
+
 }); 

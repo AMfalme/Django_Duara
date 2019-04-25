@@ -26,7 +26,7 @@ def index(request):
 
 
 @require_http_methods(["POST"])
-def subscribe(request):
+def subscribeForm(request):
     data = json.loads(request.body.decode('utf-8'))
     error = None
     message = None
@@ -52,7 +52,7 @@ def subscribe(request):
 
 
 @require_http_methods(["POST"])
-def send_inquiry(request):
+def InquiryForm(request):
     response_message = None
     error = None
 
@@ -61,15 +61,17 @@ def send_inquiry(request):
         name = data["name"]
         email = data["email"]
         message = data["message"]
+        form_id = data['form_id']
         if not (name and message):
             raise ValidationError("Missing either 'name' or 'message'")
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
-        logger.warning(e)
+        logger.warning(e);
         error = LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,
-            "error" : LANDING_PAGE_ERROR["bad_input"]
+            "error" : LANDING_PAGE_ERROR["bad_input"],
+            'form_id': form_id
         })
 
 
@@ -92,7 +94,7 @@ def send_inquiry(request):
             subject,
             email_body,
             settings.LANDING_PAGE_INQUIRY_SENDER,
-            [settings.LANDING_PAGE_INQUIRY_RECIPIENT],
+            [settings.RECEPIENTS[form_id]],
             fail_silently=False
         )
         response_message = LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
@@ -103,7 +105,8 @@ def send_inquiry(request):
 
     return JsonResponse({
         "message": response_message,
-        "error": error
+        "error": error,
+        'form_id': form_id
     })
 
 

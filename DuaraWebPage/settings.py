@@ -186,8 +186,14 @@ EMAIL_HOST_PASSWORD = os.environ.get("NO_REPLY_EMAIL_HOST_PASSWORD")
 
 
 # Duara Settings
-LANDING_PAGE_INQUIRY_RECIPIENT = "info@duara.io "
+RECEPIENTS = {
+    "sendInquiryForm" : "info@duara.io ",
+    "supportForm" : "support@duara.io"  ,
+    "salesForm": "sales@duara.io"      
+}
+
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@duara.io"
+
 
 # development environment
 try:

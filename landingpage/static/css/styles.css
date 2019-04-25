@@ -676,7 +676,7 @@ min-width: 390px;
 }
 
 .info h6 {
-    font-size: 20px;
+    font-size: 17px;
   
     text-align: center;
 
@@ -684,11 +684,11 @@ min-width: 390px;
 .info.active h6 {
  
  color: #fff;
- font-size: 19px;
+ font-size: 17px;
  font-weight: 100;
 }
 .info {
-    width: 260px;
+    width: 32%;
    
 
     border: 1px solid #cebcca;
@@ -697,9 +697,11 @@ min-width: 390px;
     padding: 2px;
 
         height: 45px;
-    margin-right: 30px;
+    margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(50,50,50,.3);
     border-radius: 20px;
+    float: left;
+
 }
 .borderless{
     border-left: none; border-right: none;

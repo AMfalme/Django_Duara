@@ -4,8 +4,8 @@ from . import views
 name = 'landingpage'
 urlpatterns = [
     path('', views.index, name= 'index'),
-    path('send_inquiry', views.send_inquiry, name='send_inquiry'),
-    path('subscribe', views.subscribe, name='subscribe'),
+    path('InquiryForm', views.InquiryForm, name='InquiryForm'),
+    path('subscribeForm', views.subscribeForm, name='subscribeForm'),
     path('pricing', views.pricing, name = 'pricing'),
     path('contact', views.contact, name = 'contact'),
     path('about', views.about, name = 'about'),
