@@ -251,6 +251,26 @@ margin-left: -25px;
 	width: 65px;
 	display: inline-block;
 }
+.FAQ{
+	margin: 30px auto;
+	
+	float: none;
+	/*background-color: #eee;*/
+}
+.FAQ a{
+	color: #000 !important;
+	font-size: 15px;
+	
+}
+.faq-header{
+	text-align: center;
+}
+.FAQ .panel-heading{
+	background-color: rgba(161, 161, 161, 0.32);
+}
+.FAQ .panel-default{
+	border: none;
+}
 .contact_nav ul{
 	width: 335px;
 	height: 50px;
@@ -267,11 +287,22 @@ color: #fff;
 	margin: 40px auto 160px;
 	width: 50%;
 }
+.form-select{
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px;
+	padding-left: 20px;
+	width: 100%;
+	border-bottom: 1px solid;
+	
+}
 .general, .support,.sales{
 	display: none;
 }
 .left{
-	width: 50%;
+
 	min-width: 200px;
 	float: left;
 	margin-top: 30px;
@@ -410,7 +441,7 @@ aside.dashboard-panels{
 	margin-left: -20px;
 	margin-bottom: 20px;
 }
-.panel{
+.target.panel{
 	margin-left: -40px;
 background-color: transparent !important;
 border-radius: 4px;
@@ -423,11 +454,11 @@ margin-bottom: 0 !important;
 padding-bottom: 10px;
 padding-top: 10px;
 }
-.panel.active, .panel:hover{
+/*.panel.active, .panel:hover{
 	background-color: rgba(117, 70, 117, 0.83) !important;
 
 border-radius: 0 !important;
-}
+}*/
 .none{
 	display: none;
 }

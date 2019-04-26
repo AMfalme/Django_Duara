@@ -8,7 +8,7 @@ $(function() {
     $.map(unindexed_array, function(n, i){
       indexed_array[n['name']] = n['value'];
     });
-
+    console.log(indexed_array);
     return indexed_array;
   }
 
@@ -32,6 +32,7 @@ $(function() {
      event.preventDefault();
     var form = $(this);
     var data = getFormData(form);
+    console.log(data);
     var endPoint = form[0] ? form[0].id : null;
     data['form_id'] = endPoint
     console.log(endPoint);

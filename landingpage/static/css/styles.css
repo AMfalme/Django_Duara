@@ -1285,7 +1285,7 @@ p.survey{
   height: 290px;
   text-align: center;
 }
-.error-box h1, h4{
+.error-box h1,.error-box h4{
   text-align: center;
 }
 .error-box h4{
