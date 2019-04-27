@@ -49,12 +49,12 @@ $(function() {
         if (response.error) {
           $(".info-active #sendInquiryResponse").addClass("alert alert-warning");  
           $(".info-active #sendInquiryResponse").css('display','block');
-          $(".info-active #sendInquiryResponse").html("<p>" + response.error.message +  response.form_id + "</p>");
+          $(".info-active #sendInquiryResponse").html("<p>" + response.error.message  "</p>");
         }
         else {
           $("#"+endPoint).hide();
           $(".info-active #sendInquiryResponse").css('display','block');
-          $(".info-active #sendInquiryResponse").html("<p>" + response.message + response.form_id + "</p>");
+          $(".info-active #sendInquiryResponse").html("<p>" + response.message  "</p>");
         }
       },
       error: function(response, error) {

@@ -58,37 +58,84 @@ def InquiryForm(request):
 
     try:
         data = json.loads(request.body.decode('utf-8'))
-        name = data["name"]
-        email = data["email"]
-        message = data["message"]
         form_id = data['form_id']
-        if not (name and message):
-            raise ValidationError("Missing either 'name' or 'message'")
+        if form_id == "sendInquiryForm":
+            name = data["name"]
+            email = data["email"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+
+            %s
+
+            """ % ( name,
+                    email,
+                    message
+                    )
+
+
+            subject = "Home Page Inquiry: %s" % email
+            if not (name and message):
+                raise ValidationError("Missing either 'name' or 'message'")
+        elif form_id == "supportForm":
+            name = data["name"]
+            email = data["email"]
+            reason = data["select"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+            Issue: %s
+            %s
+
+            """ % ( name,
+                    email,
+                    reason,
+                    message
+                    )
+
+
+            subject = "Support Inquiry: %s" % email
+            if not (name and message and reason):
+                raise ValidationError("Missing either 'name', 'reason' or 'message'")
+        elif form_id == "salesForm":
+            name = data["name"]
+            email = data["email"]
+            company = data["company"]
+            reason = data["select"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+            Company: %s
+            Issue: %s
+
+            %s
+
+            """ % ( name,
+                    email,
+                    company,
+                    reason,
+                    message
+                    )
+
+
+            subject = "Sales Inquiry: %s" % email
+            if not (name and message and reason and company):
+                raise ValidationError("Missing either 'name', 'reason', 'Company' or 'message'")
+        
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
         logger.warning(e);
         error = LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,
-            "error" : LANDING_PAGE_ERROR["bad_input"],
-            'form_id': form_id
+            "error" : LANDING_PAGE_ERROR["bad_input"]
         })
 
 
-    email_body = """
-    From: %s
-    E-mail: %s
-
-    %s
-
-    """ % ( name,
-            email,
-            message
-            )
-
-
-    subject = "Home Page Inquiry: %s" % email
-
+    
     try:
         send_mail(
             subject,
@@ -105,8 +152,7 @@ def InquiryForm(request):
 
     return JsonResponse({
         "message": response_message,
-        "error": error,
-        'form_id': form_id
+        "error": error
     })
 
 

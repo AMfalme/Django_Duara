@@ -3,7 +3,9 @@
    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
    {% endblock %}
 {% block contact %}
-        <h1 class="contact-header heavy-fontcolor">
+
+  <section id="contact" class="">
+            <h1 class="contact-header heavy-fontcolor">
           Contact us
         </h1>
         <p class="simplicity"></p>
@@ -12,20 +14,19 @@
             <div class="target info active borderless" id="general">
               <h6>Leave a Message</h6>
             </div> 
-             <div class="target info  borderless" id="support">
-              <h6>Contact sales Team</h6>
-            </div> 
             <div class="target info  borderless" id="sales">
-              <h6>Open a support ticket</h6>
+              <h6>Contact sales Team</h6>
             </div>  
+             <div class="target info  borderless" id="support">
+              <h6>Open a support ticket</h6>
+            </div> 
+            
             
 
           </div>
         </div>
 <div class="trigger-target">
 <div class="general info-active">
-  <section id="contact" class="">
-    
     <div class="container contact-card">
       <div class="row">
         <div class="toast">
@@ -92,21 +93,20 @@
         </div>
       </div>
     </div>
-  </section>
+  
 </div>
-<div class="support">
-  <section id="contact" class="">
-    
+<div class="sales">
+  
     <div class="container contact-card">
       <div class="row">
         <div class="toast">
-          <h3>Contact our sales team (clients)</h3>
+          <h3>Contact our sales team </h3>
         </div>
         <div class="col-md-6">
           <div class="contact">
             <div id="sendInquiryResponse">
             </div>
-            <form id="supportForm" method="POST">
+            <form id="salesForm" method="POST">
               {% csrf_token %}
               <div class="form-row">
                 <div class="form-group">
@@ -173,21 +173,21 @@
         </div>
       </div>
     </div>
-  </section>
+ 
 </div>
-<div class="sales">
-  <section id="contact" class="">
+<div class="support">
+  
 
     <div class="container contact-card">
       <div class="row">
         <div class="toast">
-          <h3>Existing Customers (clients)</h3>
+          <h3>Existing Customers | Support Questions</h3>
         </div>
         <div class="col-md-6">
           <div class="contact">
             <div id="sendInquiryResponse">
             </div>
-            <form id="salesForm" method="POST">
+            <form id="supportForm" method="POST">
               {% csrf_token %}
               <div class="form-row">
                 <div class="form-group">
@@ -251,7 +251,8 @@
         </div>
       </div>
     </div>
-  </section>
+ 
 </div>
 </div>
+ </section>
 {% endblock %}
