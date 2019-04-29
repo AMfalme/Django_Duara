@@ -1,0 +1,329 @@
+
+{% extends 'landingpage/base.html' %}
+{% load static %}
+   {% block styles %}
+   <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+   {% endblock %}
+{% block content %}
+   {% block nav %}
+   {% include 'landingpage/nav.html' %}
+   {% endblock %}
+  
+<div class="outlay features-top">
+  <div class="container ">
+    <div class="row">
+       <div class="col-md-6">
+        <div class="heading">
+          <h3 class="heavy-font">
+             ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            
+
+          </h3>
+          
+          <div class="pay-pitch"> <div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Click!</div><div class="pitch">Launch!</div></div>      
+
+        </div>
+      </div>  
+      <div class="col-md-6">
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container features-target">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/vm.svg">
+            </div>
+            <h2>
+              Compute Instances
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+          </div>
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/virtual%20machines.svg">
+            </div>
+            <h2>
+              Block Storage
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="feature-compute">
+            <div class="icon">
+              <img class="" alt="virtual servers" src="/static_files/images/virtual%20machines.svg">
+            </div>
+            <h2>
+             Floating IP address.
+            </h2>
+            <p class="simplicity" style="margin: 60px;"></p>
+            <p class="feature-info">
+              Duara offers high performing compute instances that can be launched in few simple steps.
+            </p>
+            <ul style="">
+              <li>Deploy in few simple steps</li>
+              <li>Intuitive and user-friendly dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+   <!--
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+              <div class="features-pitch">
+ 
+  <div class="features-target">
+    <div class="products-info">
+      
+      <div class="features-products">
+        <div class="products-left">
+          <ul>
+            <li class="products-icons active first">
+              <img src="/static_files/images/vm.svg">
+              <p><i>Compute instances</i></p>
+            </li>
+            <li class="products-icons second">
+              <img src="/static_files/images/bs.svg">
+              <p><i>Block Storage</i></p>
+            </li>
+            <li class="products-icons third">
+              <img src="/static_files/images/snapshots.svg">
+              <p><i>Backups and Snapshots</i></p>
+            </li>
+          </ul>
+        </div>
+        <div class="product-info">
+          <div class="info-vm">
+            <div class="over-lay-shadow">
+              <blockquote class="token vm active" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+               <blockquote class="token bs" cite="">  
+                Easily attach a block storage to a compute instance.
+              </blockquote>
+               <blockquote class="token snapshot" cite="">  
+                
+              </blockquote>
+               <blockquote class="token FI" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+               <blockquote class="token Faas" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+               <blockquote class="token network" cite="">  
+                Scalable VMs that can run any linux operating system.
+              </blockquote>
+
+            </div>
+      </div>
+      
+     
+           
+          </div>
+          <div class="products-right">
+          <ul>
+            <li class="products-icons first">
+              <img src="/static_files/images/network.svg">
+              <p><i>Private Networking</i></p>
+            </li>
+            <li class="products-icons second">
+              <img src="/static_files/images/FI.svg">
+              <p><i>Floating IP</i></p>
+            </li>
+            <li class="products-icons third">
+              <img src="/static_files/images/snapshots.svg">
+              <p><i>Firewall-as-a-servie</i></p>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+ -->
+ <div class="container">
+   <div class="row">
+     <div class="col-md-12">
+       
+       <div class="images">
+          <h2>Linux distro images on-demand</h2>
+          <div class="ubuntu-16">
+           <img src="/static_files/images/cieldebianmenulogodisc.svg">
+         </div>
+         <div class="ubuntu-18">
+           <img src="/static_files/images/ubuntux.png">
+         </div>
+           <div class="ubuntu-16">
+           <img src="/static_files/images/fedor.png">
+         </div>
+           <div class="ubuntu-16">
+           <img src="/static_files/images/CentOS_logo.svg.png">
+         </div>
+           <!-- <div class="ubuntu-16">
+           <img src="/static_files/images/centos.png">
+         </div> -->
+       </div>
+     </div>
+   </div>
+ </div>
+<div class="container">
+  <div class="row feature-center">
+    <div class="col-md-6">
+      <div class="products-info products-nav">
+        <p class="">
+          Features
+        </p>
+        <p class="simplicity" style="padding-top: -80px;"></p>
+      </div>
+      <h2>
+        User friendly dashboard
+      </h2>
+      <p class="pitch1">
+        We offer a very easy to use dashboard that lets you work at the comfort of relax. 
+        The dashboard accords you the power to manage, execute and impliment our features without much hasle.
+      </p>
+      <ol class="left">
+        <li>Easy</li>
+        <li>Intuitive</li>
+      </ol>
+      <ol class="left">
+        <li>Self explanatory</li>
+        <li>robust</li>
+      </ol>
+    </div>
+    <div class="col-md-6">
+      <div class="dashboard">
+        <aside class="dashboard-panels">
+          <div class="side-logo">
+            <img class="logoimg" title="Duara Logo" alt="Duara Logo" src="/static_files/images/white logo.svg">
+          </div>
+          <ul>
+          
+            <li class="target panel active" id="instance-replica">
+            
+                Instances
+              
+            </li>
+            <li class="target panel" id="image-replica">
+              
+                Images
+              
+            </li>
+            <li class="target panel" id="keypair-replica">
+              
+                           Key Pairs
+              
+            </li>
+            <li class="target panel" id="volume-replica">
+              Volumes
+            </li>
+            <li class="target panel" id="backup-replica">
+              Backups
+            </li>
+            <li class="target panel" id="snapshot-replica">
+              Snapshots
+            </li>
+            <li class="target panel" id="sg-replica">
+              Security Groups
+            </li>
+            <li class="target panel" id="fi-replica">
+              Floating IPs
+            </li>
+            
+            
+          </ul>
+        </aside>
+        <section class="dashboard-replica trigger-target">
+          <div class=" info-active replica instance-replica">
+            
+          </div>
+          <div class="replica image-replica">
+            
+          </div>
+          <div class="replica keypair-replica">
+            
+          </div>
+          <div class="replica  volume-replica">
+            
+          </div>
+          <div class="replica backup-replica">
+            
+          </div>
+          <div class="replica snapshot-replica">
+            
+          </div>
+
+          <div class="replica sg-replica">
+            
+          </div>
+
+          <div class="replica fi-replica">
+            
+          </div>
+
+          
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ {% block footer %}
+  {% include "landingpage/footer.html" %}
+  {% endblock %}
+ <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.validate.js' %}"></script>
+  <script src="{% static 'js/wow.js' %}"></script><script>new WOW().init();</script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  <script> 
+    function afterReveal( el ) 
+{
+  el.addEventListener('animationend', function( event ) 
+    {
+      $('.wow').each(function(){ $(this).css('opacity',1); }); 
+    }
+  ); 
+} new WOW({ callback: afterReveal }).init() 
+  </script>
+
+{% endblock %}
+
+

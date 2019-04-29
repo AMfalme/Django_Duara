@@ -26,7 +26,7 @@ def index(request):
 
 
 @require_http_methods(["POST"])
-def subscribe(request):
+def subscribeForm(request):
     data = json.loads(request.body.decode('utf-8'))
     error = None
     message = None
@@ -52,20 +52,82 @@ def subscribe(request):
 
 
 @require_http_methods(["POST"])
-def send_inquiry(request):
+def InquiryForm(request):
     response_message = None
     error = None
 
     try:
         data = json.loads(request.body.decode('utf-8'))
-        name = data["name"]
-        email = data["email"]
-        message = data["message"]
-        if not (name and message):
-            raise ValidationError("Missing either 'name' or 'message'")
+        form_id = data['form_id']
+        if form_id == "sendInquiryForm":
+            name = data["name"]
+            email = data["email"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+
+            %s
+
+            """ % ( name,
+                    email,
+                    message
+                    )
+
+
+            subject = "Home Page Inquiry: %s" % email
+            if not (name and message):
+                raise ValidationError("Missing either 'name' or 'message'")
+        elif form_id == "supportForm":
+            name = data["name"]
+            email = data["email"]
+            reason = data["select"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+            Issue: %s
+            %s
+
+            """ % ( name,
+                    email,
+                    reason,
+                    message
+                    )
+
+
+            subject = "Support Inquiry: %s" % email
+            if not (name and message and reason):
+                raise ValidationError("Missing either 'name', 'reason' or 'message'")
+        elif form_id == "salesForm":
+            name = data["name"]
+            email = data["email"]
+            company = data["company"]
+            reason = data["select"]
+            message = data["message"]
+            email_body = """
+            From: %s
+            E-mail: %s
+            Company: %s
+            Issue: %s
+
+            %s
+
+            """ % ( name,
+                    email,
+                    company,
+                    reason,
+                    message
+                    )
+
+
+            subject = "Sales Inquiry: %s" % email
+            if not (name and message and reason and company):
+                raise ValidationError("Missing either 'name', 'reason', 'Company' or 'message'")
+        
         validate_email(email)
     except (ValidationError, KeyError, ValueError) as e:
-        logger.warning(e)
+        logger.warning(e);
         error = LANDING_PAGE_ERROR["bad_input"]
         return JsonResponse({
             "message" : None,
@@ -73,26 +135,13 @@ def send_inquiry(request):
         })
 
 
-    email_body = """
-    From: %s
-    E-mail: %s
-
-    %s
-
-    """ % ( name,
-            email,
-            message
-            )
-
-
-    subject = "Home Page Inquiry: %s" % email
-
+    
     try:
         send_mail(
             subject,
             email_body,
             settings.LANDING_PAGE_INQUIRY_SENDER,
-            [settings.LANDING_PAGE_INQUIRY_RECIPIENT],
+            [settings.RECEPIENTS[form_id]],
             fail_silently=False
         )
         response_message = LANDING_PAGE_MESSAGE["inquiry_email_send_success"]
@@ -105,3 +154,32 @@ def send_inquiry(request):
         "message": response_message,
         "error": error
     })
+
+
+@require_http_methods(["GET"])
+def pricing(request):
+    return render(request, 'landingpage/pricing.html')
+
+
+@require_http_methods(["GET"])
+def contact(request):
+    return render(request, 'landingpage/contactus.html')
+
+
+@require_http_methods(["GET"])
+def about(request):
+    return render(request, 'landingpage/about.html')
+
+@require_http_methods(["GET"])
+def openstack(request):
+    return render(request, 'landingpage/openstack.html')
+    
+
+@require_http_methods(["GET"])
+def features(request):
+    return render(request, 'landingpage/features.html')
+
+@require_http_methods(["GET"])
+def services(request):
+    return render(request, 'landingpage/services.html')
+

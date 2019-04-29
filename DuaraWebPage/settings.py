@@ -18,7 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INTERCOM_APPID = "azwrgw1i"
 
-# Load .env file for development environment
+# # Load .env file for development environment
 STAGE = os.environ.get('STAGE')
 if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
     from dotenv import load_dotenv
@@ -36,9 +36,9 @@ SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "localhost",
+    "127.0.0.1",
     "duara.io",
-    "duara.io.10.0.0.2.xip.io"
+    "duara.io.172.16.0.5.xip.io",
 ]
 
 ADMIN_ENABLED = False
@@ -123,10 +123,10 @@ WSGI_APPLICATION = 'DuaraWebPage.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'diam.staging',
-        'NAME': 'launching_soon',
-        'USER': 'launching_soon',
-        'PASSWORD': 'ATiCEntaLTuR',
+        'HOST': 'localhost',
+        'NAME': 'Duara_Beta',
+        'USER': 'root',
+        'PASSWORD': '',
     }
 }
 
@@ -185,8 +185,14 @@ EMAIL_HOST_PASSWORD = os.environ.get("NO_REPLY_EMAIL_HOST_PASSWORD")
 
 
 # Duara Settings
-LANDING_PAGE_INQUIRY_RECIPIENT = "info@duara.io "
+RECEPIENTS = {
+    "sendInquiryForm" : "info@duara.io ",
+    "supportForm" : "support@duara.io"  ,
+    "salesForm": "sales@duara.io"      
+}
+
 LANDING_PAGE_INQUIRY_SENDER = "no-reply@duara.io"
+
 
 # development environment
 try:

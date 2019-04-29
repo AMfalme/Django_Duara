@@ -1,0 +1,51 @@
+
+{% extends 'landingpage/base.html' %}
+{% load static %}
+   {% block nav %}
+   {% include 'landingpage/nav.html' %}
+   {% endblock %}
+   {% block styles %}
+   <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+   {% endblock %}
+
+{% block content %}
+<div class="outlay">
+	 <div class="container ">
+    <div class="row">
+      <div>
+        <h3 class="heavy-font">
+          Frequently Asked Question
+        </h3>
+        <p class="simplicity" style="background-image: linear-gradient(to bottom left, #e8d3ec 0%,#940a4a 100%);"></p>
+        <p class="pay-pitch"> Feel free to leave us a message!</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% block faqs %}
+  {% include "landingpage/faqs.html" %}
+{% endblock %}
+{% block contact %}
+  {% include "landingpage/contact.html" %}
+{%endblock %}
+{% block footer %}
+  {% include "landingpage/footer.html" %}
+{% endblock %}
+ <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.validate.js' %}"></script>
+  <script src="{% static 'js/wow.js' %}"></script><script>new WOW().init();</script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  <script> 
+    function afterReveal( el ) 
+{
+  el.addEventListener('animationend', function( event ) 
+    {
+      $('.wow').each(function(){ $(this).css('opacity',1); }); 
+    }
+  ); 
+} new WOW({ callback: afterReveal }).init() 
+  </script>
+
+ {% endblock %}
