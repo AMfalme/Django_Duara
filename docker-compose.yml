@@ -4,7 +4,7 @@ secrets:
     external: true
 services:
   home:
-    image: gcr.io/robotic-fuze-194312/home:latest
+    image: gcr.io/robotic-fuze-194312/home/release:latest
     deploy:
       replicas: 1
       resources:
@@ -14,8 +14,6 @@ services:
       restart_policy:
         condition: on-failure
     secrets:
-      - home.env
+    - home.env
     ports:
     - "8000:8000"
-    volumes:
-    - /var/log/home:/var/log

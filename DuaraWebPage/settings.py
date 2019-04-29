@@ -19,13 +19,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INTERCOM_APPID = "azwrgw1i"
 
 # # Load .env file for development environment
-# STAGE = os.environ.get('STAGE')
-# if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
-#     from dotenv import load_dotenv
-#     load_dotenv()
+STAGE = os.environ.get('STAGE')
+if STAGE is None or (STAGE != 'staging' and  STAGE != 'prod'):
+    from dotenv import load_dotenv
+    load_dotenv()
 
-# if STAGE == 'prod':
-#     INTERCOM_APPID = "lstoqvzn"
+if STAGE == 'prod':
+    INTERCOM_APPID = "lstoqvzn"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -36,10 +36,9 @@ SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
+    "127.0.0.1",
     "duara.io",
     "duara.io.172.16.0.5.xip.io",
-    "*"
 ]
 
 ADMIN_ENABLED = False
