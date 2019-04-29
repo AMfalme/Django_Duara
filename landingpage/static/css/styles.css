@@ -265,6 +265,10 @@ nav.navigation ul li a {
     text-align: center;
     border-radius: 4px;
 }
+.center{
+    text-align: center;
+    margin: 20px auto;
+}
 .centered {
     max-width: 800px;
     font-family: Rubik;

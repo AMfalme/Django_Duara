@@ -454,11 +454,18 @@ margin-bottom: 0 !important;
 padding-bottom: 10px;
 padding-top: 10px;
 }
-/*.panel.active, .panel:hover{
+.target.panel.active, .target.panel:hover{
 	background-color: rgba(117, 70, 117, 0.83) !important;
 
 border-radius: 0 !important;
-}*/
+}
 .none{
 	display: none;
+}
+
+
+/*Services page*/
+
+.public {
+	margin: 20px auto;
 }
