@@ -6,30 +6,42 @@
 
 {% block content%}
 
-<section id="home">
+<section id="">
   <div class="container ">
     <div class="row">
-      <div class="landing-section  purple-theme">
-        <div class="col-md-6 col-lg-5">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+            <div class="landing-section  purple-theme" id="home">
+              
+        <div class="col-md-6 col-lg-7">
           <div class="centered">
             <h2>
-              Providing on-demand cloud solutions in Africa 
+               Securing Enterprise and Government Data in Africa.
             </h2>
             <div class="">
               <p class="pitch"> 
-              We make it easy for developers and enterprises to deploy cloud resources.
+              we offer openstack private cloud Infrastructure as a managed service.
               </p>
-              <p class="pitch pitch2">
+              <!-- <p class="pitch pitch2">
               Subscribe to be part of our beta process.
-              </p>
+              </p> -->
             </div>
             <div class="buttons">
               <div class="buttons">
                 <form id="subscribeForm" method="POST">
                   {% csrf_token %}
                   <div class="input-group subscribe-button">
-                  <input class="subscribemail" type="email" name="email" placeholder="Enter your Email address">
-                  <div class="input-alert">Enter your email address</div>
+                  <div class="subscribemail" type="email" name="email" placeholder="Get Started">Get Started</div>
+                  <div class="input-alert">Get Started</div>
                   <button type="submit" class="submit-btn-sub btn "><p>></p></button>
                   </div>
                 </form>
@@ -42,16 +54,73 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-7">
+        <div class="col-md-6 col-lg-5">
           <div class="duara-cloud fadeInUp">
-            <img alt="Duara Virtual Server" src="{% static 'images/Image_VM.svg' %}">
+            <img alt="Duara Virtual Server" src="/static_files/images/pencil server.png">
           </div>
         </div>
       </div>
     </div>
+    <div class="item">
+            <div class="landing-section  purple-theme" id="home2">
+              <div class="col-md-6 col-lg-5">
+          <div class="duara-cloud fadeInUp">
+            <img class="sort-iconserver" src="/static_files/images/serverer.png">
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7">
+          <div class="centered">
+            <h2>
+               Secure Mision critical infrastracture.
+            </h2>
+            <div class="">
+              <p class="pitch"> 
+              we offer openstack private cloud Infrastructure as a managed service.
+              </p>
+              <!-- <p class="pitch pitch2">
+              Subscribe to be part of our beta process.
+              </p> -->
+            </div>
+            <div class="buttons">
+              <div class="buttons">
+                <form id="subscribeForm" method="POST">
+                  {% csrf_token %}
+                  <div class="input-group subscribe-button">
+                  <div class="subscribemail" type="email" name="email" placeholder="Get Started">Get Started</div>
+                  <div class="input-alert">Get Started</div>
+                  <button type="submit" class="submit-btn-sub btn "><p>></p></button>
+                  </div>
+                </form>
+                <div id="subscribeResponse">
+                  <div id="dismiss">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+
+ <!-- Controls 
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+</div>
+
+    </div>
   </div>
 </section>
-
+<!-- 
 <section id="features">
 
   <h3 class="pitch-spin wow fadeIn heavy-fontcolor" data-wow-delay=".2s" data-wow-duration="1s">Spin up your compute instances in <span>3</span> simple steps</h3>
@@ -88,8 +157,172 @@
       </div>
     </div>
   </div>
+</section> -->
+ <section id="features">
+    <h1 class="heavy-fontcolor">Why choose Duara </h1>
+  <p class="simplicity"></p>
+  <div class="container">
+    <div class="row reduce">
+
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="  clompute simple-value">
+          <img class="transparent-image" alt="simply intuitive" src="{% static 'images/simple colored.svg' %}">
+          <h2 >
+            Simple
+          </h2>
+            <p>
+            Easily self-provision your infrastructure on our intuitive platform.
+            </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="  clompute transparent-value">
+          <img class="transparent-image" alt="transparent pricing" src="{% static 'images/transparent colored.svg' %}">
+          <h2 >
+            Transparent 
+          </h2>
+            <p>
+            Only pay for resources used. Resources are billed per hour.
+            </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="  clompute reliable-value">
+          <img class="transparent-image reliable" alt="reliable" src="{% static 'images/reliable colored.svg' %}">
+          <h2 >
+            Reliable
+          </h2>
+            <p>
+            We guarantee a 99.99% uptime SLA.
+            </p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="support-value clompute separator">
+          <img class="transparent-image" alt="support" src="{% static 'images/support colored.svg' %}">
+          <h2 >
+            Support
+          </h2>
+            <p>
+            We offer round the clock support.
+            </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
-<section id="products" class="bck-shade" >
+
+<div class="container">
+  <div class="row feature-center">
+   <h1 class="heavy-fontcolor">Openstack </h1>
+  <p class="simplicity"></p>
+    <div class="col-md-6" >
+      <div class="products-info products-nav">
+        <!-- <p class="">
+          
+        </p> -->
+       <!--  <p class="simplicity" style="padding-top: -80px;"></p> -->
+      </div>
+      <h2>
+        Duara Openstack Dashboard
+      </h2>
+      <p class="pitch1">
+        OpenStack is a platform for building a highly automated infrastructure platform.
+
+        Duara's OpenStack is a Debian based OpenStack distribution. We aim to provide a high quality while price competitive solution to our customers.
+      </p>
+      <ol class="left">
+        <li>Easy</li>
+        <li>Intuitive</li>
+      </ol>
+      <ol class="left">
+        <li>Self explanatory</li>
+        <li>robust</li>
+      </ol>
+    </div>
+    <div class="col-md-6">
+      <div class="dashboard">
+        <aside class="dashboard-panels">
+          <div class="side-logo">
+            <img class="logoimg" title="Duara Logo" alt="Duara Logo" src="/static_files/images/white logo.svg">
+          </div>
+          <ul class="target-list">
+          
+            <li class="target panel active" id="instance-replica">
+            
+                Instances
+              
+            </li>
+            <li class="target panel" id="image-replica">
+              
+                Images
+              
+            </li>
+            <li class="target panel" id="keypair-replica">
+              
+                           Key Pairs
+              
+            </li>
+            <li class="target panel" id="volume-replica">
+              Volumes
+            </li>
+            <li class="target panel" id="backup-replica">
+              Backups
+            </li>
+            <li class="target panel" id="snapshot-replica">
+              Snapshots
+            </li>
+            <li class="target panel" id="sg-replica">
+              Security Groups
+            </li>
+            <li class="target panel" id="fi-replica">
+              Floating IPs
+            </li>
+            
+            
+          </ul>
+        </aside>
+        <section class="dashboard-replica trigger-target">
+          <div class=" info-active replica instance-replica">
+            
+          </div>
+          <div class="replica image-replica">
+            
+          </div>
+          <div class="replica keypair-replica">
+            
+          </div>
+          <div class="replica  volume-replica">
+            
+          </div>
+          <div class="replica backup-replica">
+            
+          </div>
+          <div class="replica snapshot-replica">
+            
+          </div>
+
+          <div class="replica sg-replica">
+            
+          </div>
+
+          <div class="replica fi-replica">
+            
+          </div>
+
+          
+        </section>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+
+
+<!-- <section id="products" class="bck-shade" >
   <div>
   </div>
   <div class="container">
@@ -211,62 +444,8 @@
       </div>
     </div>
   </div>
-</section>
-<section id="features">
-    <h1 class="heavy-fontcolor">Why choose Duara </h1>
-  <p class="simplicity"></p>
-  <div class="container">
-    <div class="row reduce">
+</section> -->
 
-      <div class="col-md-3 col-sm-6 col-xs-6">
-        <div class="  clompute simple-value">
-          <img class="transparent-image" alt="simply intuitive" src="{% static 'images/simple colored.svg' %}">
-          <h2 >
-            Simple
-          </h2>
-            <p>
-            Easily self-provision your infrastructure on our intuitive platform.
-            </p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 col-xs-6">
-        <div class="  clompute transparent-value">
-          <img class="transparent-image" alt="transparent pricing" src="{% static 'images/transparent colored.svg' %}">
-          <h2 >
-            Transparent 
-          </h2>
-            <p>
-            Only pay for resources used. Resources are billed per hour.
-            </p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 col-xs-6">
-        <div class="  clompute reliable-value">
-          <img class="transparent-image reliable" alt="reliable" src="{% static 'images/reliable colored.svg' %}">
-          <h2 >
-            Reliable
-          </h2>
-            <p>
-            We guarantee a 99.99% uptime SLA.
-            </p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6 col-xs-6">
-        <div class="support-value clompute separator">
-          <img class="transparent-image" alt="support" src="{% static 'images/support colored.svg' %}">
-          <h2 >
-            Support
-          </h2>
-            <p>
-            We offer round the clock support.
-            </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
   {% block contact %}
   {% include "landingpage/contact.html" %}
   {%endblock %}
