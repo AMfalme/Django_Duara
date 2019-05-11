@@ -4,3 +4,4 @@ __MACOSX/
 .vscode
 local_settings.py
 home.log
+.env
