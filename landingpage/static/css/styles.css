@@ -350,7 +350,7 @@ border: none;
 
 #features h1 {
     text-align: center;
-    margin: 30px auto;
+    margin: 75px auto -20px;
  
     
     line-height: 2;
@@ -789,6 +789,7 @@ font-size: 15px;
 .heavy-fontcolor{
     color: #64606f !important;
     text-align: center;
+    margin: 75px auto -20px;
 }
 .info-active {
     display: block !important;

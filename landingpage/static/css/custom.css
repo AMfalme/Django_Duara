@@ -129,7 +129,7 @@ margin: 35px auto 0;
 
 }
 .feature-center{
-	margin: 0 auto 150px; 
+	margin: 0 auto ; 
 
 }
 .feature-center:before{
@@ -146,6 +146,12 @@ margin: 35px auto 0;
 	color: #64606f;
 	width: 400px;
 	margin: 40px auto 0 0;
+}
+.feature-center .heavy-fontcolor{
+	font-size: 30px;
+}
+.products-info{
+	margin-top: 100px;
 }
 .products-left{
 	position: absolute;
