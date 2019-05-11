@@ -273,7 +273,7 @@ nav.navigation ul li a {
 }
 .center{
     text-align: center;
-    margin: 60px auto;
+    
 }
 .centered {
     max-width: 800px;
@@ -441,16 +441,17 @@ color: rgb(116, 114, 130);
 
 .simple {
     margin: 50px auto 100px !important;
-    width: 95%;
+    width: 90%;
     position: relative !important;
 }
 .simple p{
     color: rgb(56, 56, 56) !important;
-    font-size: 16px !important;
+    font-size: 12px !important;
     line-height: 3;
     letter-spacing: 1px;
     text-align: center !important;
     margin: 35px auto 0;
+    font-weight: 700;
 }
 
 .simplicity {
@@ -461,7 +462,7 @@ color: rgb(116, 114, 130);
  
 }
 .simplicity img{
-    width:  50px;
+    width:  40px;
 }
 .simplicity i.fa-user-plus{
     color: #fb5d57;
@@ -477,8 +478,8 @@ color: rgb(116, 114, 130);
     
     box-shadow:-4px 8px 20px 0px rgba(50, 50, 50, 0.15);
     padding: 30px;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     background-color: #fff;
     z-index: 10;
     margin: 0 auto;

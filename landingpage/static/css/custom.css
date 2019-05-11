@@ -471,3 +471,40 @@ border-radius: 0 !important;
 .public {
 	margin: 20px auto;
 }
+
+
+/*landing page */
+#services-pitch{
+	margin: 90px auto;
+}
+.pin{
+	background-color: #448bd1;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+padding: 30px;
+color: #fff;
+font-weight: bold;
+font-size: 12px;
+}
+.services-heavyfont:after{
+	content: '';
+	width: 80%;
+	height: 1px;
+	background-color: #448bd1;
+	position: absolute;
+	bottom: 0;
+	left: 12%;
+	margin: -20px auto;
+
+}
+.article{
+	width: 80%;
+	font-size: 15px;
+	letter-spacing: 0 !important;
+	font-weight: normal !important;
+	line-height: 2 !important;
+}
+.openstack-logo{
+	width: 190px;
+	position: absolute;
+}
