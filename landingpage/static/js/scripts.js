@@ -95,15 +95,19 @@ $(function(){
 }
 toggle_scroll();
 
-
+/*-------------------------------------------------------------------------*
+     *          Auto scroll for replica dashboard
+                 *
+     *-------------------------------------------------------------------------*/
   setInterval(
     function(){
-      var children = $('.target-list').children();
-      for (var i = children.length - 1; i >= 0; i--) {
-        
-          children[i].removeClass('active');
-          children[i+1].addClass('active');
-      }
+      children = $('.dashboard-replica').children();
+      
+      // for (var i = children.length - 1; i >= 0; i--) {
+      //   // Remove side panel active
+      //     $('.target.panel.active').removeClass('active');
+          
+      // }
     }
     , 2000);
 

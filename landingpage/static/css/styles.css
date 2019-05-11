@@ -379,7 +379,7 @@ font-weight: bold;
 }
 .clompute {
     
-    box-shadow:0px 0px 20px 7px rgba(103, 38, 132, 0.05);
+    box-shadow:inset 0px 0px 10px 0px rgba(38, 45, 132, 0.22);
     padding: 22px;
     background-color: #fff;
         transition-duration: 0.3s;
@@ -387,7 +387,7 @@ font-weight: bold;
         height: 290px;
         border-radius: 5px;
         position: relative;
-
+        transition-duration: 2s;
         
 }
 .clompute::before{
@@ -409,7 +409,8 @@ font-weight: bold;
     background-image: url('../images/signup.svg');
 }
 .clompute:hover{
-    box-shadow: 0px 0px 20px 7px rgba(103, 38, 132, 0.1);
+    transform: scale(1.03);
+    transition-duration: 2s;
 }
 
 .reduce p {

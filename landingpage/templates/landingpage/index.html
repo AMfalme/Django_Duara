@@ -3,7 +3,9 @@
 {% extends 'landingpage/base.html' %}
 
 {% load static %}
-
+{% block styles %}
+   <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+   {% endblock %}
 {% block content%}
 
 <section id="">
@@ -175,6 +177,17 @@
             </p>
         </div>
       </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">
+        <div class="  clompute reliable-value">
+          <img class="transparent-image reliable" alt="reliable" src="{% static 'images/reliable colored.svg' %}">
+          <h2 >
+            Reliable
+          </h2>
+            <p>
+            We guarantee a 99.99% uptime SLA.
+            </p>
+        </div>
+      </div>
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="  clompute transparent-value">
           <img class="transparent-image" alt="transparent pricing" src="{% static 'images/transparent colored.svg' %}">
@@ -186,18 +199,6 @@
             </p>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-6">
-        <div class="  clompute reliable-value">
-          <img class="transparent-image reliable" alt="reliable" src="{% static 'images/reliable colored.svg' %}">
-          <h2 >
-            Reliable
-          </h2>
-            <p>
-            We guarantee a 99.99% uptime SLA.
-            </p>
-        </div>
-      </div>
-
       <div class="col-md-3 col-sm-6 col-xs-6">
         <div class="support-value clompute separator">
           <img class="transparent-image" alt="support" src="{% static 'images/support colored.svg' %}">
@@ -446,9 +447,6 @@
   </div>
 </section> -->
 
-  {% block contact %}
-  {% include "landingpage/contact.html" %}
-  {%endblock %}
   {% block footer %}
   {% include "landingpage/footer.html" %}
   {% endblock %}
