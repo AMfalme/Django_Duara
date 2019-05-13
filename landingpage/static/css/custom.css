@@ -508,3 +508,20 @@ font-size: 12px;
 	width: 190px;
 	position: absolute;
 }
+#features{
+	background-color: #edf2f7;
+	padding-top: 1px;
+}
+.nth{
+	margin-top: 100px;
+}
+#customer-onboard{
+	width: 600px;
+    margin:0 auto -48px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e6e5e5;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #fff;
+}
