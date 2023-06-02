@@ -33,12 +33,13 @@ if STAGE == 'prod':
 SECRET_KEY = '0i16y8zgm1#gp9h=^l&un07-=sfm=e9ruo0^pudp$b54202d$('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "duara.io",
     "duara.io.172.16.0.5.xip.io",
+    "localhost"
 ]
 
 ADMIN_ENABLED = False
